@@ -384,7 +384,8 @@
     border-radius: 10px; /* 稍微減少圓角，增加硬派感 */
     overflow: hidden;
     height: 60px; /* 增加高度，更霸氣 */
-    width: 450px; /* 加長一點，符合改裝車的延伸感 */
+    width: 100%; /* 改為100%以適應螢幕寬度 */
+    max-width: 450px; /* 限制最大寬度，桌面仍保持450px */
     background: linear-gradient(90deg, #1a1a1a, #333); /* 深色金屬漸層背景 */
     border: 2px solid #ff4500; /* 加上亮橘色邊框，像車身塗裝 */
     box-shadow: 0 0 15px rgba(255, 69, 0, 0.7); /* 霓虹燈光暈效果 */
@@ -430,6 +431,9 @@
     background: url('https://via.placeholder.com/500x200/1a1a1a?text=Carbon+Fiber') repeat; /* 碳纖維紋理背景 */
     border-radius: 15px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+    width: 100%; /* 確保表單適應螢幕 */
+    max-width: 600px; /* 限制最大寬度 */
+    margin: 0 auto; /* 置中 */
   }
 </style>
 
