@@ -328,15 +328,31 @@
       </ul>
     </li>
     <!-- 右半邊：嵌入影片 -->
-    <li class="col-6-12 left ae-5 fromCenter" style="flex: 1 1 100%; max-width: 100%; position: relative;">
-      <div style="position: relative; width: 100%; padding-top: 56.25%;">
-        <iframe src="https://player.vimeo.com/video/307412404?h=bbf9545c2f" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-        <!-- 播放按鈕 -->
-        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(255, 69, 0, 0.8); border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;">
-          <div style="width: 0; height: 0; border-left: 20px solid #fff; border-top: 12px solid transparent; border-bottom: 12px solid transparent;"></div>
-        </div>
+<li class="col-6-12 left ae-5 fromCenter" style="flex: 1 1 100%; max-width: 100%; position: relative;">
+  <div style="position: relative; width: 100%; padding-top: 56.25%;">
+    <!-- 預設顯示縮圖 -->
+    <div id="videoThumbnail" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+      <img src="https://i.vimeocdn.com/video/742978144_640.jpg" alt="Video Thumbnail" style="width: 100%; height: 100%; object-fit: cover;"/>
+      <!-- 播放按鈕 -->
+      <div onclick="playVideo()" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(255, 69, 0, 0.8); border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 2;">
+        <div style="width: 0; height: 0; border-left: 20px solid #fff; border-top: 12px solid transparent; border-bottom: 12px solid transparent;"></div>
       </div>
-    </li>
+    </div>
+    <!-- 影片容器，初始隱藏 -->
+    <div id="videoPlayer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: none;">
+      <iframe src="https://player.vimeo.com/video/307412404?h=bbf9545c2f&autoplay=1muted=1" frameborder="0" allowfullscreen style="width: 100%; height: 100%;"></iframe>
+    </div>
+  </div>
+</li>
+
+<script>
+  function playVideo() {
+    // 隱藏縮圖，顯示影片並自動播放
+    document.getElementById('videoThumbnail').style.display = 'none';
+    document.getElementById('videoPlayer').style.display = 'block';
+  }
+</script>
+      
   </ul>
   <!-- CTA 按鈕 -->
   <div style="text-align: center; margin-top: 20px; z-index: 1; position: relative;">
