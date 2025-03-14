@@ -180,86 +180,90 @@
 <p>&nbsp;</p>
           
 <div class="fix-12-12 toCenter">         
-    <style>
-      progress {
-        position: relative;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        border-radius: 10px;
-        overflow: hidden;
-        height: 60px;
-        width: 100%;
-        max-width: 450px;
-        background: linear-gradient(90deg, #1a1a1a, #333);
-        border: 2px solid #ff4500;
-        box-shadow: 0 0 15px rgba(255, 69, 0, 0.7);
-      }
+  <style>
+    progress {
+      position: relative;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 60px;
+      width: 100%;
+      max-width: 450px;
+      background: linear-gradient(90deg, #1a1a1a, #333);
+      border: 2px solid #ff4500;
+      box-shadow: 0 0 15px rgba(255, 69, 0, 0.7);
+    }
 
-      ::-webkit-progress-value {
-        background: linear-gradient(45deg, #ff4500, #ffd700);
-        border-radius: 8px;
-        animation: boost 2s infinite;
-      }
-      ::-moz-progress-value {
-        background: linear-gradient(45deg, #ff4500, #ffd700);
-        border-radius: 8px;
-        animation: boost 2s infinite;
-      }
+    ::-webkit-progress-value {
+      background: linear-gradient(45deg, #ff4500, #ffd700);
+      border-radius: 8px;
+      animation: boost 2s infinite;
+    }
+    ::-moz-progress-value {
+      background: linear-gradient(45deg, #ff4500, #ffd700);
+      border-radius: 8px;
+      animation: boost 2s infinite;
+    }
 
-      ::-webkit-progress-bar {
-        background: linear-gradient(90deg, #1a1a1a, #333);
-      }
-      ::-moz-progress-bar {
-        background: linear-gradient(90deg, #1a1a1a, #333);
-      }
+    ::-webkit-progress-bar {
+      background: linear-gradient(90deg, #1a1a1a, #333);
+    }
+    ::-moz-progress-bar {
+      background: linear-gradient(90deg, #1a1a1a, #333);
+    }
 
-      @keyframes boost {
-        0% { transform: scaleX(1); }
-        50% { transform: scaleX(1.02); box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); }
-        100% { transform: scaleX(1); }
-      }
+    @keyframes boost {
+      0% { transform: scaleX(1); }
+      50% { transform: scaleX(1.02); box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); }
+      100% { transform: scaleX(1); }
+    }
 
-      .cool-text {
-        font-family: 'Racing Sans One', sans-serif;
-        color: #fff;
-        text-shadow: 0 0 10px #ff4500, 0 0 20px #ffd700;
-        letter-spacing: 2px;
-        margin: 0; /* 移除文字預設外邊距 */
-      }
+    .cool-text {
+      font-family: 'Racing Sans One', sans-serif;
+      color: #fff;
+      text-shadow: 0 0 10px #ff4500, 0 0 20px #ffd700;
+      letter-spacing: 2px;
+      margin: 0;
+    }
 
-      .counter {
-        font-family: 'Arial', sans-serif;
-        color: #ffd700;
-        text-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
-        font-size: 16px;
-        opacity: 0.9;
-        display: inline-block;
-      }
+    .counter {
+      font-family: 'Racing Sans One', sans-serif; /* 與標題一致的賽車風格 */
+      color: #ffd700;
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 69, 0, 0.8); /* 增強陰影 */
+      font-size: 28px; /* 增大字體 */
+      font-weight: bold; /* 加粗 */
+      opacity: 1; /* 移除透明度，增強顯眼度 */
+      display: inline-block;
+      padding: 2px 8px; /* 添加內邊距，讓數字更突出 */
+      background: rgba(255, 69, 0, 0.2); /* 微透明背景 */
+      border-radius: 5px; /* 圓角邊框 */
+    }
 
-      @keyframes pulse {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.05); }
-      }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); } /* 增大脈動幅度 */
+    }
 
-      form {
-        position: relative;
-        padding: 0px 0px 0px; /* 減少底部內邊距 */
-        background: url('https://via.placeholder.com/500x200/1a1a1a?text=Carbon+Fiber') repeat;
-        border-radius: 15px;
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto -5px; /* 縮減底部外邊距 */
-      }
-    </style>
+    form {
+      position: relative;
+      padding: 20px 20px 0;
+      background: url('https://via.placeholder.com/500x200/1a1a1a?text=Carbon+Fiber') repeat;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto 0;
+    }
+  </style>
 
-    <form action="test.aspx" method="get" class="ae-2 huge fromAbove">
-      <h1 class="cool-text">募資狀態</h1>
-      <progress value="30" max="100"></progress>
-      <p class="cool-text">達成率 <span class="counter" id="progress-counter">0%</span></p>
-    </form>
+  <form action="test.aspx" method="get" class="ae-2 huge fromAbove">
+    <h1 class="cool-text">募資狀態</h1>
+    <progress value="30" max="100"></progress>
+    <p class="cool-text">達成率 <span class="counter" id="progress-counter">0%</span></p>
+  </form>
             
-  <ul class="grid margin-top-10" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; margin-top: -5px; max-width: 1200px; margin-left: auto; margin-right: auto;" id="stats-section">
+  <ul class="grid margin-top-10" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; margin-top: 0; max-width: 1200px; margin-left: auto; margin-right: auto;" id="stats-section">
     <li class="ae-4" style="flex: 1 1 300px; max-width: 33.33%; text-align: center; background: linear-gradient(135deg, #1a1a1a, #333); padding: 20px; border-radius: 10px; border: 2px solid #ff4500; box-shadow: 0 0 15px rgba(255, 69, 0, 0.5); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 25px rgba(255, 69, 0, 0.8)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px rgba(255, 69, 0, 0.5)';">
       <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #ff4500; font-size: 24px; margin-bottom: 10px;">支持人數</h3>
       <p class="tiny"><span class="counter" id="supporters-counter">0</span> 位車主</p>
@@ -286,9 +290,9 @@
       const progress = Math.min((timestamp - startTime) / duration, 1);
       const value = Math.floor(progress * (end - start) + start);
       element.textContent = value + suffix;
-      element.classList.add('pulse'); // 添加脈動效果
+      element.classList.add('pulse');
       if (progress < 1) requestAnimationFrame(updateCounter);
-      else element.classList.remove('pulse'); // 動畫結束後移除脈動
+      else element.classList.remove('pulse');
     }
 
     return updateCounter;
@@ -296,26 +300,23 @@
 
   // IntersectionObserver 監測
   const statsSection = document.getElementById('stats-section');
-  const progressCounter = document.getElementById('progress-counter');
   let hasAnimated = false;
 
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting && !hasAnimated) {
-        // 啟動計數器動畫
         requestAnimationFrame(animateCounter('progress-counter', 0, 30, 2000, '%'));
         requestAnimationFrame(animateCounter('supporters-counter', 0, 528, 2000));
         requestAnimationFrame(animateCounter('days-counter', 0, 7, 1000));
         requestAnimationFrame(animateCounter('funds-counter', 0, 150, 2500));
-        hasAnimated = true; // 確保只觸發一次
-        observer.unobserve(statsSection); // 動畫完成後停止監測
+        hasAnimated = true;
+        observer.unobserve(statsSection);
       }
     });
   }, {
-    threshold: 0.5 // 當50%區域進入視野時觸發
+    threshold: 0.5
   });
 
-  // 開始監測
   observer.observe(statsSection);
 </script>
 
@@ -664,28 +665,38 @@
     max-width: 600px; /* 限制最大寬度 */
     margin: 0 auto; /* 置中 */
   }
+  .highlight-number {
+    font-family: 'Racing Sans One', sans-serif; /* 與標題一致 */
+    font-size: 28px; /* 增大字體 */
+    font-weight: bold; /* 加粗 */
+    color: #ffd700; /* 金色 */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 69, 0, 0.8); /* 增強光暈 */
+    display: inline-block;
+    padding: 2px 8px; /* 添加內邊距 */
+    background: rgba(255, 69, 0, 0.2); /* 微透明橘色背景 */
+    border-radius: 5px; /* 圓角 */
+  }
 </style>
 
 <form action="test.aspx" method="get" class="ae-2 huge fromAbove margin-bottom-2">
-  <h1 class="cool-text">募資狀態</h1>
-  <progress value="30" max="100"></progress>
-  <p class="cool-text">30% 達成率</p>
-</form>
-              
+    <h1 class="cool-text">募資狀態</h1>
+    <progress value="30" max="100"></progress>
+    <p class="cool-text"><span class="highlight-number">30%</span> 達成率</p>
+  </form>
 </div>
             
 <ul class="grid margin-top-10" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; margin-top: 10px; max-width: 1200px; margin-left: auto; margin-right: auto;">
   <li class="ae-4" style="flex: 1 1 300px; max-width: 33.33%; text-align: center; background: linear-gradient(135deg, #1a1a1a, #333); padding: 20px; border-radius: 10px; border: 2px solid #ff4500; box-shadow: 0 0 15px rgba(255, 69, 0, 0.5); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 25px rgba(255, 69, 0, 0.8)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px rgba(255, 69, 0, 0.5)';">
     <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #ff4500; font-size: 24px; margin-bottom: 10px;">支持人數</h3>
-    <p class="tiny" style="font-family: 'Arial', sans-serif; color: #ffd700; text-shadow: 0 0 5px rgba(255, 215, 0, 0.7); font-size: 16px; opacity: 0.9;">528位車主加入</p>
+    <p class="tiny"><span class="highlight-number">528</span> 位車主加入</p>
   </li>
   <li class="ae-5" style="flex: 1 1 300px; max-width: 33.33%; text-align: center; background: linear-gradient(135deg, #1a1a1a, #333); padding: 20px; border-radius: 10px; border: 2px solid #ff4500; box-shadow: 0 0 15px rgba(255, 69, 0, 0.5); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 25px rgba(255, 69, 0, 0.8)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px rgba(255, 69, 0, 0.5)';">
     <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #ff4500; font-size: 24px; margin-bottom: 10px;">剩餘時間</h3>
-    <p class="tiny" style="font-family: 'Arial', sans-serif; color: #ffd700; text-shadow: 0 0 5px rgba(255, 215, 0, 0.7); font-size: 16px; opacity: 0.9;">只剩下7天</p>
+    <p class="tiny">只剩下 <span class="highlight-number">7</span> 天</p>
   </li>
   <li class="ae-6" style="flex: 1 1 300px; max-width: 33.33%; text-align: center; background: linear-gradient(135deg, #1a1a1a, #333); padding: 20px; border-radius: 10px; border: 2px solid #ff4500; box-shadow: 0 0 15px rgba(255, 69, 0, 0.5); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 25px rgba(255, 69, 0, 0.8)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px rgba(255, 69, 0, 0.5)';">
     <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #ff4500; font-size: 24px; margin-bottom: 10px;">募資金額</h3>
-    <p class="tiny" style="font-family: 'Arial', sans-serif; color: #ffd700; text-shadow: 0 0 5px rgba(255, 215, 0, 0.7); font-size: 16px; opacity: 0.9;">已達150萬</p>
+    <p class="tiny">已達 <span class="highlight-number">150</span> 萬</p>
   </li>
 </ul>
 </div>
