@@ -466,11 +466,37 @@
     <h2 class="ae-2 huge fromAbove margin-bottom-2" style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #ff4500, 0 0 20px #ffd700; text-align: center;">加入改裝革命，獨享早鳥特權</h2>
     <p style="color: #ffd700; font-family: 'Arial', sans-serif; text-shadow: 0 0 5px rgba(255, 69, 0, 0.7); text-align: center; margin-bottom: 20px;">訂閱即獲早鳥折扣碼 + 免運費</p>
 
-    <!-- 表單 -->
-    <form action="https://your-getresponse-url.com" method="post" style="display: flex; justify-content: center; gap: 10px;">
-      <input type="email" name="email" placeholder="輸入你的 Email" required style="width: 300px; padding: 10px; background: #1a1a1a; border: 2px solid #ffd700; border-radius: 5px; color: #fff; font-family: 'Arial', sans-serif; outline: none; transition: border-color 0.3s ease;" onfocus="this.style.borderColor='#ff4500';" onblur="this.style.borderColor='#ffd700';">
-      <button type="submit" style="padding: 12px 25px; background: linear-gradient(45deg, #ff4500, #ffd700); border: none; border-radius: 5px; color: #fff; font-family: 'Racing Sans One', sans-serif; text-transform: uppercase; box-shadow: 0 0 10px rgba(255, 69, 0, 0.7); cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">立即訂閱</button>
-    </form>
+<!-- 表單 -->
+<form action="https://your-getresponse-url.com" method="post" style="display: flex; justify-content: center; gap: 10px;">
+  <input type="email" name="email" placeholder="輸入你的 Email" required style="width: 300px; padding: 10px; background: #1a1a1a; border: 2px solid #ffd700; border-radius: 5px; color: #fff; font-family: 'Arial', sans-serif; outline: none; transition: border-color 0.3s ease;" onfocus="this.style.borderColor='#ff4500';" onblur="this.style.borderColor='#ffd700';">
+  <button type="submit" style="padding: 12px 25px; background: linear-gradient(45deg, #ff4500, #ffd700); border: none; border-radius: 5px; color: #fff; font-family: 'Racing Sans One', sans-serif; text-transform: uppercase; box-shadow: 0 0 10px rgba(255, 69, 0, 0.7); cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">立即訂閱</button>
+</form>
+
+<style>
+  /* 預設樣式保持不變 */
+  form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* 手機螢幕調整 */
+  @media (max-width: 600px) {
+    form {
+      flex-direction: column; /* 改為垂直排列 */
+      align-items: center; /* 元素置中 */
+      gap: 15px; /* 增加上下間距 */
+    }
+    form input[type="email"] {
+      width: 100%; /* 輸入框全寬 */
+      max-width: 300px; /* 限制最大寬度 */
+    }
+    form button {
+      width: 100%; /* 按鈕全寬 */
+      max-width: 200px; /* 限制最大寬度 */
+    }
+  }
+</style>
 
     <!-- 小字提示 -->
     <p style="color: #ccc; font-family: 'Arial', sans-serif; font-size: 12px; text-shadow: 0 0 3px rgba(255, 69, 0, 0.5); text-align: center; margin-top: 10px; opacity: 0.8;">我們重視你的隱私，不會濫發垃圾信</p>
