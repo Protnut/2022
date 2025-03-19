@@ -172,7 +172,7 @@
               <a class="button ae-4 fromCenter" style="display: inline-block; padding: 12px 25px; background: #008EAA; color: #fff; text-decoration: none; border-radius: 5px; font-family: 'Racing Sans One', sans-serif;" href="#features">探索改裝細節</a>
             </li>
             <li class="col-6-12">
-              <img class="ae-4" width="605" src="assets/img/real_steering_wheel.jpg" alt="Modified Steering Wheel" data-action="zoom" style="display: block; margin: 0 auto; animation: rotateWheel 5s infinite linear;" />
+              <img class="ae-4" width="605" src="assets/img/t302_steering_wheel.png" alt="Modified Steering Wheel" data-action="zoom" style="display: block; margin: 0 auto; animation: rotateWheel 5s infinite linear;" />
               <style>
                 @keyframes rotateWheel {
                   0% { transform: rotate(0deg); }
@@ -207,7 +207,11 @@
             ::-moz-progress-bar { background: #008EAA; }
             .cool-text { font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900; letter-spacing: 2px; margin: 0; }
             .counter { font-family: 'Racing Sans One', sans-serif; color: #FFB900; text-shadow: 0 0 10px #6E2585; font-size: 36px; font-weight: bold; }
-            @media (max-width: 600px) { .grid { flex-direction: column; } }
+            @media (max-width: 600px) {
+              .grid { flex-direction: column; align-items: center; }
+              .grid li { flex: 1 1 100%; max-width: 100%; margin-bottom: 10px; }
+              .counter { font-size: 24px; text-align: center; }
+            }
           </style>
           <form action="test.aspx" method="get" class="ae-2 huge fromAbove" style="max-width: 600px; margin: 0 auto; background: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 15px;">
             <h2 class="cool-text">募資狀態</h2>
@@ -216,15 +220,15 @@
           </form>
           
           <ul class="grid margin-top-10" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;" id="stats-section">
-            <li class="ae-4" style="flex: 1 1 300px; max-width: 33.33%; text-align: center; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #931621;">
+            <li class="ae-4" style="flex: 1 1 300px; text-align: center; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #931621;">
               <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900;">支持人數</h3>
               <p class="tiny"><span class="counter" id="supporters-counter">0</span> 位車主</p>
             </li>
-            <li class="ae-5" style="flex: 1 1 300px; max-width: 33.33%; text-align: center; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #931621;">
+            <li class="ae-5" style="flex: 1 1 300px; text-align: center; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #931621;">
               <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900;">剩餘時間</h3>
               <p class="tiny">只剩 <span class="counter" id="days-counter">0</span> 天</p>
             </li>
-            <li class="ae-6" style="flex: 1 1 300px; max-width: 33.33%; text-align: center; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #931621;">
+            <li class="ae-6" style="flex: 1 1 300px; text-align: center; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #931621;">
               <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900;">募資金額</h3>
               <p class="tiny">已達 <span class="counter" id="funds-counter">0</span> 萬</p>
             </li>
@@ -302,25 +306,31 @@
                 <h6 style="font-family: 'Racing Sans One', sans-serif; color: #fff; background: #6E2585; padding: 5px; border-radius: 3px;">AUDI (2016-2023)</h6>
               </div>
             </div>
-            <div style="text-align: center; margin-top: 20px;">
+            <div style="text-align: center; margin-top: 20px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
               <select style="padding: 10px; background: #32373B; border: 2px solid #FFB900; color: #fff; border-radius: 5px;" onchange="alert('您的車型適用！請聯繫客服確認。')">
                 <option value="">選擇您的車型</option>
                 <option value="bmw">BMW 3系</option>
                 <option value="toyota">Toyota Corolla</option>
                 <option value="audi">Audi A4</option>
               </select>
-              <a href="/fitment" class="cta-button" style="margin-left: 10px; padding: 10px 20px; background: linear-gradient(45deg, #6E2585, #FFB900); color: #fff; font-family: 'Racing Sans One', sans-serif; text-decoration: none; border-radius: 5px; transition: transform 0.3s ease;">立即檢查我的車型</a>
+              <a href="/fitment" class="cta-button" style="padding: 10px 20px; background: linear-gradient(45deg, #6E2585, #FFB900); color: #fff; font-family: 'Racing Sans One', sans-serif; text-decoration: none; border-radius: 5px; transition: transform 0.3s ease;">立即檢查我的車型</a>
             </div>
+            <style>
+              @media (max-width: 600px) {
+                .fix-7-12 > div[style*="text-align: center"] { flex-direction: column; align-items: center; gap: 15px; }
+                .cta-button { padding: 8px 15px; font-size: 14px; }
+              }
+            </style>
           </div>
         </div>
 
         <!-- 訂閱區 -->
-        <div class="fix-12-12 toCenter">
+          <div class="fix-12-12 toCenter">
           <div class="fix-7-12" style="background: #32373B; padding: 30px; border-radius: 10px; box-shadow: 0 0 20px rgba(110, 37, 133, 0.5);">
             <h2 class="ae-2 huge fromAbove margin-bottom-2" style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900; text-align: center;">搶先解鎖早鳥特權</h2>
             <p style="color: #FFB900; text-shadow: 0 0 5px rgba(110, 37, 133, 0.7); text-align: center; margin-bottom: 20px;">訂閱享 NT$500 折扣 + 免運費</p>
             <form action="https://your-getresponse-url.com" method="post" style="display: flex; justify-content: center; gap: 10px;">
-              <input type="email" name="email" placeholder="輸入 Email，搶 NT$500 折扣" required style="width: 300px; padding: 10px; background: #191716; border: 2px solid #FFB900; border-radius: 5px; color: #fff; outline: none;" onfocus="this.style.borderColor='#6E2585';" onblur="this.style.borderColor='#FFB900';">
+              <input type="email" name="email" placeholder="輸入 Email，搶 NT$500 折扣" required style="width: 250px; padding: 10px; background: #191716; border: 2px solid #FFB900; border-radius: 5px; color: #fff; outline: none;" onfocus="this.style.borderColor='#6E2585';" onblur="this.style.borderColor='#FFB900';">
               <button type="submit" style="padding: 12px 25px; background: linear-gradient(45deg, #6E2585, #FFB900); border: none; border-radius: 5px; color: #fff; font-family: 'Racing Sans One', sans-serif;">立即訂閱</button>
             </form>
             <p style="color: #E0E2DB; font-size: 12px; text-align: center; margin-top: 10px; opacity: 0.8;">我們重視你的隱私，不會濫發垃圾信</p>
