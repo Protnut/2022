@@ -246,44 +246,59 @@
         </div>
 
         <!-- 產品核心賣點區 -->
-        <style>
-          .feature-section { background: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 15px; box-shadow: 0 0 20px rgba(110, 37, 133, 0.5); }
-          .feature { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
-          .icon { width: 48px; height: 48px; display: flex; justify-content: center; align-items: center; border: 2px solid #FFB900; border-radius: 50%; transition: all 0.3s ease; }
-          .icon:hover { transform: scale(1.2) rotate(10deg); box-shadow: 0 0 15px rgba(255, 185, 0, 0.8); }
-          .text { color: #E0E2DB; font-family: 'Racing Sans One', sans-serif; text-shadow: 0 0 5px rgba(110, 37, 133, 0.7); font-size: 18px; }
-          .desc { color: #E0E2DB; font-size: 14px; opacity: 0.8; }
-          .title { color: #fff; font-family: 'Racing Sans One', sans-serif; text-shadow: 0 0 10px #FFB900; font-size: 32px; text-align: center; margin-bottom: 20px; }
-          .cta-button { padding: 10px 20px; background: linear-gradient(45deg, #6E2585, #FFB900); color: #fff; font-family: 'Racing Sans One', sans-serif; text-decoration: none; border-radius: 5px; transition: transform 0.3s ease; }
-          .cta-button:hover { transform: scale(1.05); }
-        </style>
-        <div class="feature-section" style="max-width: 600px; margin: 20px auto;" id="features">
-          <h2 class="title ae-2 huge fromAbove">你的方向盤，三大升級</h2>
-          <div class="feature">
-            <div class="icon"><svg width="24" height="24" fill="#FFB900"><path d="M12 2a10 10 0 00-10 10h4v2h4v-2h4a10 10 0 00-2-18z"/></svg></div>
-            <div>
-              <p class="text">不拆盤改裝，保固無憂</p>
-              <p class="desc">不影響安全氣囊與保險</p>
-            </div>
-          </div>
-          <div class="feature">
-            <div class="icon"><svg width="24" height="24" fill="#FFB900"><path d="M12 2l-10 20h20L12 2z"/></svg></div>
-            <div>
-              <p class="text">超跑級碳纖，永不黃變</p>
-              <p class="desc">耐溫提升 50%</p>
-            </div>
-          </div>
-          <div class="feature">
-            <div class="icon"><svg width="24" height="24" fill="#FFB900"><path d="M2 12h20M12 2v20"/></svg></div>
-            <div>
-              <p class="text">全球首創，你的專屬圖樣</p>
-              <p class="desc">轉印車標或寵物照</p>
-            </div>
-          </div>
-          <div style="text-align: center; margin-top: 20px;">
-            <a href="#customize" class="cta-button">設計我的方向盤</a>
-          </div>
-        </div>
+<style>
+  .feature-section { background: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 15px; box-shadow: 0 0 20px rgba(110, 37, 133, 0.5); }
+  .feature { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+  .icon { width: 68px; height: 68px; display: flex; justify-content: center; align-items: center; border: 2px solid #FFB900; border-radius: 50%; transition: all 0.3s ease; }
+  .icon:hover { transform: scale(1.2) rotate(10deg); box-shadow: 0 0 15px rgba(255, 185, 0, 0.8); }
+  .text { color: #E0E2DB; font-family: 'Racing Sans One', sans-serif; text-shadow: 0 0 5px rgba(110, 37, 133, 0.7); font-size: 24px; margin-bottom: 4px; margin-top: 20px; } /* 縮短底部間距 */
+  .desc { color: #E0E2DB; font-size: 18px; opacity: 0.8; margin-top: 0; } /* 移除頂部間距 */
+  .title { color: #fff; font-family: 'Racing Sans One', sans-serif; text-shadow: 0 0 10px #FFB900; font-size: 32px; text-align: center; margin-bottom: 20px; }
+  .cta-button { padding: 10px 20px; background: linear-gradient(45deg, #6E2585, #FFB900); color: #fff; font-family: 'Racing Sans One', sans-serif; text-decoration: none; border-radius: 5px; transition: transform 0.3s ease; }
+  .cta-button:hover { transform: scale(1.05); }
+</style>
+<div class="feature-section" style="max-width: 600px; margin: 20px auto;" id="features">
+  <h2 class="title ae-2 huge fromAbove">你的方向盤，三大升級</h2>
+  <div class="feature">
+    <div class="icon">
+      <svg width="54" height="54" fill="#FFB900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <!-- 鎖頭 (Lock) - 來源: SVG Repo -->
+        <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+      </svg>
+    </div>
+    <div>
+      <p class="text">不拆盤改裝，保固無憂</p>
+      <p class="desc">不影響安全氣囊與保險</p>
+    </div>
+  </div>
+  <div class="feature">
+    <div class="icon">
+      <svg width="54" height="54" fill="#FFB900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <!-- 火箭 (Rocket) - 來源: Flaticon -->
+        <path d="M12 2L9 8H5l3 4-3 8h6l3-6 3 6h6l-3-8 3-4h-4l-3-6zm0 4.5l2 4h-4l2-4z"/>
+      </svg>
+    </div>
+    <div>
+      <p class="text">超跑級碳纖，永不黃變</p>
+      <p class="desc">耐溫提升 50%</p>
+    </div>
+  </div>
+  <div class="feature">
+    <div class="icon">
+      <svg width="54" height="54" fill="#FFB900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <!-- 閃電 (Lightning) - 來源: SVG Repo -->
+        <path d="M13 2L3 14h7v8l10-12h-7z"/>
+      </svg>
+    </div>
+    <div>
+      <p class="text">全球首創，你的專屬圖樣</p>
+      <p class="desc">轉印車標或寵物照</p>
+    </div>
+  </div>
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="#customize" class="cta-button">設計我的方向盤</a>
+  </div>
+</div>
 
         <!-- 車型適用性區 -->
         <div class="fix-12-12 toCenter">
@@ -441,123 +456,184 @@
   <div class="content">
     <div class="container">
       <div class="wrap">
- 
-               
-<!-- 頁面標題 -->
-<div style="text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #6E2585, #1a1a1a); border-bottom: 2px solid #FFB900;">
-  <h1 class="ae-1" style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900; font-size: 36px;">握住極致，碳纖維方向盤新革命</h1>
-  <p class="hero ae-2 margin-bottom-3" style="font-family: 'Arial', sans-serif; color: #FFB900; font-size: 20px; text-shadow: 0 0 5px rgba(255, 185, 0, 0.7);"><span class="opacity-8">安心、耐用、有個性——改裝你的駕馭靈魂</span></p>
+        <!-- 頁面標題 -->
+<div style="text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #6E2585, #32373B); border-bottom: 2px solid #FFB900; position: relative; overflow: hidden;">
+  <h1 class="ae-1" style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900; font-size: 36px; position: relative; z-index: 2;">掌控未來：你的專屬碳纖方向盤</h1>
+  <p class="hero ae-2 margin-bottom-3" style="font-family: 'Arial', sans-serif; color: #FFB900; font-size: 20px; text-shadow: 0 0 5px rgba(255, 185, 0, 0.7); position: relative; z-index: 2;"><span class="opacity-8">無損改裝｜航太碳纖｜全球首創個性化</span></p>
+  <style>
+    @keyframes rotateWheel { 
+      0% { transform: rotate(0deg); } 
+      50% { transform: rotate(3deg); } 
+      100% { transform: rotate(0deg); } 
+    }
+    .title-bg { 
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+      opacity: 0.15; 
+      object-fit: cover; 
+      animation: rotateWheel 5s infinite ease-in-out; 
+      z-index: 1; 
+    }
+    @media (max-width: 600px) {
+      .title-container { 
+        padding: 20px 10px; 
+      }
+      .title-container h1 { 
+        font-size: 28px; 
+      }
+      .title-container p { 
+        font-size: 16px; 
+        margin-bottom: 1rem; 
+      }
+      .title-bg { 
+        animation: none; /* 手機上禁用動畫 */
+        height: 120%; /* 稍微放大避免空白 */
+      }
+    }
+  </style>
+  <img class="title-bg" src="assets/img/background/features_back.jpg" alt="Steering Wheel Animation" />
 </div>
 
-<!-- 產品亮點區 -->
-<div class="fix-10-12" style="margin: 0 auto; padding: 20px;">
-  <ul class="grid grid-83 equal" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-    <li class="col-4-12 ae-3" style="flex: 1 1 300px; max-width: 120%; background: linear-gradient(135deg, #6E2585, #1a1a1a); padding: 20px; border-radius: 10px; border: 2px solid #FFB900; box-shadow: 0 0 15px rgba(255, 185, 0, 0.5); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
-      <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; font-size: 24px; text-shadow: 0 0 5px #FFB900;">安心改裝無損保固</h3>
-      <img class="ae-4" width="100%" src="assets/img/Video_dot.png" alt="BMW Demo" style="border-radius: 5px; margin: 10px 0;" data-action="zoom"/>
-      <div class="ae-5">
-        <h6 style="font-family: 'Arial', sans-serif; color: #FFB900; font-size: 14px; text-transform: uppercase; opacity: 0.6;">BMW</h6>
-      </div>
-      <div class="margin-top-3 margin-bottom-3 equalElement ae-6">
-        <ul style="font-family: 'Arial', sans-serif; color: #fff; font-size: 16px; padding: 0; list-style: none;">
-          <li><strong>不拆原方向盤</strong></li>
-          <li><strong>不碰安全氣囊</strong></li>
-          <li><strong>不失原廠保固</strong></li>
-          <li><strong>無損汽車保險</strong></li>
-          <li style="opacity: 0.7;">打臉 "怕就不要改"</li>
-          <li style="opacity: 0.7;">既改裝又安全</li>
-        </ul>
-      </div>
-    </li>
-    <li class="col-4-12 ae-4" style="flex: 1 1 300px; max-width: 120%; background: linear-gradient(135deg, #6E2585, #1a1a1a); padding: 20px; border-radius: 10px; border: 2px solid #FFB900; box-shadow: 0 0 15px rgba(255, 185, 0, 0.5); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
-      <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; font-size: 24px; text-shadow: 0 0 5px #FFB900;">耐用抗溫不黃化</h3>
-      <img class="ae-4" width="100%" src="assets/img/Video_usa.png" alt="Toyota Demo" style="border-radius: 5px; margin: 10px 0;" data-action="zoom"/>
-      <div class="ae-6">
-        <h6 style="font-family: 'Arial', sans-serif; color: #FFB900; font-size: 14px; text-transform: uppercase; opacity: 0.6;">TOYOTA</h6>
-      </div>
-      <div class="margin-top-3 margin-bottom-3 equalElement ae-7">
-        <ul style="font-family: 'Arial', sans-serif; color: #fff; font-size: 16px; padding: 0; list-style: none;">
-          <li><strong>顛覆傳統材質</strong></li>
-          <li><strong>航太超跑材料</strong></li>
-          <li><strong>乾式碳纖維</strong></li>
-          <li style="opacity: 0.8;">耐溫達140°C</li>
-          <li style="opacity: 0.8;">抗UV不黃化</li>
-        </ul>
-      </div>
-    </li>
-    <li class="col-4-12 ae-5" style="flex: 1 1 300px; max-width: 120%; background: linear-gradient(135deg, #6E2585, #1a1a1a); padding: 20px; border-radius: 10px; border: 2px solid #FFB900; box-shadow: 0 0 15px rgba(255, 185, 0, 0.5); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
-      <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; font-size: 24px; text-shadow: 0 0 5px #FFB900;">個性化圖像客製</h3>
-      <img class="ae-4" width="100%" src="assets/img/Video_war.png" alt="Audi Demo" style="border-radius: 5px; margin: 10px 0;" data-action="zoom"/>
-      <div class="ae-7">
-        <h6 style="font-family: 'Arial', sans-serif; color: #FFB900; font-size: 14px; text-transform: uppercase; opacity: 0.6;">AUDI</h6>
-      </div>
-      <div class="margin-top-3 margin-bottom-3 equalElement ae-8">
-        <ul style="font-family: 'Arial', sans-serif; color: #fff; font-size: 16px; padding: 0; list-style: none;">
-          <li><strong>唯一圖樣客製</strong></li>
-          <li><strong>金油油墨轉印</strong></li>
-          <li><strong>個性化方向盤</strong></li>
-          <li style="opacity: 0.8;">平滑無異物感</li>
-          <li style="opacity: 0.8;">風格融入生活</li>
-        </ul>
-      </div>
-    </li>
-  </ul>
-  <div style="text-align: center; margin: 20px 0;">
-    <a href="#" class="button ae-3" style="display: inline-block; padding: 15px 30px; background: linear-gradient(45deg, #FFB900, #6E2585); color: #fff; font-family: 'Arial', sans-serif; font-size: 18px; text-decoration: none; border-radius: 5px; box-shadow: 0 0 10px rgba(255, 185, 0, 0.7); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">探索更多，立即支持</a>
-  </div>
-</div>
-          
-<!-- 影片展示區 -->
-<div class="fix-12-12" style="text-align: center; padding: 20px; background: #1a1a1a;">
-  <h1 class="ae-1" style="font-family: 'Racing Sans One', sans-serif; color: #fff; font-size: 32px; text-shadow: 0 0 10px #FFB900;">親眼感受它的不同</h1>
-<li class="col-6-12 left ae-5 fromCenter">
-              <ul class="slider animated margin-top-4" data-slider-id="60-4">
-                <li class="selected fromCenter">
-                  <div class="popupTrigger videoThumbnail shadow rounded" data-popup-id="60-4">
-                    <img class="wide" src="assets/img/background/img-95_1.jpg" alt="Video Thumbnail"/>
-                  </div>
-                </li>
-              </ul>
+        <!-- 產品亮點區 -->
+        <div class="fix-10-12" style="margin: 0 auto; padding: 20px;">
+          <ul class="grid grid-83 equal" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+            <li class="col-4-12 ae-3" style="flex: 1 1 300px; max-width: 100%; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #FFB900; box-shadow: 0 0 15px rgba(255, 185, 0, 0.5); transition: transform 0.3s ease, opacity 0.5s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <svg width="24" height="24" fill="#FFB900" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; font-size: 24px; text-shadow: 0 0 5px #FFB900;">安心改裝無損保固</h3>
+              </div>
+              <img class="ae-4" width="100%" src="assets/img/bmw_steering_mod.jpg" alt="BMW 無損改裝方向盤示範" style="border-radius: 5px; margin: 10px 0;" data-action="zoom"/>
+              <div class="ae-5">
+                <h6 style="font-family: 'Arial', sans-serif; color: #FFB900; font-size: 14px; text-transform: uppercase; opacity: 0.6;">BMW 3系 2015-2023</h6>
+              </div>
+              <div class="margin-top-3 margin-bottom-3 equalElement ae-6">
+                <ul style="font-family: 'Arial', sans-serif; color: #E0E2DB; font-size: 16px; padding: 0; list-style: none;">
+                  <li><strong>3分鐘無損安裝</strong></li>
+                  <li><strong>不碰安全氣囊</strong></li>
+                  <li><strong>保固與保險無憂</strong></li>
+                  <li style="opacity: 0.7;">義大利頭層皮革</li>
+                </ul>
+              </div>
             </li>
-    <p></p>
-  <a href="#" class="button ae-3" style="display: inline-block; padding: 15px 30px; background: #FFB900; color: #6E2585; font-family: 'Arial', sans-serif; font-size: 18px; font-weight: bold; text-decoration: none; border-radius: 5px; box-shadow: 0 0 10px rgba(255, 185, 0, 0.7); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">喜歡它？支持募資</a>
-</div>
-
-          <!-- Popup Video -->
-<div class="popup autoplay" data-popup-id="60-4">
-  <div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-        <div class="fix-10-12">
-          <div class="embedVideo popupContent">
-            <iframe src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_1MB.mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <li class="col-4-12 ae-4" style="flex: 1 1 300px; max-width: 100%; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #FFB900; box-shadow: 0 0 15px rgba(255, 185, 0, 0.5); transition: transform 0.3s ease, opacity 0.5s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <svg width="24" height="24" fill="#FFB900" viewBox="0 0 24 24"><path d="M12 2L9 8H5l3 4-3 8h6l3-6 3 6h6l-3-8 3-4h-4l-3-6zm0 4.5l2 4h-4l2-4z"/></svg>
+                <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; font-size: 24px; text-shadow: 0 0 5px #FFB900;">耐用抗溫不黃化</h3>
+              </div>
+              <img class="ae-4" width="100%" src="assets/img/toyota_steering_mod.jpg" alt="Toyota 耐用碳纖方向盤" style="border-radius: 5px; margin: 10px 0;" data-action="zoom"/>
+              <div class="ae-6">
+                <h6 style="font-family: 'Arial', sans-serif; color: #FFB900; font-size: 14px; text-transform: uppercase; opacity: 0.6;">Toyota Corolla 2018-2023</h6>
+              </div>
+              <div class="margin-top-3 margin-bottom-3 equalElement ae-7">
+                <ul style="font-family: 'Arial', sans-serif; color: #E0E2DB; font-size: 16px; padding: 0; list-style: none;">
+                  <li><strong>航太乾式碳纖</strong></li>
+                  <li><strong>耐溫達 140°C</strong></li>
+                  <li><strong>抗UV不黃化</strong></li>
+                  <li style="opacity: 0.7;">鋼模高壓成型</li>
+                </ul>
+              </div>
+            </li>
+            <li class="col-4-12 ae-5" style="flex: 1 1 300px; max-width: 100%; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #FFB900; box-shadow: 0 0 15px rgba(255, 185, 0, 0.5); transition: transform 0.3s ease, opacity 0.5s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <svg width="24" height="24" fill="#FFB900" viewBox="0 0 24 24"><path d="M13 2L3 14h7v8l10-12h-7z"/></svg>
+                <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; font-size: 24px; text-shadow: 0 0 5px #FFB900;">個性化圖像客製</h3>
+              </div>
+              <img class="ae-4" width="100%" src="assets/img/audi_steering_mod.jpg" alt="Audi 客製化方向盤" style="border-radius: 5px; margin: 10px 0;" data-action="zoom"/>
+              <div class="ae-7">
+                <h6 style="font-family: 'Arial', sans-serif; color: #FFB900; font-size: 14px; text-transform: uppercase; opacity: 0.6;">Audi A4 2016-2023</h6>
+              </div>
+              <div class="margin-top-3 margin-bottom-3 equalElement ae-8">
+                <ul style="font-family: 'Arial', sans-serif; color: #E0E2DB; font-size: 16px; padding: 0; list-style: none;">
+                  <li><strong>全球首創轉印</strong></li>
+                  <li><strong>專屬圖樣設計</strong></li>
+                  <li><strong>平滑無異物感</strong></li>
+                  <li style="opacity: 0.7;">台製邦迪線</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <div style="text-align: center; margin: 20px 0;">
+            <a href="#" class="button ae-3" style="display: inline-block; padding: 15px 30px; background: linear-gradient(45deg, #FFB900, #6E2585); color: #fff; font-family: 'Arial', sans-serif; font-size: 18px; text-decoration: none; border-radius: 5px; box-shadow: 0 0 10px rgba(255, 185, 0, 0.7); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">探索更多，立即支持</a>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
 
+        <!-- 影片展示區 -->
+        <div class="fix-12-12" style="text-align: center; padding: 20px; background: #191716;">
+          <h1 class="ae-1" style="font-family: 'Racing Sans One', sans-serif; color: #fff; font-size: 32px; text-shadow: 0 0 10px #FFB900;">親眼感受它的不同</h1>
+          <ul class="slider animated margin-top-4" data-slider-id="60-4" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <li class="selected fromCenter" style="flex: 1 1 300px; max-width: 400px;">
+              <div class="popupTrigger videoThumbnail shadow rounded" data-popup-id="60-4-1">
+                <img class="wide" src="assets/img/install_demo.jpg" alt="3分鐘無損安裝示範" style="position: relative;"/>
+                <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 24px; color: #FFB900;">▶</span>
+                <p style="color: #E0E2DB; font-size: 14px; margin-top: 5px;">3分鐘無損安裝</p>
+              </div>
+            </li>
+            <li class="fromCenter" style="flex: 1 1 300px; max-width: 400px;">
+              <div class="popupTrigger videoThumbnail shadow rounded" data-popup-id="60-4-2">
+                <img class="wide" src="assets/img/durability_test.jpg" alt="耐溫測試展示" style="position: relative;"/>
+                <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 24px; color: #FFB900;">▶</span>
+                <p style="color: #E0E2DB; font-size: 14px; margin-top: 5px;">耐溫測試</p>
+              </div>
+            </li>
+          </ul>
+          <div style="margin: 20px 0;">
+            <a href="#" class="button ae-3" style="display: inline-block; padding: 15px 30px; background: #FFB900; color: #6E2585; font-family: 'Arial', sans-serif; font-size: 18px; font-weight: bold; text-decoration: none; border-radius: 5px; box-shadow: 0 0 10px rgba(255, 185, 0, 0.7); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">喜歡它？支持募資</a>
+            <p style="color: #E0E2DB; font-size: 14px; margin-top: 10px;">募資倒數：<span id="countdown">7天</span></p>
+          </div>
+        </div>
 
-<!-- 行動召喚區 -->
-<div class="fix-6-12" style="text-align: center; padding: 40px 20px; margin: 0 auto; background: linear-gradient(135deg, #6E2585, #1a1a1a);">
-  <h1 class="ae-2 huge fromAbove margin-bottom-2" style="font-family: 'Racing Sans One', sans-serif; color: #fff; font-size: 40px; text-shadow: 0 0 10px #FFB900;">準備好升級你的方向盤了嗎？</h1>
-  <div style="margin: 20px 0;">
-    <a href="#" class="button ae-3" style="display: inline-block; padding: 15px 30px; background: #FFB900; color: #6E2585; font-family: 'Arial', sans-serif; font-size: 20px; font-weight: bold; text-decoration: none; border-radius: 5px; box-shadow: 0 0 15px rgba(255, 185, 0, 0.7); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">立即支持募資</a>
-    <a href="#" class="button ae-3" style="display: inline-block; padding: 15px 30px; background: transparent; color: #fff; font-family: 'Arial', sans-serif; font-size: 20px; text-decoration: none; border-radius: 5px; border: 2px solid #008EAA; margin-left: 10px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">訂閱獲最新資訊</a>
-  </div>
-  <p class="hero ae-2 margin-bottom-3" style="font-family: 'Arial', sans-serif; color: #FFB900; font-size: 18px; text-shadow: 0 0 5px rgba(255, 185, 0, 0.7);"><span class="opacity-8">早鳥支持者享限量折扣</span></p>
-</div>
+        <!-- Popup Video -->
+        <div class="popup autoplay" data-popup-id="60-4-1">
+          <div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
+          <div class="content">
+            <div class="container">
+              <div class="wrap">
+                <div class="fix-10-12">
+                  <div class="embedVideo popupContent">
+                    <iframe src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_1MB.mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup autoplay" data-popup-id="60-4-2">
+          <div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
+          <div class="content">
+            <div class="container">
+              <div class="wrap">
+                <div class="fix-10-12">
+                  <div class="embedVideo popupContent">
+                    <iframe src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_1MB.mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<!-- JavaScript for Video -->
-<script>
-  function playVideo() {
-    document.getElementById('videoThumbnail').style.display = 'none';
-    document.getElementById('videoPlayer').style.display = 'block';
-  }
-</script>
+        <!-- 行動召喚區 -->
+        <div class="fix-6-12" style="text-align: center; padding: 40px 20px; margin: 0 auto; background: linear-gradient(135deg, #6E2585, #32373B);">
+          <h1 class="ae-2 huge fromAbove margin-bottom-2" style="font-family: 'Racing Sans One', sans-serif; color: #fff; font-size: 40px; text-shadow: 0 0 10px #FFB900;">現在就打造你的夢幻方向盤！</h1>
+          <div style="margin: 20px 0;">
+            <a href="#" class="button ae-3" style="display: inline-block; padding: 15px 30px; background: #FFB900; color: #6E2585; font-family: 'Arial', sans-serif; font-size: 20px; font-weight: bold; text-decoration: none; border-radius: 5px; box-shadow: 0 0 15px rgba(255, 185, 0, 0.7); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">立即支持募資</a>
+            <a href="#" class="button ae-3" style="display: inline-block; padding: 15px 30px; background: transparent; color: #008EAA; font-family: 'Arial', sans-serif; font-size: 20px; text-decoration: none; border-radius: 5px; border: 2px solid #008EAA; margin-left: 10px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">訂閱最新資訊</a>
+          </div>
+          <p class="hero ae-2 margin-bottom-3" style="font-family: 'Arial', sans-serif; color: #FFB900; font-size: 18px; text-shadow: 0 0 5px rgba(255, 185, 0, 0.7);"><span class="opacity-8">前 50 名享 NT$500 折扣 + 免運費</span></p>
+        </div>
 
+        <!-- JavaScript -->
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.ae-3, .ae-4, .ae-5, .ae-6, .ae-7, .ae-8').forEach(el => {
+              el.style.opacity = 0;
+              setTimeout(() => { el.style.opacity = 1; }, 500);
+            });
+          });
+        </script>
       </div>
     </div>
   </div>
