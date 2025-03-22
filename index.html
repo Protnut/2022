@@ -20,6 +20,8 @@
 
 	<!-- Fonts and Material Icons -->
 	<link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,600,700|Material+Icons"/>
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
  
 </head>
 <body class="slides horizontal simplifiedMobile animated">
@@ -154,25 +156,300 @@
   <div class="content">
     <div class="container">
       <div class="wrap">
-      
-        <div class="fix-12-12">
-          <ul class="flex fixedSpaces verticalCenter reverse">
+        <!-- 背景影片區 -->
+        <div class="fix-12-12" style="position: relative; min-height: 600px;">
+          <video autoplay muted playsinline loop style="position: absolute; top: 50%; left: 50%; width: 1390px; height: 782px; transform: translate(-50%, -50%); object-fit: cover; z-index: -1;">
+            <source src="https://protnut.github.io/2022/assets/videos/home_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div style="position: absolute; top: 50%; left: 50%; width: 1400px; height: 787px; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.5); z-index: 0;"></div>
+
+          <!-- 前景內容 -->
+          <ul class="flex fixedSpaces verticalCenter reverse" style="position: relative; z-index: 1; padding: 20px; min-height: 600px; display: flex; align-items: center;">
             <li class="col-6-12 left middle">
-              <h1 class="ae-1 fromLeft">Free horizontal slides template by FreeHTML5.</h1>
-              <p class="ae-2 fromLeft"><span class="opacity-8">The sudden hunch, the creative leap of mind that “sees” in a flash how to solve a problem in a simple way, is something quite&nbsp;different.</span></p>
-              <a class="button blue gradient ae-3 fromCenter cropLeft">Get Started</a><a class="button white ae-4 fromCenter">Learn more</a>
+              <h1 class="ae-1 fromLeft" style="color: #fff; text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); font-family: 'Racing Sans One', sans-serif;">不拆盤改裝，極致碳纖新體驗</h1>
+              <p class="ae-2 fromLeft" style="color: #FFB900; text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); font-size: 18px;"><span class="opacity-8">無損安裝｜航太碳纖｜你的風格</span></p>
+              <a class="button ae-3 fromCenter" style="display: inline-block; padding: 12px 25px; margin-right: 10px; background: linear-gradient(45deg, #6E2585, #FFB900); color: #fff; text-decoration: none; border-radius: 5px; font-family: 'Racing Sans One', sans-serif;" href="#early-bird">立即搶早鳥</a>
+              <a class="button ae-4 fromCenter" style="display: inline-block; padding: 12px 25px; background: #008EAA; color: #fff; text-decoration: none; border-radius: 5px; font-family: 'Racing Sans One', sans-serif;" href="#features">探索改裝細節</a>
             </li>
             <li class="col-6-12">
-              <img class="ae-4" width="605" src="assets/img/iphones-34.png" alt="iPhones Thumbnail" data-action="zoom"/>
+              <img class="ae-4" width="605" src="assets/img/t302_steering_wheel.png" alt="Modified Steering Wheel" data-action="zoom" style="display: block; margin: 0 auto; animation: rotateWheel 5s infinite linear;" />
+              <style>
+                @keyframes rotateWheel {
+                  0% { transform: rotate(0deg); }
+                  25% { transform: rotate(5deg); }
+                  75% { transform: rotate(-5deg); }
+                  100% { transform: rotate(0deg); }
+                }
+              </style>
             </li>
           </ul>
         </div>
-        
+        <p> </p>
+
+        <!-- 募資狀態區 -->
+        <div class="fix-12-12 toCenter">
+          <style>
+            progress {
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              border-radius: 10px;
+              overflow: hidden;
+              height: 60px;
+              width: 100%;
+              max-width: 450px;
+              background: #008EAA;
+              border: 2px solid #FFB900;
+              box-shadow: 0 0 15px rgba(255, 185, 0, 0.7);
+            }
+            ::-webkit-progress-value { background: linear-gradient(45deg, #6E2585, #FFB900); border-radius: 8px; }
+            ::-moz-progress-value { background: linear-gradient(45deg, #6E2585, #FFB900); border-radius: 8px; }
+            ::-webkit-progress-bar { background: #008EAA; }
+            ::-moz-progress-bar { background: #008EAA; }
+            .cool-text { font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900; letter-spacing: 2px; margin: 0; }
+            .counter { font-family: 'Racing Sans One', sans-serif; color: #FFB900; text-shadow: 0 0 10px #6E2585; font-size: 36px; font-weight: bold; }
+            @media (max-width: 600px) {
+              .grid { flex-direction: column; align-items: center; }
+              .grid li { flex: 1 1 100%; max-width: 100%; margin-bottom: 10px; }
+              .counter { font-size: 24px; text-align: center; }
+            }
+          </style>
+          <form action="test.aspx" method="get" class="ae-2 huge fromAbove" style="max-width: 600px; margin: 0 auto; background: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 15px;">
+            <h2 class="cool-text">募資狀態</h2>
+            <progress value="30" max="100"></progress>
+            <p class="cool-text">目標 500 萬，已達 <span class="counter" id="progress-counter">0%</span></p>
+          </form>
+          
+          <ul class="grid margin-top-10" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;" id="stats-section">
+            <li class="ae-4" style="flex: 1 1 300px; text-align: center; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #931621;">
+              <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900;">支持人數</h3>
+              <p class="tiny"><span class="counter" id="supporters-counter">0</span> 位車主</p>
+            </li>
+            <li class="ae-5" style="flex: 1 1 300px; text-align: center; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #931621;">
+              <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900;">募資啟動剩餘時間</h3>
+              <p class="tiny">只剩 <span class="counter" id="days-counter">0</span> 天</p>
+            </li>
+            <li class="ae-6" style="flex: 1 1 300px; text-align: center; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #931621;">
+              <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900;">募資金額</h3>
+              <p class="tiny">已達 <span class="counter" id="funds-counter">0</span> 萬</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 早鳥優惠區 -->
+        <div class="fix-12-12 toCenter" id="early-bird">
+          <div class="fix-7-12">
+            <h2 class="ae-2 huge fromAbove margin-bottom-2" style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900;">限時早鳥：50 組倒數中</h2>
+            <h2 class="ae-2 huge fromAbove margin-bottom-2" style="font-family: 'Racing Sans One', sans-serif; color: #FFB900;">原價 NT$4,999 現僅 NT$2,999</h2>
+            <a href="#" class="button ae-3" style="font-size: 24px; padding: 15px 30px; background: linear-gradient(45deg, #6E2585, #FFB900); color: #fff; text-decoration: none; border-radius: 5px; font-family: 'Racing Sans One', sans-serif;" onmouseover="this.style.background='linear-gradient(45deg, #FFB900, #6E2585)';" onmouseout="this.style.background='linear-gradient(45deg, #6E2585, #FFB900)';">立即搶早鳥優惠</a>
+          </div>
+        </div>
+
+        <!-- 產品核心賣點區 -->
+<style>
+  .feature-section { background: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 15px; box-shadow: 0 0 20px rgba(110, 37, 133, 0.5); }
+  .feature { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+  .icon { width: 68px; height: 68px; display: flex; justify-content: center; align-items: center; border: 2px solid #FFB900; border-radius: 50%; transition: all 0.3s ease; }
+  .icon:hover { transform: scale(1.2) rotate(10deg); box-shadow: 0 0 15px rgba(255, 185, 0, 0.8); }
+  .text { color: #E0E2DB; font-family: 'Racing Sans One', sans-serif; text-shadow: 0 0 5px rgba(110, 37, 133, 0.7); font-size: 24px; margin-bottom: 4px; margin-top: 20px; } /* 縮短底部間距 */
+  .desc { color: #E0E2DB; font-size: 18px; opacity: 0.8; margin-top: 0; } /* 移除頂部間距 */
+  .title { color: #fff; font-family: 'Racing Sans One', sans-serif; text-shadow: 0 0 10px #FFB900; font-size: 32px; text-align: center; margin-bottom: 20px; }
+  .cta-button { padding: 10px 20px; background: linear-gradient(45deg, #6E2585, #FFB900); color: #fff; font-family: 'Racing Sans One', sans-serif; text-decoration: none; border-radius: 5px; transition: transform 0.3s ease; }
+  .cta-button:hover { transform: scale(1.05); }
+</style>
+<div class="feature-section" style="max-width: 600px; margin: 20px auto;" id="features">
+  <h2 class="title ae-2 huge fromAbove">你的方向盤，三大升級</h2>
+  <div class="feature">
+    <div class="icon">
+      <svg width="54" height="54" fill="#FFB900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <!-- 鎖頭 (Lock) - 來源: SVG Repo -->
+        <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+      </svg>
+    </div>
+    <div>
+      <p class="text">不拆盤改裝，保固無憂</p>
+      <p class="desc">不影響安全氣囊與保險</p>
+    </div>
+  </div>
+  <div class="feature">
+    <div class="icon">
+      <svg width="54" height="54" fill="#FFB900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <!-- 火箭 (Rocket) - 來源: Flaticon -->
+        <path d="M12 2L9 8H5l3 4-3 8h6l3-6 3 6h6l-3-8 3-4h-4l-3-6zm0 4.5l2 4h-4l2-4z"/>
+      </svg>
+    </div>
+    <div>
+      <p class="text">超跑級碳纖，永不黃變</p>
+      <p class="desc">耐溫提升 50%</p>
+    </div>
+  </div>
+  <div class="feature">
+    <div class="icon">
+      <svg width="54" height="54" fill="#FFB900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <!-- 閃電 (Lightning) - 來源: SVG Repo -->
+        <path d="M13 2L3 14h7v8l10-12h-7z"/>
+      </svg>
+    </div>
+    <div>
+      <p class="text">全球首創，你的專屬圖樣</p>
+      <p class="desc">轉印車標或寵物照</p>
+    </div>
+  </div>
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="#customize" class="cta-button">設計我的方向盤</a>
+  </div>
+</div>
+
+        <!-- 車型適用性區 -->
+        <div class="fix-12-12 toCenter">
+          <div class="fix-7-12" style="background: #28464B; padding: 20px; border-radius: 10px; box-shadow: 0 0 20px rgba(110, 37, 133, 0.5);">
+            <h2 class="ae-2 huge fromAbove margin-bottom-2" style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900; text-align: center;">你的愛車適用嗎？</h2>
+            <div style="position: relative; width: 100%; max-width: 610px; padding-bottom: 56.56%; margin: 0 auto 20px; height: 0;">
+              <iframe src="https://player.vimeo.com/video/307412404?h=b0cc5455fe&autoplay=1&loop=1&color=ffffff&title=0&byline=0&portrait=0&muted=1&controls=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 5px; border: 2px solid #FFB900;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+              <div style="position: absolute; bottom: 10px; left: 10px; color: #FFB900; font-family: 'Racing Sans One', sans-serif; text-shadow: 0 0 5px #6E2585;">BMW 實車改裝演示（3分鐘無損安裝）</div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 20px;">
+              <div class="ae-4" style="text-align: center;">
+                <a href="#"><img width="100%" src="assets/img/Mercedes-Benz_C300.jpg" alt="Mercedes-Benz C300" style="border-radius: 5px; border: 2px solid #FFB900;" /></a>
+                <h6 style="font-family: 'Racing Sans One', sans-serif; color: #fff; background: #6E2585; padding: 5px; border-radius: 3px;">Mercedes-Benz C300 (2010)</h6>
+              </div>
+              <div class="ae-4" style="text-align: center;">
+                <a href="/fitment"><img width="100%" src="assets/img/bmw_520i.jpg" alt="BMW 520i" style="border-radius: 5px; border: 2px solid #FFB900;" /></a>
+                <h6 style="font-family: 'Racing Sans One', sans-serif; color: #fff; background: #6E2585; padding: 5px; border-radius: 3px;">BMW 520i (1998)</h6>
+              </div>
+              <div class="ae-4" style="text-align: center;">
+                <a href="/fitment"><img width="100%" src="assets/img/bmw_316i.jpg" alt="BMW 316i" style="border-radius: 5px; border: 2px solid #FFB900;" /></a>
+                <h6 style="font-family: 'Racing Sans One', sans-serif; color: #fff; background: #6E2585; padding: 5px; border-radius: 3px;">BMW 316i (2013)</h6>
+              </div>
+              <div class="ae-4" style="text-align: center;">
+                <a href="/fitment"><img width="100%" src="assets/img/bmw_316i_b.jpg" alt="BMW 316i" style="border-radius: 5px; border: 2px solid #FFB900;" /></a>
+                <h6 style="font-family: 'Racing Sans One', sans-serif; color: #fff; background: #6E2585; padding: 5px; border-radius: 3px;">BMW 316i (2013)</h6>
+              </div>
+              <div class="ae-4" style="text-align: center;">
+                <a href="/fitment"><img width="100%" src="assets/img/hyundai_elantra.jpg" alt="Hyundai_Elantra" style="border-radius: 5px; border: 2px solid #FFB900;" /></a>
+                <h6 style="font-family: 'Racing Sans One', sans-serif; color: #fff; background: #6E2585; padding: 5px; border-radius: 3px;">Hyundai Elantra (2014)</h6>
+              </div>
+              <div class="ae-4" style="text-align: center;">
+                <a href="/fitment"><img width="100%" src="assets/img/ford_kuga.jpg" alt="Ford Kuga" style="border-radius: 5px; border: 2px solid #FFB900;" /></a>
+                <h6 style="font-family: 'Racing Sans One', sans-serif; color: #fff; background: #6E2585; padding: 5px; border-radius: 3px;">Ford Kuga (2015)</h6>
+              </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+              <select style="padding: 10px; background: #32373B; border: 2px solid #FFB900; color: #fff; border-radius: 5px;" onchange="alert('您的車型適用！請聯繫客服確認。')">
+                <option value="">選擇您的車型</option>
+                <option value="bmw">BMW 3系</option>
+                <option value="toyota">Toyota Corolla</option>
+                <option value="audi">Audi A4</option>
+              </select>
+              <a href="/fitment" class="cta-button" style="padding: 10px 20px; background: linear-gradient(45deg, #6E2585, #FFB900); color: #fff; font-family: 'Racing Sans One', sans-serif; text-decoration: none; border-radius: 5px; transition: transform 0.3s ease;">立即檢查我的車型</a>
+            </div>
+            <style>
+              @media (max-width: 600px) {
+                .fix-7-12 > div[style*="text-align: center"] { flex-direction: column; align-items: center; gap: 15px; }
+                .cta-button { padding: 8px 15px; font-size: 14px; }
+              }
+            </style>
+          </div>
+        </div>
+
+        <!-- 訂閱區 -->
+          <div class="fix-12-12 toCenter">
+          <div class="fix-7-12" style="background: #32373B; padding: 30px; border-radius: 10px; box-shadow: 0 0 20px rgba(110, 37, 133, 0.5);">
+            <h2 class="ae-2 huge fromAbove margin-bottom-2" style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900; text-align: center;">搶先解鎖早鳥特權</h2>
+            <p style="color: #FFB900; text-shadow: 0 0 5px rgba(110, 37, 133, 0.7); text-align: center; margin-bottom: 20px;">訂閱享 NT$500 折扣 + 免運費</p>
+            <form action="https://your-getresponse-url.com" method="post" style="display: flex; justify-content: center; gap: 10px;">
+              <input type="email" name="email" placeholder="輸入 Email，搶 NT$500 折扣" required style="width: 250px; padding: 10px; background: #191716; border: 2px solid #FFB900; border-radius: 5px; color: #fff; outline: none;" onfocus="this.style.borderColor='#6E2585';" onblur="this.style.borderColor='#FFB900';">
+              <button type="submit" style="padding: 12px 25px; background: linear-gradient(45deg, #6E2585, #FFB900); border: none; border-radius: 5px; color: #fff; font-family: 'Racing Sans One', sans-serif;">立即訂閱</button>
+            </form>
+            <p style="color: #E0E2DB; font-size: 12px; text-align: center; margin-top: 10px; opacity: 0.8;">我們重視你的隱私，不會濫發垃圾信</p>
+            <style>
+              @media (max-width: 600px) {
+                form { flex-direction: column; align-items: center; gap: 15px; }
+                form input[type="email"] { width: 100%; max-width: 300px; }
+                form button { width: 150px; }
+              }
+            </style>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer style="background: #191716; padding: 20px; color: #fff; box-shadow: 0 0 20px rgba(110, 37, 133, 0.5);">
+          <div class="fix-12-12 toCenter" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; gap: 20px;">
+          <div style="flex: 1; min-width: 250px; text-align: left;">
+  <img src="assets/img/logo_pc.png" alt="Beurst Logo" style="width: 100px; max-width: 100%; height: auto; margin: 0; display: block;" />
+  <p style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 5px #FFB900; font-size: 14px;">改裝新世代，從方向盤開始</p>
+  <style>
+    @media (max-width: 600px) {
+      img[src="assets/img/xai_tuning_logo.png"] {
+        width: 100px;
+      }
+    }
+  </style>
+            </div>
+            <div style="flex: 1; min-width: 200px; text-align: center;">
+  <a href="https://facebook.com" target="_blank" style="margin: 0 10px; text-decoration: none;">
+    <i class="fab fa-facebook" style="font-size: 36px; color: #fff; transition: color 0.3s ease;" onmouseover="this.style.color='#008EAA';" onmouseout="this.style.color='#fff';"></i>
+  </a>
+  <a href="https://instagram.com" target="_blank" style="margin: 0 10px; text-decoration: none;">
+    <i class="fab fa-instagram" style="font-size: 36px; color: #fff; transition: color 0.3s ease;" onmouseover="this.style.color='#008EAA';" onmouseout="this.style.color='#fff';"></i>
+  </a>
+  <a href="https://x.com" target="_blank" style="margin: 0 10px; text-decoration: none;">
+    <i class="fab fa-x-twitter" style="font-size: 36px; color: #fff; transition: color 0.3s ease;" onmouseover="this.style.color='#008EAA';" onmouseout="this.style.color='#fff';"></i>
+  </a>
+            </div>
+            <div style="flex: 1; min-width: 250px; text-align: right;">
+<p style="margin: 5px 0;">
+  <i class="fas fa-envelope" style="font-size: 24px; color: #FFB900;"></i>
+  <a href="mailto:contact@beurst.com" style="color: #fff; text-decoration: none;">contact@beurst.com</a>
+</p>
+<p style="margin: 5px 0;">
+  <i class="fab fa-line" style="font-size: 24px; color: #FFB900;"></i>
+  <a href="https://lin.ee/GmiO256" target="_blank" style="color: #fff; text-decoration: none;">@914dpsqc</a>
+</p>
+              <a href="/faq" style="color: #008EAA; text-decoration: none; margin-right: 10px;">常見問題</a>
+              <a href="/crowdfunding" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background: linear-gradient(45deg, #6E2585, #FFB900); color: #fff; font-family: 'Racing Sans One', sans-serif; text-decoration: none; border-radius: 5px;">立即支持募資</a>
+            </div>
+          </div>
+          <div style="text-align: center; margin-top: 20px; font-size: 12px; color: #E0E2DB;">
+            © 2025 Beurst. All Rights Reserved. | <a href="/privacy" style="color: #FFB900; text-decoration: none;">隱私政策</a>
+          </div>
+        </footer>
       </div>
     </div>
   </div>
-  <div class="background" style="background-image:url(assets/img/background/img-34.jpg)"></div>
 </section>
+
+<script>
+  // 計數器動畫
+  function animateCounter(id, start, end, duration, suffix = '') {
+    const element = document.getElementById(id);
+    let startTime = null;
+    function updateCounter(timestamp) {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const value = Math.floor(progress * (end - start) + start);
+      element.textContent = value + suffix;
+      if (progress < 1) requestAnimationFrame(updateCounter);
+    }
+    return updateCounter;
+  }
+
+  const statsSection = document.getElementById('stats-section');
+  let hasAnimated = false;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !hasAnimated) {
+        requestAnimationFrame(animateCounter('progress-counter', 0, 30, 2000, '%'));
+        requestAnimationFrame(animateCounter('supporters-counter', 0, 528, 2000));
+        requestAnimationFrame(animateCounter('days-counter', 0, 7, 1000));
+        requestAnimationFrame(animateCounter('funds-counter', 0, 150, 2500));
+        hasAnimated = true;
+        observer.unobserve(statsSection);
+      }
+    });
+  }, { threshold: 0.5 });
+  observer.observe(statsSection);
+</script>
 
 <!-- Slide 2 (#60) -->
 <section class="slide fade-6 kenBurns" data-name="videos">
