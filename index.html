@@ -210,26 +210,26 @@
             .counter { font-family: 'Racing Sans One', sans-serif; color: #FFB900; text-shadow: 0 0 10px #6E2585; font-size: 36px; font-weight: bold; }
             @media (max-width: 600px) {
               .grid { flex-direction: column; align-items: center; }
-              .grid li { flex: 1 1 100%; max-width: 100%; margin-bottom: 10px; }
+              .grid li { flex: 1 1 auto; width: 90%; max-width: 600px; margin-bottom: 15px; padding: 15px; }
               .counter { font-size: 24px; text-align: center; }
             }
           </style>
-          <form action="test.aspx" method="get" class="ae-2 huge fromAbove" style="max-width: 600px; margin: 0 auto; background: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 15px;">
+          <form action="test.aspx" method="get" class="ae-2 huge fromAbove; margin-top-6" style="max-width: 600px; margin: 0 auto; background: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 15px;">
             <h2 class="cool-text">募資狀態</h2>
             <progress value="30" max="100"></progress>
             <p class="cool-text">目標 500 萬，已達 <span class="counter" id="progress-counter">0%</span></p>
           </form>
           
-          <ul class="grid margin-top-10" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;" id="stats-section">
-            <li class="ae-4" style="flex: 1 1 300px; text-align: center; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #931621;">
+          <ul class="grid margin-top-2" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;" id="stats-section">
+            <li class="ae-4" style="flex: 1 1 auto; text-align: center; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #931621;">
               <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900;">支持人數</h3>
               <p class="tiny"><span class="counter" id="supporters-counter">0</span> 位車主</p>
             </li>
-            <li class="ae-5" style="flex: 1 1 300px; text-align: center; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #931621;">
+            <li class="ae-5" style="flex: 1 1 auto; text-align: center; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #931621;">
               <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900;">募資啟動剩餘時間</h3>
               <p class="tiny">只剩 <span class="counter" id="days-counter">0</span> 天</p>
             </li>
-            <li class="ae-6" style="flex: 1 1 300px; text-align: center; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #931621;">
+            <li class="ae-6" style="flex: 1 1 auto; text-align: center; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #931621;">
               <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900;">募資金額</h3>
               <p class="tiny">已達 <span class="counter" id="funds-counter">0</span> 萬</p>
             </li>
@@ -237,7 +237,7 @@
         </div>
 
         <!-- 早鳥優惠區 -->
-        <div class="fix-12-12 toCenter" id="early-bird">
+        <div class="fix-12-12 toCenter; margin-top-5" id="early-bird">
           <div class="fix-7-12">
             <h2 class="ae-2 huge fromAbove margin-bottom-2" style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900;">限時早鳥：50 組倒數中</h2>
             <h2 class="ae-2 huge fromAbove margin-bottom-2" style="font-family: 'Racing Sans One', sans-serif; color: #FFB900;">原價 NT$4,999 現僅 NT$2,999</h2>
@@ -353,7 +353,7 @@
         </div>
 
         <!-- 訂閱區 -->
-          <div class="fix-12-12 toCenter">
+          <div class="fix-12-12 toCenter; margin-top-2">
           <div class="fix-7-12" style="background: #32373B; padding: 30px; border-radius: 10px; box-shadow: 0 0 20px rgba(110, 37, 133, 0.5);">
             <h2 class="ae-2 huge fromAbove margin-bottom-2" style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900; text-align: center;">搶先解鎖早鳥特權</h2>
             <p style="color: #FFB900; text-shadow: 0 0 5px rgba(110, 37, 133, 0.7); text-align: center; margin-bottom: 20px;">訂閱享 NT$500 折扣 + 免運費</p>
@@ -373,7 +373,7 @@
         </div>
 
         <!-- Footer -->
-        <footer style="background: #191716; padding: 20px; color: #fff; box-shadow: 0 0 20px rgba(110, 37, 133, 0.5);">
+        <footer class="margin-top-2" style="background: #191716; padding: 20px; color: #fff; box-shadow: 0 0 20px rgba(110, 37, 133, 0.5);">
           <div class="fix-12-12 toCenter" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; gap: 20px;">
           <div style="flex: 1; min-width: 250px; text-align: left;">
   <img src="assets/img/logo_pc.png" alt="Beurst Logo" style="width: 100px; max-width: 100%; height: auto; margin: 0; display: block;" />
@@ -456,10 +456,12 @@
   <div class="content">
     <div class="container">
       <div class="wrap">
+          
         <!-- 頁面標題 -->
         <div style="text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #6E2585 40%, #FFB900 70%, #32373B 100%); border-bottom: 2px solid #FFB900; position: relative; overflow: hidden;">
           <h1 class="ae-1" style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900; font-size: 36px; position: relative; z-index: 2;">駕馭獨我：專屬碳纖方向盤</h1>
           <p class="hero ae-2 margin-bottom-3" style="font-family: 'Arial', sans-serif; color: #FFB900; font-size: 20px; text-shadow: 0 0 5px rgba(255, 185, 0, 0.7); position: relative; z-index: 2;"><span class="opacity-8">輕鬆改裝｜超跑材質｜獨一無二</span></p>
+            
           <style>
             @keyframes rotateWheel { 
               0% { transform: rotate(0deg); } 
@@ -494,13 +496,27 @@
               }
             }
           </style>
+            
           <img class="title-bg" src="assets/img/background/features_back.jpg" alt="Steering Wheel Animation" />
         </div>
 
         <!-- 產品亮點區 -->
         <div class="fix-10-12" style="margin: 0 auto; padding: 20px;">
-          <ul class="grid grid-83 equal" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
-            <li class="col-4-12 ae-3" style="flex: 1 1 300px; max-width: 90%; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #FFB900; box-shadow: 0 0 15px rgba(255, 185, 0, 0.5); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+            <style>
+    /* 針對手機視圖的調整 */
+    @media (max-width: 600px) {
+      .grid-83 .equalElement ul {
+        padding: 0; /* 確保無額外內邊距 */
+      }
+      .grid-83 .equalElement ul li {
+        line-height: 1.2; /* 縮減行距，從預設約1.5減至1.2 */
+        margin: 2px 0; /* 縮減上下邊距至2px */
+        padding: 0; /* 移除可能的內邊距 */
+      }
+    }
+            </style>
+          <ul class="grid grid-83 equal" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+            <li class="col-4-12 ae-3" style="flex: 1 1 32%; max-width: 100%; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #FFB900; box-shadow: 0 0 15px rgba(255, 185, 0, 0.5); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
               <div style="display: flex; align-items: center; gap: 10px;">
                   <svg width="54" height="54" fill="#FFB900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <!-- 鎖頭 (Lock) - 來源: SVG Repo -->
@@ -521,7 +537,7 @@
                 </ul>
               </div>
             </li>
-            <li class="col-4-12 ae-4" style="flex: 1 1 300px; max-width: 90%; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #FFB900; box-shadow: 0 0 15px rgba(255, 185, 0, 0.5); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+            <li class="col-4-12 ae-4" style="flex: 1 1 32%; max-width: 100%; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #FFB900; box-shadow: 0 0 15px rgba(255, 185, 0, 0.5); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
               <div style="display: flex; align-items: center; gap: 10px;">
                   <svg width="54" height="54" fill="#FFB900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <!-- 火箭 (Rocket) - 來源: Flaticon -->
@@ -542,7 +558,7 @@
                 </ul>
               </div>
             </li>
-            <li class="col-4-12 ae-5" style="flex: 1 1 300px; max-width: 90%; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #FFB900; box-shadow: 0 0 15px rgba(255, 185, 0, 0.5); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+            <li class="col-4-12 ae-5" style="flex: 1 1 32%; max-width: 100%; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #FFB900; box-shadow: 0 0 15px rgba(255, 185, 0, 0.5); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
               <div style="display: flex; align-items: center; gap: 10px;">
                   <svg width="54" height="54" fill="#FFB900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <!-- 閃電 (Lightning) - 來源: SVG Repo -->
@@ -705,94 +721,120 @@
   <div class="content">
     <div class="container">
       <div class="wrap">
-      
+        <!-- 標題區 -->
         <div class="fix-6-12">
-          <h1 class="ae-2 huge fromAbove margin-bottom-2">募資進度實時追蹤</h1>
-          <p class="hero ae-2 margin-bottom-3"><span class="opacity-8">我們的旅程正在加速，與你同行！</span></p>
-            <a href="#" class="button red gradient ae-3">立即支持募資</a>
-                <a href="#" class="button purple gradient ae-3">訂閱更新</a>
+          <h1 class="ae-2 huge fromAbove margin-bottom-2">打造你的專屬方向盤，進度火熱進行中！</h1>
+          <p class="hero ae-2 margin-bottom-3"><span class="opacity-8">與528位車主一起，加速實現航太級改裝夢想！</span></p>
+          <a href="#" class="button ae-3" style="background: #FFB900; color: #191716; padding: 12px 24px; border-radius: 5px; font-weight: bold; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 15px rgba(255, 185, 0, 0.8)';" onmouseout="this.style.boxShadow='none';">立即支持募資</a>
+          <a href="#" class="button ae-3" style="background: #6E2585; color: #E0E2DB; padding: 12px 24px; border-radius: 5px; font-weight: bold; margin-left: 10px; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 15px rgba(110, 37, 133, 0.8)';" onmouseout="this.style.boxShadow='none';">訂閱更新</a>
+        </div>
+
+        <!-- 進度展示區 -->
+        <div class="fix-12-12 toCenter">
+          <div class="fix-7-12">
+            <h1 class="margin-top-8 margin-bottom-2 ae-1"><span class="opacity-6">我們走到哪了？</span></h1>
+            <div class="progress-circle" style="position: relative; width: 200px; height: 200px; margin: 0 auto;">
+              <svg viewBox="0 0 36 36" style="width: 100%; height: 100%;">
+                <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#E0E2DB" stroke-width="2"/>
+                <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 9.54 3.06" fill="none" stroke="#FFB900" stroke-width="2" stroke-dasharray="30, 100"/>
+                <text x="18" y="20" text-anchor="middle" fill="#FFB900" font-size="10">30%</text>
+              </svg>
             </div>
-          
+            <p class="cool-text ae-2" style="color: #E0E2DB; font-size: 18px; text-align: center;">目標500萬，已達 <span class="highlight-number" style="color: #FFB900; font-weight: bold;">150萬</span></p>
+          </div>
+
+          <!-- 數據卡片區 -->
+          <ul class="grid margin-top-4" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; max-width: 1200px; margin-left: auto; margin-right: auto;">
+            <li class="ae-4" style="flex: 1 1 auto; max-width: 300px; text-align: center; background: linear-gradient(135deg, #28464B, #333); padding: 20px; border-radius: 10px; border: 2px solid #FFB900; box-shadow: 0 0 15px rgba(255, 185, 0, 0.5); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 25px rgba(255, 185, 0, 0.8)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px rgba(255, 185, 0, 0.5)';">
+              <h3 style="font-family: 'Racing Sans One', sans-serif; color: #E0E2DB; text-shadow: 0 0 10px #FFB900; font-size: 24px; margin-bottom: 10px;">支持人數</h3>
+              <p class="tiny" style="color: #E0E2DB;"><span class="highlight-number" style="color: #FFB900; font-size: 28px;">528</span> 位車主</p>
+            </li>
+            <li class="ae-5" style="flex: 1 1 auto; max-width: 300px; text-align: center; background: linear-gradient(135deg, #28464B, #333); padding: 20px; border-radius: 10px; border: 2px solid #931621; box-shadow: 0 0 15px rgba(147, 22, 33, 0.5); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 25px rgba(147, 22, 33, 0.8)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px rgba(147, 22, 33, 0.5)';">
+              <h3 style="font-family: 'Racing Sans One', sans-serif; color: #E0E2DB; text-shadow: 0 0 10px #931621; font-size: 24px; margin-bottom: 10px;">剩餘時間</h3>
+              <p class="tiny" style="color: #E0E2DB;">只剩 <span class="highlight-number" style="color: #931621; font-size: 28px;">7</span> 天</p>
+            </li>
+            <li class="ae-6" style="flex: 1 1 auto; max-width: 300px; text-align: center; background: linear-gradient(135deg, #28464B, #333); padding: 20px; border-radius: 10px; border: 2px solid #FFB900; box-shadow: 0 0 15px rgba(255, 185, 0, 0.5); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 25px rgba(255, 185, 0, 0.8)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px rgba(255, 185, 0, 0.5)';">
+              <h3 style="font-family: 'Racing Sans One', sans-serif; color: #E0E2DB; text-shadow: 0 0 10px #FFB900; font-size: 24px; margin-bottom: 10px;">募資金額</h3>
+              <p class="tiny" style="color: #E0E2DB;">已達 <span class="highlight-number" style="color: #FFB900; font-size: 28px;">150</span> 萬</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 里程碑區 -->
+        <div class="margin-top-8" style="max-width: 600px; margin: 40px auto; text-align: center;">
+          <h2 style="font-family: 'Racing Sans One', sans-serif; color: #FFB900; text-shadow: 0 0 10px #FFB900; font-size: 32px; margin-bottom: 15px;">最新里程碑</h2>
+          <div style="background: linear-gradient(135deg, #28464B, #333); padding: 15px; border-radius: 10px; border: 2px solid #FFB900; box-shadow: 0 0 15px rgba(255, 185, 0, 0.5);">
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="font-family: 'Arial', sans-serif; color: #E0E2DB; font-size: 16px; margin-bottom: 10px; text-align: left;">
+                <span style="color: #FFB900; font-weight: bold;">3/15：</span> 首批客製化圖樣開放投票，支持者參與中！
+              </li>
+              <li style="font-family: 'Arial', sans-serif; color: #E0E2DB; font-size: 16px; margin-bottom: 10px; text-align: left;">
+                <span style="color: #FFB900; font-weight: bold;">3/18：</span> 碳纖維鋼模壓製完成，耐溫測試達200°C！
+              </li>
+              <li style="font-family: 'Arial', sans-serif; color: #E0E2DB; font-size: 16px; margin-bottom: 10px; text-align: left;">
+                <span style="color: #FFB900; font-weight: bold;">3/20：</span> 義大利皮革新色選項公開，質感再升級！
+              </li>
+            </ul>
+            <details style="margin-top: 10px;">
+              <summary style="font-family: 'Racing Sans One', sans-serif; color: #FFB900; text-shadow: 0 0 5px rgba(255, 185, 0, 0.7); font-size: 18px; cursor: pointer;">查看更多</summary>
+              <ul style="list-style: none; padding: 0; margin: 10px 0;">
+                <li style="font-family: 'Arial', sans-serif; color: #E0E2DB; font-size: 16px; margin-bottom: 10px; text-align: left;">
+                  <span style="color: #FFB900; font-weight: bold;">3/5：</span> 首批樣品完成，質感超乎預期！
+                </li>
+                <li style="font-family: 'Arial', sans-serif; color: #E0E2DB; font-size: 16px; margin-bottom: 10px; text-align: left;">
+                  <span style="color: #FFB900; font-weight: bold;">3/8：</span> 募資突破100萬，感謝支持者！
+                </li>
+                <li style="font-family: 'Arial', sans-serif; color: #E0E2DB; font-size: 16px; margin-bottom: 10px; text-align: left;">
+                  <span style="color: #FFB900; font-weight: bold;">3/10：</span> 新增車型適配，清單更新中。
+                </li>
+              </ul>
+            </details>
+          </div>
+          <a href="#"><button style="display: block; margin: 20px auto; padding: 12px 24px; font-family: 'Arial', sans-serif; font-size: 18px; color: #FFB900; background: transparent; border: 2px solid #FFB900; border-radius: 5px; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 185, 0, 0.2)'; this.style.boxShadow='0 0 15px rgba(255, 185, 0, 0.7)';" onmouseout="this.style.background='transparent'; this.style.boxShadow='none';">立即設計你的圖樣</button></a>
+        </div>
+
+        <!-- 底部CTA區 -->
         <div class="fix-12-12 toCenter">
           <div class="fix-7-12">
-            <p class="margin-bottom-2 ae-1"><span class="opacity-6">我們走到哪了？</p>
-<form action="test.aspx" method="get" class="ae-2 huge fromAbove margin-bottom-2">
-  <h2 class="cool-text">募資狀態</h2>
-  <progress value="30" max="100"></progress>
-  <p class="cool-text"><span class="highlight-number">30%</span> 達成率</p>
-</form>
-</div>
-            
-<ul class="grid margin-top-10" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; margin-top: 10px; max-width: 1200px; margin-left: auto; margin-right: auto;">
-  <li class="ae-4" style="flex: 1 1 300px; max-width: 33.33%; text-align: center; background: linear-gradient(135deg, #1a1a1a, #333); padding: 20px; border-radius: 10px; border: 2px solid #ff4500; box-shadow: 0 0 15px rgba(255, 69, 0, 0.5); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 25px rgba(255, 69, 0, 0.8)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px rgba(255, 69, 0, 0.5)';">
-    <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #ff4500; font-size: 24px; margin-bottom: 10px;">支持人數</h3>
-    <p class="tiny"><span class="highlight-number">528</span> 位車主</p>
-  </li>
-  <li class="ae-5" style="flex: 1 1 300px; max-width: 33.33%; text-align: center; background: linear-gradient(135deg, #1a1a1a, #333); padding: 20px; border-radius: 10px; border: 2px solid #ff4500; box-shadow: 0 0 15px rgba(255, 69, 0, 0.5); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 25px rgba(255, 69, 0, 0.8)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px rgba(255, 69, 0, 0.5)';">
-    <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #ff4500; font-size: 24px; margin-bottom: 10px;">剩餘時間</h3>
-    <p class="tiny">只剩下 <span class="highlight-number">7</span> 天</p>
-  </li>
-  <li class="ae-6" style="flex: 1 1 300px; max-width: 33.33%; text-align: center; background: linear-gradient(135deg, #1a1a1a, #333); padding: 20px; border-radius: 10px; border: 2px solid #ff4500; box-shadow: 0 0 15px rgba(255, 69, 0, 0.5); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 25px rgba(255, 69, 0, 0.8)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px rgba(255, 69, 0, 0.5)';">
-    <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #ff4500; font-size: 24px; margin-bottom: 10px;">募資金額</h3>
-    <p class="tiny">已達 <span class="highlight-number">150</span> 萬</p>
-  </li>
-</ul>
-</div>
-          
-     <div style="max-width: 600px; margin: 20px auto; text-align: center;">
-  <!-- 小標題 -->
-  <h2 style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #ff4500; font-size: 32px; margin-bottom: 15px;">最新里程碑</h2>
-
-  <!-- 動態列表 -->
-  <div style="background: linear-gradient(135deg, #1a1a1a, #333); padding: 15px; border-radius: 10px; border: 2px solid #ff4500; box-shadow: 0 0 15px rgba(255, 69, 0, 0.5);">
-    <!-- 前三項預覽 -->
-    <ul style="list-style: none; padding: 0; margin: 0;">
-      <li style="font-family: 'Arial', sans-serif; color: #fff; font-size: 16px; margin-bottom: 10px; text-align: left;">
-        <span style="color: #ff4500; font-weight: bold;">3/5：</span> 首批樣品完成，質感超乎預期！
-      </li>
-      <li style="font-family: 'Arial', sans-serif; color: #fff; font-size: 16px; margin-bottom: 10px; text-align: left;">
-        <span style="color: #ff4500; font-weight: bold;">3/8：</span> 募資突破100萬，感謝支持者！
-      </li>
-      <li style="font-family: 'Arial', sans-serif; color: #fff; font-size: 16px; margin-bottom: 10px; text-align: left;">
-        <span style="color: #ff4500; font-weight: bold;">3/10：</span> 新增車型適配，清單更新中。
-      </li>
-    </ul>
-
-    <!-- 可展開完整列表 -->
-    <details style="margin-top: 10px;">
-      <summary style="font-family: 'Racing Sans One', sans-serif; color: #ffd700; text-shadow: 0 0 5px rgba(255, 215, 0, 0.7); font-size: 18px; cursor: pointer;">查看更多</summary>
-      <ul style="list-style: none; padding: 0; margin: 10px 0;">
-        <li style="font-family: 'Arial', sans-serif; color: #fff; font-size: 16px; margin-bottom: 10px; text-align: left;">
-          <span style="color: #ff4500; font-weight: bold;">3/5：</span> 首批樣品完成，質感超乎預期！
-        </li>
-        <li style="font-family: 'Arial', sans-serif; color: #fff; font-size: 16px; margin-bottom: 10px; text-align: left;">
-          <span style="color: #ff4500; font-weight: bold;">3/8：</span> 募資突破100萬，感謝支持者！
-        </li>
-        <li style="font-family: 'Arial', sans-serif; color: #fff; font-size: 16px; margin-bottom: 10px; text-align: left;">
-          <span style="color: #ff4500; font-weight: bold;">3/10：</span> 新增車型適配，清單更新中。
-        </li>
-      </ul>
-    </details>
-  </div>
-
-  <!-- CTA 按鈕 -->
-         <a href="#"><button style="display: block; margin: 15px auto; padding: 10px 20px; font-family: 'Arial', sans-serif; font-size: 32px; color: #ffd700; background: transparent; border: 2px solid rgba(255, 215, 0, 0.7); border-radius: 5px; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 215, 0, 0.2)'; this.style.boxShadow='0 0 10px rgba(255, 215, 0, 0.7)';" onmouseout="this.style.background='transparent'; this.style.boxShadow='none';">訂閱獲最新消息</button></a>
-</div>
-          
-        <div class="fix-12-12 toCenter">
-          <div class="fix-7-12">
-            <h1 class="ae-2 huge fromAbove margin-bottom-2">別錯過，</h1>
-              <h1 class="ae-2 huge fromAbove margin-bottom-2">現在就加入我們！</h1>
-                        <a href="#" class="button red gradient ae-3">立即支持募資</a>
-                <a href="#" class="button purple gradient ae-3">訂閱更新</a>
+            <h1 class="ae-2 huge fromAbove margin-bottom-2">別錯過早鳥優惠，</h1>
+            <h1 class="ae-2 huge fromAbove margin-bottom-2">現在就加入我們！</h1>
+            <a href="#" class="button ae-3" style="background: #FFB900; color: #191716; padding: 12px 24px; border-radius: 5px; font-weight: bold; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 15px rgba(255, 185, 0, 0.8)';" onmouseout="this.style.boxShadow='none';">搶先體驗客製化設計</a>
+            <a href="#" class="button ae-3" style="background: #6E2585; color: #E0E2DB; padding: 12px 24px; border-radius: 5px; font-weight: bold; margin-left: 10px; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 15px rgba(110, 37, 133, 0.8)';" onmouseout="this.style.boxShadow='none';">訂閱最新消息</a>
           </div>
         </div>
-                
       </div>
     </div>
   </div>
-  <div class="background" style="background-image:url(assets/img/background/img-91.jpg)"></div>
-</section>    
+  <div class="background" style="background-image: url('assets/img/background/img-91.jpg'); background-size: cover; background-position: center; opacity: 0.8;"></div>
+</section>
+
+<!-- 響應式設計的CSS -->
+<style>
+@media (max-width: 768px) {
+  .fix-6-12, .fix-7-12 {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .grid li {
+    max-width: 100%;
+  }
+  .progress-circle {
+    width: 150px;
+    height: 150px;
+  }
+  .huge {
+    font-size: 24px;
+  }
+  .button {
+    display: block;
+    margin: 10px auto;
+  }
+}
+</style>    
 
 <!-- Slide 4 (#27) -->
 <section class="slide fade-6 kenBurns" data-name="install">
