@@ -114,7 +114,13 @@
         <li><a href="#mission">我們的使命</a></li>
       </ul>
     </div>
-    <div class="right"><a class="button green gradient" href="#">訂閱電子報</a><a class="button red gradient" href="https://###" target="_blank" style="display: inline-block; padding: 10px 20px; color: #fff; text-decoration: none; border-radius: 5px; background: linear-gradient(45deg, #ff0000, #ff4500); transition: transform 0.3s ease, filter 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.filter='brightness(1.2)';" onmouseout="this.style.transform='scale(1)'; this.style.filter='brightness(1)';">加入會員</a></div>
+    <div class="right">
+      <!-- 訂閱電子報按鈕 -->
+      <a class="button" href="#" style="display: inline-block; padding: 8px 16px; margin-right: 10px; color: #fff; text-decoration: none; border-radius: 5px; background: #008EAA; font-family: 'Racing Sans One', sans-serif; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 10px rgba(0, 142, 170, 0.7)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">訂閱搶最新優惠</a>
+
+      <!-- 加入會員按鈕 -->
+      <a class="button" href="https://###" target="_blank" style="display: inline-block; padding: 10px 20px; color: #fff; text-decoration: none; border-radius: 5px; background: linear-gradient(45deg, #6E2585, #FFB900); font-family: 'Racing Sans One', sans-serif; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 15px rgba(255, 185, 0, 0.7)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">加入會員解鎖福利</a>
+    </div>
   </div>
   <div class="sections compact hidden">
     <div class="left"><a href="#" title="Beurst Taiwan"><img style="width:89px;height:28px" src="assets/img/logo_pc.png"></a></div>
@@ -162,23 +168,23 @@
             <source src="https://protnut.github.io/2022/assets/videos/home_video.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <div style="position: absolute; top: 50%; left: 50%; width: 1400px; height: 787px; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.5); z-index: 0;"></div>
+        <div style="position: absolute; top: 50%; left: 50%; width: 1390px; height: 782px; transform: translate(-50%, -50%); background: linear-gradient(45deg, rgba(110, 37, 133, 0.2), rgba(0, 0, 0, 0.5)); z-index: 0;"></div>
 
           <!-- 前景內容 -->
           <ul class="flex fixedSpaces verticalCenter reverse" style="position: relative; z-index: 1; padding: 20px; min-height: 600px; display: flex; align-items: center;">
             <li class="col-6-12 left middle">
-              <h1 class="ae-1 fromLeft" style="color: #fff; text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); font-family: 'Racing Sans One', sans-serif;">不拆盤改裝，極致碳纖新體驗</h1>
-              <p class="ae-2 fromLeft" style="color: #FFB900; text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); font-size: 18px;"><span class="opacity-8">無損安裝｜航太碳纖｜你的風格</span></p>
-              <a class="button ae-3 fromCenter" style="display: inline-block; padding: 12px 25px; margin-right: 10px; background: linear-gradient(45deg, #6E2585, #FFB900); color: #fff; text-decoration: none; border-radius: 5px; font-family: 'Racing Sans One', sans-serif;" href="#early-bird">立即搶早鳥</a>
-              <a class="button ae-4 fromCenter" style="display: inline-block; padding: 12px 25px; background: #008EAA; color: #fff; text-decoration: none; border-radius: 5px; font-family: 'Racing Sans One', sans-serif;" href="#features">探索改裝細節</a>
+              <h1 class="ae-1 fromLeft" style="color: #fff; text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); font-family: 'Racing Sans One', sans-serif;">無損改裝，你的極致駕馭新體驗</h1>
+              <p class="ae-2 fromLeft" style="color: #FFB900; text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); font-size: 18px;"><span class="opacity-8">無損改裝｜航太碳纖｜圖樣風格定制</span></p>
+              <a class="button ae-3 fromCenter" style="display: inline-block; padding: 12px 25px; margin-right: 10px; background: linear-gradient(45deg, #6E2585, #FFB900); color: #fff; text-decoration: none; border-radius: 5px; font-family: 'Racing Sans One', sans-serif;" href="#early-bird">搶限量50組早鳥</a>
+              <a class="button ae-4 fromCenter" style="display: inline-block; padding: 12px 25px; background: #008EAA; color: #fff; text-decoration: none; border-radius: 5px; font-family: 'Racing Sans One', sans-serif;" href="#features">立即探索亮點</a>
             </li>
             <li class="col-6-12">
-              <img class="ae-4" width="605" src="assets/img/t302_steering_wheel.png" alt="Modified Steering Wheel" data-action="zoom" style="display: block; margin: 0 auto; animation: rotateWheel 5s infinite linear;" />
+            <img class="ae-4" width="605" src="assets/img/t302_steering_wheel.png" alt="Modified Steering Wheel" data-action="zoom" style="display: block; margin: 0 auto; animation: fadeInRotate 5s infinite ease;" />
               <style>
-                @keyframes rotateWheel {
-                  0% { transform: rotate(0deg); }
-                  25% { transform: rotate(5deg); }
-                  75% { transform: rotate(-5deg); }
+                @keyframes fadeInRotate {
+                  0% { opacity: 0; transform: rotate(0deg); }
+                  20% { opacity: 1; transform: rotate(5deg); }
+                  80% { transform: rotate(-5deg); }
                   100% { transform: rotate(0deg); }
                 }
               </style>
@@ -208,28 +214,22 @@
             ::-moz-progress-bar { background: #008EAA; }
             .cool-text { font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900; letter-spacing: 2px; margin: 0; }
             .counter { font-family: 'Racing Sans One', sans-serif; color: #FFB900; text-shadow: 0 0 10px #6E2585; font-size: 36px; font-weight: bold; }
-            @media (max-width: 600px) {
-              .grid { flex-direction: column; align-items: center; }
-              .grid li { flex: 1 1 auto; width: 90%; max-width: 600px; margin-bottom: 15px; padding: 15px; }
-              .counter { font-size: 24px; text-align: center; }
-            }
           </style>
           <form action="test.aspx" method="get" class="ae-2 huge fromAbove; margin-top-6" style="max-width: 600px; margin: 0 auto; background: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 15px;">
             <h2 class="cool-text">募資狀態</h2>
-            <progress value="30" max="100"></progress>
-            <p class="cool-text">目標 500 萬，已達 <span class="counter" id="progress-counter">0%</span></p>
+            <progress id="funding-progress" value="0" max="100"></progress>
+            <p class="cool-text">目標 20 萬，已達 <span class="counter" id="progress-counter">0%</span></p>
           </form>
-          
           <ul class="grid margin-top-2" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;" id="stats-section">
-            <li class="ae-4" style="flex: 1 1 auto; text-align: center; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #931621;">
+            <li class="ae-4" style="flex: 1 1 100px; text-align: center; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #FFB900;">
               <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900;">支持人數</h3>
               <p class="tiny"><span class="counter" id="supporters-counter">0</span> 位車主</p>
             </li>
-            <li class="ae-5" style="flex: 1 1 auto; text-align: center; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #931621;">
-              <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900;">募資啟動剩餘時間</h3>
-              <p class="tiny">只剩 <span class="counter" id="days-counter">0</span> 天</p>
+            <li class="ae-5" style="flex: 1 1 100px; text-align: center; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #FFB900;">
+              <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900;">剩餘時間</h3>
+              <p class="tiny">只剩 <span class="counter" id="days-counter">00天00時00分00秒</span></p>
             </li>
-            <li class="ae-6" style="flex: 1 1 auto; text-align: center; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #931621;">
+            <li class="ae-6" style="flex: 1 1 100px; text-align: center; background: #32373B; padding: 20px; border-radius: 10px; border: 2px solid #FFB900;">
               <h3 style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900;">募資金額</h3>
               <p class="tiny">已達 <span class="counter" id="funds-counter">0</span> 萬</p>
             </li>
@@ -239,178 +239,78 @@
         <!-- 早鳥優惠區 -->
         <div class="fix-12-12 toCenter; margin-top-5" id="early-bird">
           <div class="fix-7-12">
-            <h2 class="ae-2 huge fromAbove margin-bottom-2" style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900;">限時早鳥：50 組倒數中</h2>
-            <h2 class="ae-2 huge fromAbove margin-bottom-2" style="font-family: 'Racing Sans One', sans-serif; color: #FFB900;">原價 NT$4,999 現僅 NT$2,999</h2>
+            <h2 class="ae-2 huge fromAbove margin-bottom-2" style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900;">限時早鳥：僅剩 50 組</h2>
+            <h2 class="ae-2 huge fromAbove margin-bottom-2" style="font-family: 'Racing Sans One', sans-serif; color: #FFB900;">原價 NT$4,999 現僅 NT$2,999 <span style="font-size: 54px;">(省 40%)</span></h2>
             <a href="#" class="button ae-3" style="font-size: 24px; padding: 15px 30px; background: linear-gradient(45deg, #6E2585, #FFB900); color: #fff; text-decoration: none; border-radius: 5px; font-family: 'Racing Sans One', sans-serif;" onmouseover="this.style.background='linear-gradient(45deg, #FFB900, #6E2585)';" onmouseout="this.style.background='linear-gradient(45deg, #6E2585, #FFB900)';">立即搶早鳥優惠</a>
           </div>
         </div>
 
-        <!-- 產品核心賣點區 -->
-<style>
-  .feature-section { background: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 15px; box-shadow: 0 0 20px rgba(110, 37, 133, 0.5); }
-  .feature { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
-  .icon { width: 68px; height: 68px; display: flex; justify-content: center; align-items: center; border: 2px solid #FFB900; border-radius: 50%; transition: all 0.3s ease; }
-  .icon:hover { transform: scale(1.2) rotate(10deg); box-shadow: 0 0 15px rgba(255, 185, 0, 0.8); }
-  .text { color: #E0E2DB; font-family: 'Racing Sans One', sans-serif; text-shadow: 0 0 5px rgba(110, 37, 133, 0.7); font-size: 24px; margin-bottom: 4px; margin-top: 20px; } /* 縮短底部間距 */
-  .desc { color: #E0E2DB; font-size: 18px; opacity: 0.8; margin-top: 0; } /* 移除頂部間距 */
-  .title { color: #fff; font-family: 'Racing Sans One', sans-serif; text-shadow: 0 0 10px #FFB900; font-size: 32px; text-align: center; margin-bottom: 20px; }
-  .cta-button { padding: 10px 20px; background: linear-gradient(45deg, #6E2585, #FFB900); color: #fff; font-family: 'Racing Sans One', sans-serif; text-decoration: none; border-radius: 5px; transition: transform 0.3s ease; }
-  .cta-button:hover { transform: scale(1.05); }
-</style>
-<div class="feature-section" style="max-width: 600px; margin: 20px auto;" id="features">
-  <h2 class="title ae-2 huge fromAbove">你的方向盤，三大升級</h2>
-  <div class="feature">
-    <div class="icon">
-      <svg width="54" height="54" fill="#FFB900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <!-- 鎖頭 (Lock) - 來源: SVG Repo -->
-        <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
-      </svg>
-    </div>
-    <div>
-      <p class="text">不拆盤改裝，保固無憂</p>
-      <p class="desc">不影響安全氣囊與保險</p>
-    </div>
-  </div>
-  <div class="feature">
-    <div class="icon">
-      <svg width="54" height="54" fill="#FFB900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <!-- 火箭 (Rocket) - 來源: Flaticon -->
-        <path d="M12 2L9 8H5l3 4-3 8h6l3-6 3 6h6l-3-8 3-4h-4l-3-6zm0 4.5l2 4h-4l2-4z"/>
-      </svg>
-    </div>
-    <div>
-      <p class="text">超跑級碳纖，永不黃變</p>
-      <p class="desc">耐溫提升 50%</p>
-    </div>
-  </div>
-  <div class="feature">
-    <div class="icon">
-      <svg width="54" height="54" fill="#FFB900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <!-- 閃電 (Lightning) - 來源: SVG Repo -->
-        <path d="M13 2L3 14h7v8l10-12h-7z"/>
-      </svg>
-    </div>
-    <div>
-      <p class="text">全球首創，你的專屬圖樣</p>
-      <p class="desc">轉印車標或寵物照</p>
-    </div>
-  </div>
-  <div style="text-align: center; margin-top: 20px;">
-    <a href="#customize" class="cta-button">設計我的方向盤</a>
-  </div>
-</div>
+        <!-- 產品核心賣點簡述區 -->
+        <style>
+          .feature-overview { background: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 15px; box-shadow: 0 0 20px rgba(110, 37, 133, 0.5); max-width: 600px; margin: 20px auto; }
+          .feature-title { color: #fff; font-family: 'Racing Sans One', sans-serif; text-shadow: 0 0 10px #FFB900; font-size: 32px; text-align: center; margin-bottom: 20px; }
+          .feature-list { color: #E0E2DB; font-size: 18px; list-style: none; padding: 0; }
+          .feature-list li { margin-bottom: 10px; }
+          .cta-button { padding: 10px 20px; background: linear-gradient(45deg, #6E2585, #FFB900); color: #fff; font-family: 'Racing Sans One', sans-serif; text-decoration: none; border-radius: 5px; transition: transform 0.3s ease; }
+          .cta-button:hover { transform: scale(1.05); }
+        </style>
+        <div class="feature-overview">
+          <h2 class="feature-title ae-2 huge fromAbove">三大升級，一盤搞定</h2>
+          <ul class="feature-list">
+            <li>無損安裝，保固無憂</li>
+            <li>航太碳纖，輕量耐用</li>
+            <li>專屬圖樣，個性十足</li>
+          </ul>
+          <div style="text-align: center; margin-top: 20px;">
+            <a href="#features" class="cta-button">了解更多亮點</a>
+          </div>
+        </div>
 
-        <!-- 車型適用性區 -->
+        <!-- 車型適用性簡述區 -->
         <div class="fix-12-12 toCenter">
           <div class="fix-7-12" style="background: #28464B; padding: 20px; border-radius: 10px; box-shadow: 0 0 20px rgba(110, 37, 133, 0.5);">
-            <h2 class="ae-2 huge fromAbove margin-bottom-2" style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900; text-align: center;">你的愛車適用嗎？</h2>
-            <div style="position: relative; width: 100%; max-width: 610px; padding-bottom: 56.56%; margin: 0 auto 20px; height: 0;">
-              <iframe src="https://player.vimeo.com/video/307412404?h=b0cc5455fe&autoplay=1&loop=1&color=ffffff&title=0&byline=0&portrait=0&muted=1&controls=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 5px; border: 2px solid #FFB900;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-              <div style="position: absolute; bottom: 10px; left: 10px; color: #FFB900; font-family: 'Racing Sans One', sans-serif; text-shadow: 0 0 5px #6E2585;">BMW 實車改裝演示（3分鐘無損安裝）</div>
+            <h2 class="ae-2 huge fromAbove margin-bottom-2" style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900; text-align: center;">適配你的愛車</h2>
+            <p style="color: #E0E2DB; font-size: 18px; text-align: center;">兼容 BMW、Mercedes-Benz 等多款車型，20分鐘 DIY 改裝</p>
+            <div style="text-align: center; margin-top: 20px;">
+              <a href="#suitable" class="cta-button">檢查我的車型</a>
             </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 20px;">
-              <div class="ae-4" style="text-align: center;">
-                <a href="#"><img width="100%" src="assets/img/Mercedes-Benz_C300.jpg" alt="Mercedes-Benz C300" style="border-radius: 5px; border: 2px solid #FFB900;" /></a>
-                <h6 style="font-family: 'Racing Sans One', sans-serif; color: #fff; background: #6E2585; padding: 5px; border-radius: 3px;">Mercedes-Benz C300 (2010)</h6>
-              </div>
-              <div class="ae-4" style="text-align: center;">
-                <a href="/fitment"><img width="100%" src="assets/img/bmw_520i.jpg" alt="BMW 520i" style="border-radius: 5px; border: 2px solid #FFB900;" /></a>
-                <h6 style="font-family: 'Racing Sans One', sans-serif; color: #fff; background: #6E2585; padding: 5px; border-radius: 3px;">BMW 520i (1998)</h6>
-              </div>
-              <div class="ae-4" style="text-align: center;">
-                <a href="/fitment"><img width="100%" src="assets/img/bmw_316i.jpg" alt="BMW 316i" style="border-radius: 5px; border: 2px solid #FFB900;" /></a>
-                <h6 style="font-family: 'Racing Sans One', sans-serif; color: #fff; background: #6E2585; padding: 5px; border-radius: 3px;">BMW 316i (2013)</h6>
-              </div>
-              <div class="ae-4" style="text-align: center;">
-                <a href="/fitment"><img width="100%" src="assets/img/bmw_316i_b.jpg" alt="BMW 316i" style="border-radius: 5px; border: 2px solid #FFB900;" /></a>
-                <h6 style="font-family: 'Racing Sans One', sans-serif; color: #fff; background: #6E2585; padding: 5px; border-radius: 3px;">BMW 316i (2013)</h6>
-              </div>
-              <div class="ae-4" style="text-align: center;">
-                <a href="/fitment"><img width="100%" src="assets/img/hyundai_elantra.jpg" alt="Hyundai_Elantra" style="border-radius: 5px; border: 2px solid #FFB900;" /></a>
-                <h6 style="font-family: 'Racing Sans One', sans-serif; color: #fff; background: #6E2585; padding: 5px; border-radius: 3px;">Hyundai Elantra (2014)</h6>
-              </div>
-              <div class="ae-4" style="text-align: center;">
-                <a href="/fitment"><img width="100%" src="assets/img/ford_kuga.jpg" alt="Ford Kuga" style="border-radius: 5px; border: 2px solid #FFB900;" /></a>
-                <h6 style="font-family: 'Racing Sans One', sans-serif; color: #fff; background: #6E2585; padding: 5px; border-radius: 3px;">Ford Kuga (2015)</h6>
-              </div>
-            </div>
-            <div style="text-align: center; margin-top: 20px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-              <select style="padding: 10px; background: #32373B; border: 2px solid #FFB900; color: #fff; border-radius: 5px;" onchange="alert('您的車型適用！請聯繫客服確認。')">
-                <option value="">選擇您的車型</option>
-                <option value="bmw">BMW 3系</option>
-                <option value="toyota">Toyota Corolla</option>
-                <option value="audi">Audi A4</option>
-              </select>
-              <a href="/fitment" class="cta-button" style="padding: 10px 20px; background: linear-gradient(45deg, #6E2585, #FFB900); color: #fff; font-family: 'Racing Sans One', sans-serif; text-decoration: none; border-radius: 5px; transition: transform 0.3s ease;">立即檢查我的車型</a>
-            </div>
-            <style>
-              @media (max-width: 600px) {
-                .fix-7-12 > div[style*="text-align: center"] { flex-direction: column; align-items: center; gap: 15px; }
-                .cta-button { padding: 8px 15px; font-size: 14px; }
-              }
-            </style>
           </div>
         </div>
 
         <!-- 訂閱區 -->
-          <div class="fix-12-12 toCenter; margin-top-2">
+        <div class="fix-12-12 toCenter; margin-top-2">
           <div class="fix-7-12" style="background: #32373B; padding: 30px; border-radius: 10px; box-shadow: 0 0 20px rgba(110, 37, 133, 0.5);">
             <h2 class="ae-2 huge fromAbove margin-bottom-2" style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 10px #FFB900; text-align: center;">搶先解鎖早鳥特權</h2>
-            <p style="color: #FFB900; text-shadow: 0 0 5px rgba(110, 37, 133, 0.7); text-align: center; margin-bottom: 20px;">訂閱享 NT$500 折扣 + 免運費</p>
+            <p style="color: #FFB900; text-shadow: 0 0 5px rgba(110, 37, 133, 0.7); text-align: center; margin-bottom: 20px;">訂閱享 NT$500 折扣 + 免運費（限前 100 名）</p>
             <form action="https://your-getresponse-url.com" method="post" style="display: flex; justify-content: center; gap: 10px;">
-              <input type="email" name="email" placeholder="輸入 Email，搶 NT$500 折扣" required style="width: 250px; padding: 10px; background: #191716; border: 2px solid #FFB900; border-radius: 5px; color: #fff; outline: none;" onfocus="this.style.borderColor='#6E2585';" onblur="this.style.borderColor='#FFB900';">
+              <input type="email" name="email" placeholder="輸入 Email，立即解鎖 NT$500 + 免運" required style="width: 250px; padding: 10px; background: #191716; border: 2px solid #FFB900; border-radius: 5px; color: #fff; outline: none;" onfocus="this.style.borderColor='#6E2585';" onblur="this.style.borderColor='#FFB900';">
               <button type="submit" style="padding: 12px 25px; background: linear-gradient(45deg, #6E2585, #FFB900); border: none; border-radius: 5px; color: #fff; font-family: 'Racing Sans One', sans-serif;">立即訂閱</button>
             </form>
             <p style="color: #E0E2DB; font-size: 12px; text-align: center; margin-top: 10px; opacity: 0.8;">我們重視你的隱私，不會濫發垃圾信</p>
-            <style>
-              @media (max-width: 600px) {
-                form { flex-direction: column; align-items: center; gap: 15px; }
-                form input[type="email"] { width: 100%; max-width: 300px; }
-                form button { width: 150px; }
-              }
-            </style>
           </div>
         </div>
 
         <!-- Footer -->
         <footer class="margin-top-2" style="background: #191716; padding: 20px; color: #fff; box-shadow: 0 0 20px rgba(110, 37, 133, 0.5);">
           <div class="fix-12-12 toCenter" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; gap: 20px;">
-          <div style="flex: 1; min-width: 250px; text-align: left;">
-  <img src="assets/img/logo_pc.png" alt="Beurst Logo" style="width: 100px; max-width: 100%; height: auto; margin: 0; display: block;" />
-  <p style="font-family: 'Racing Sans One', sans-serif; color: #fff; text-shadow: 0 0 5px #FFB900; font-size: 14px;">改裝新世代，從方向盤開始</p>
-  <style>
-    @media (max-width: 600px) {
-      img[src="assets/img/xai_tuning_logo.png"] {
-        width: 100px;
-      }
-    }
-  </style>
+            <div style="flex: 1; min-width: 250px; text-align: left;">
+              <img src="assets/img/logo_pc.png" alt="Beurst Logo" style="width: 100px; max-width: 100%; height: auto;" />
+              <p style="font-family: 'Racing Sans One', sans-serif; color: #FFB900; text-shadow: 0 0 5px #6E2585; font-size: 14px;">改裝新世代，從方向盤開始</p>
             </div>
             <div style="flex: 1; min-width: 200px; text-align: center;">
-  <a href="https://facebook.com" target="_blank" style="margin: 0 10px; text-decoration: none;">
-    <i class="fab fa-facebook" style="font-size: 36px; color: #fff; transition: color 0.3s ease;" onmouseover="this.style.color='#008EAA';" onmouseout="this.style.color='#fff';"></i>
-  </a>
-  <a href="https://instagram.com" target="_blank" style="margin: 0 10px; text-decoration: none;">
-    <i class="fab fa-instagram" style="font-size: 36px; color: #fff; transition: color 0.3s ease;" onmouseover="this.style.color='#008EAA';" onmouseout="this.style.color='#fff';"></i>
-  </a>
-  <a href="https://x.com" target="_blank" style="margin: 0 10px; text-decoration: none;">
-    <i class="fab fa-x-twitter" style="font-size: 36px; color: #fff; transition: color 0.3s ease;" onmouseover="this.style.color='#008EAA';" onmouseout="this.style.color='#fff';"></i>
-  </a>
+              <a href="https://facebook.com" target="_blank" style="margin: 0 10px;"><i class="fab fa-facebook" style="font-size: 36px; color: #fff; transition: color 0.3s ease;" onmouseover="this.style.color='#008EAA';" onmouseout="this.style.color='#fff';"></i></a>
+              <a href="https://instagram.com" target="_blank" style="margin: 0 10px;"><i class="fab fa-instagram" style="font-size: 36px; color: #fff; transition: color 0.3s ease;" onmouseover="this.style.color='#008EAA';" onmouseout="this.style.color='#fff';"></i></a>
+              <a href="https://x.com" target="_blank" style="margin: 0 10px;"><i class="fab fa-x-twitter" style="font-size: 36px; color: #fff; transition: color 0.3s ease;" onmouseover="this.style.color='#008EAA';" onmouseout="this.style.color='#fff';"></i></a>
+              <a href="https://lin.ee/GmiO256" target="_blank" style="margin: 0 10px;"><i class="fab fa-line" style="font-size: 36px; color: #fff; transition: color 0.3s ease;" onmouseover="this.style.color='#008EAA';" onmouseout="this.style.color='#fff';"></i></a>
             </div>
             <div style="flex: 1; min-width: 250px; text-align: right;">
-<p style="margin: 5px 0;">
-  <i class="fas fa-envelope" style="font-size: 24px; color: #FFB900;"></i>
-  <a href="mailto:contact@beurst.com" style="color: #fff; text-decoration: none;">contact@beurst.com</a>
-</p>
-<p style="margin: 5px 0;">
-  <i class="fab fa-line" style="font-size: 24px; color: #FFB900;"></i>
-  <a href="https://lin.ee/GmiO256" target="_blank" style="color: #fff; text-decoration: none;">@914dpsqc</a>
-</p>
+              <p style="margin: 5px 0;"><i class="fas fa-envelope" style="font-size: 24px; color: #FFB900;"></i> <a href="mailto:contact@beurst.com" style="color: #fff; text-decoration: none;">contact@beurst.com</a></p>
+              <p style="margin: 5px 0;"><i class="fab fa-line" style="font-size: 24px; color: #FFB900;"></i> <a href="https://lin.ee/GmiO256" target="_blank" style="color: #fff; text-decoration: none;">@914dpsqc</a></p>
               <a href="/faq" style="color: #008EAA; text-decoration: none; margin-right: 10px;">常見問題</a>
               <a href="/crowdfunding" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background: linear-gradient(45deg, #6E2585, #FFB900); color: #fff; font-family: 'Racing Sans One', sans-serif; text-decoration: none; border-radius: 5px;">立即支持募資</a>
             </div>
           </div>
-          <div style="text-align: center; margin-top: 20px; font-size: 12px; color: #E0E2DB;">
+          <div style="text-align: center; margin-top: 20px; font-size: 12px; color: #FFB900;">
             © 2025 Beurst. All Rights Reserved. | <a href="/privacy" style="color: #FFB900; text-decoration: none;">隱私政策</a>
           </div>
         </footer>
@@ -434,21 +334,48 @@
     return updateCounter;
   }
 
+  // 進度條動畫與計數器觸發
   const statsSection = document.getElementById('stats-section');
   let hasAnimated = false;
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting && !hasAnimated) {
-        requestAnimationFrame(animateCounter('progress-counter', 0, 30, 2000, '%'));
-        requestAnimationFrame(animateCounter('supporters-counter', 0, 528, 2000));
-        requestAnimationFrame(animateCounter('days-counter', 0, 7, 1000));
-        requestAnimationFrame(animateCounter('funds-counter', 0, 150, 2500));
+        const progress = document.getElementById('funding-progress');
+        let value = 0;
+        const target = 1;
+        const interval = setInterval(() => {
+          if (value < target) {
+            value++;
+            progress.value = value;
+          } else {
+            clearInterval(interval);
+          }
+        }, 50);
+        requestAnimationFrame(animateCounter('progress-counter', 0, -1, 2000, '%'));
+        requestAnimationFrame(animateCounter('supporters-counter', 0, -1, 2000));
+        requestAnimationFrame(animateCounter('funds-counter', 0, -1, 2500));
         hasAnimated = true;
         observer.unobserve(statsSection);
       }
     });
   }, { threshold: 0.5 });
   observer.observe(statsSection);
+
+  // 動態倒數計時器
+  const endDate = new Date("2025-06-03").getTime(); // 假設募資結束日期為 2025/04/03
+  const countdown = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = endDate - now;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("days-counter").textContent = `${days}天 ${hours.toString().padStart(2, '0')} : ${minutes.toString().padStart(2, '0')} : ${seconds.toString().padStart(2, '0')}`;
+    if (distance < 0) {
+      clearInterval(countdown);
+      document.getElementById("days-counter").textContent = "已結束";
+    }
+  }, 1000);
 </script>
 
 <!-- Slide 6 (#83) -->
@@ -971,7 +898,7 @@
         </p>
         <div class="search-bar ae-3 margin-bottom-4" style="border: 2px solid #FFB900; background: #32373B; padding: 15px; border-radius: 5px;">
           <select id="brandSelect" style="background: #E0E2DB; color: #32373B; padding: 12px; border: none; border-radius: 5px; width: 100%; margin-bottom: 10px; font-size: 16px;">
-            <option value="">請選擇您的車廠</option>
+            <option value="">請選擇您的汽車品牌</option>
             <option value="acura">Acura_雅格</option>
             <option value="alfa_romeo">Alfa Romeo_愛快羅密歐</option>
             <option value="alpine">Alpine_阿爾派</option>
@@ -980,7 +907,7 @@
             <option value="ford">Ford</option>
           </select>
           <select id="yearSelect" style="background: #E0E2DB; color: #32373B; padding: 12px; border: none; border-radius: 5px; width: 100%; margin-bottom: 10px; font-size: 16px;">
-            <option value="">請輸入汽車年份</option>
+            <option value="">請選擇汽車年份</option>
             <option value="2007">2007</option>
             <option value="2008">2008</option>
             <option value="2009">2009</option>
@@ -994,7 +921,7 @@
             <option value="2017">2017</option>
             <option value="2018">2018</option>
           </select>
-          <input type="text" id="modelInput" placeholder="請輸入車型（如 Kuga）" style="padding: 12px; width: 100%; border: none; background: #E0E2DB; color: #32373B; border-radius: 5px; margin-bottom: 10px; font-size: 16px;">
+          <input type="text" id="modelInput" placeholder="請輸入車型（如 RAV4）" style="padding: 12px; width: 100%; border: none; background: #E0E2DB; color: #32373B; border-radius: 5px; margin-bottom: 10px; font-size: 16px;">
           <button id="searchButton" style="background: #6E2585; color: #E0E2DB; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; width: 100%; font-size: 16px;" onmouseover="this.style.background='#FFB900'; this.style.color='#32373B'" onmouseout="this.style.background='#6E2585'; this.style.color='#E0E2DB'">立即查詢</button>
         </div>
 
@@ -1065,9 +992,9 @@
             const yearNum = parseInt(year);
             let message;
             if (yearNum > 2010) {
-              message = `您的車輛（${brand} - ${year} - ${model}）適用於全罩式與半罩式方向盤縫皮！`;
+              message = `恭喜您！您的車輛（${brand} - ${year} - ${model}）適用於【全罩式】與【半罩式】方向盤縫皮！`;
             } else {
-              message = `您的車輛（${brand} - ${year} - ${model}）僅適用於半罩式方向盤縫皮，不適用於全罩式。`;
+              message = `您的車輛（${brand} - ${year} - ${model}）僅適用於【半罩式】方向盤縫皮，不適用於【全罩式】。`;
             }
             alert(message);
 
@@ -1357,7 +1284,7 @@
       </div>
     </div>
   </div>
-  <div class="background" style="background-image: url('assets/img/background/carbon_texture.jpg'); opacity: 0.8;"></div>
+  <div class="background" style="background-image: url('assets/img/background/img-carbon.jpg'); opacity: 1.0;"></div>
 </section>
 
 <!-- Slide 7 (#95) -->
@@ -1365,88 +1292,103 @@
   <div class="content">
     <div class="container">
       <div class="wrap">
-      
-        <div class="fix-6-12">
-          <h1 class="ae-2 huge fromAbove margin-bottom-2">改裝，不只是配件 更是態度</h1>
-          <p class="hero ae-2 margin-bottom-3"><span class="opacity-8">我們的故事，與你的駕馭夢想相連</span></p>
-
-          <form action="#" autocomplete="off" class="slides-form margin-bottom-3">
-            <input type="email" class="ae-3" name="email" placeholder="E-mail address"/>
-            <button type="submit" class="button blue gradient ae-4" name="submit">Try it free</button>
-          </form>
-
-          <a href="#" class="button hollow ae-5"><img src="assets/img/appstore.jpg" height="63"/></a><a href="#" class="button hollow ae-6"><img src="assets/img/googleplay.jpg" height="63"/></a>
+        <!-- 標題區 -->
+        <div class="fix-6-12 ae-1">
+          <h1 class="huge fromAbove margin-bottom-2" style="color: #FFF;">駕馭你的風格，從方向盤開始</h1>
+          <p class="hero ae-2 margin-bottom-3" style="color: #E0E2DB;"><span class="opacity-8">你的改裝夢想，我們幫你實現</span></p>
         </div>
-        
-         <div class="fix-12-12">
-          <h1 class="ae-1">從高級材質到你的雙手</h1>
+
+        <!-- 從哪裡來 -->
+        <div class="fix-12-12 ae-2 margin-top-4">
+          <h2 class="ae-1 fromLeft margin-bottom-2" style="color: #008EAA;">從車庫到航太級創新</h2>
           <ul class="flex verticalCenter">
-            <li class="col-5-12 cell-27">
-              <div class="fix-4-12">
-                <ul class="controller dots ae-2 fromCenter margin-top-3" data-slider-id="27-2">
-                  <li class="selected"><img src="assets/img/Video_Spider.png" alt="Apple Watch Thumbnail"/></li>
-                </ul>
-              </div>
-            </li>
-            <li class="col-7-12 left">
-              <h1 class="ae-2 fromRight">我們從哪裡來？</h1>
-              <div class="ae-3 fromRight">
-                <p class="opacity-8">我們是一群改裝狂熱者，深知方向盤是駕馭的靈魂。從車庫實驗到碳纖維創新，我們希望讓每位車主用平民價格享受頂級操控。</p> 
-              </div>
-              <div class="relative">
-                <img src="assets/img/icon-2.png" class="ae-3 fromCenter app-26" alt="app"/>
-                <div class="text-26">
-                  <h3 class="ae-3 fromRight">確認適配？現在就行動！</h3>
-                  <div class="ae-5 fromRight">
-                     <a href="#" class="button red gradient ae-3">支持我們的夢想</a>
-                     <a href="#" class="button purple gradient ae-3">訂閱更新</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-          
-        <div class="fix-12-12">
-          <ul class="flex reverse verticalCenter">
-            <li class="col-7-12 left cell-26">
-              <h1 class="ae-1 fromLeft">我們要去哪裡？</h1>
-              <div class="ae-2 fromLeft">
-                <p class="opacity-8">「使命：打造平價、高質的改裝體驗，讓操控樂趣無門檻。」
-「願景：成為改裝圈的革新者，與你共創駕馭新時代。」</p>
-              </div>
-              <div class="relative">
-                <img src="assets/img/icon-1.png" class="ae-3 fromCenter app-26" alt="app"/>
-                <div class="text-26">
-                  <h3 class="ae-3 fromRight">確認適配？現在就行動！</h3>
-                  <div class="ae-5 fromRight">
-                     <a href="#" class="button red gradient ae-3">與我們同行</a>
-                     <a href="#" class="button purple gradient ae-3">訂閱更新</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="col-5-12">
+            <li class="col-5-12 cell-27 ae-3">
               <div class="fix-4-12 center">
-                <ul class="controller dots ae-2 fromCenter margin-top-3" data-slider-id="26-3">
-                  <li class="selected"><img src="assets/img/Video_dot.png" alt="Apple Watch Thumbnail"/></li>
-                </ul>
+                <img src="assets/img/gallery-60-1.jpg" alt="Carbon Fiber Process" style="width: 100%; border-radius: 5px;" class="ae-2 fromCenter">
+              </div>
+            </li>
+            <li class="col-7-12 left ae-4">
+              <p class="opacity-8" style="color: #E0E2DB;">我們是一群改裝狂熱者，從車庫實驗開始，打造出全球首創的碳纖維方向盤縫皮。使用航太級乾式碳纖維，無需拆盤即可改裝，讓你安心享受頂級操控與個性化風格。</p>
+              <div class="ae-5 margin-top-2">
+                <a href="#" class="button ae-6" style="background: #6E2585; color: #E0E2DB; padding: 12px 25px; border-radius: 5px; font-size: 16px;" onmouseover="this.style.background='#FFB900'; this.style.color='#32373B'" onmouseout="this.style.background='#6E2585'; this.style.color='#E0E2DB'">立即贊助，解鎖改裝</a>
               </div>
             </li>
           </ul>
         </div>
-        
-                
+
+        <!-- 要去哪裡 -->
+        <div class="fix-12-12 ae-3 margin-top-4">
+          <h2 class="ae-1 fromLeft margin-bottom-2" style="color: #008EAA;">共創駕馭新時代</h2>
+          <ul class="flex reverse verticalCenter">
+            <li class="col-7-12 left ae-4">
+              <p class="opacity-8" style="color: #E0E2DB;">我們的使命是用平價高質的改裝體驗，讓每位車主都能擁有獨一無二的方向盤。從義大利頭層皮革到個人化圖樣，我們的願景是成為改裝圈的革新者，與你同行。</p>
+              <div class="ae-5 margin-top-2">
+                <a href="#" class="button ae-6" style="background: #6E2585; color: #E0E2DB; padding: 12px 25px; border-radius: 5px; font-size: 16px;" onmouseover="this.style.background='#FFB900'; this.style.color='#32373B'" onmouseout="this.style.background='#6E2585'; this.style.color='#E0E2DB'">加入改裝革命</a>
+                <a href="#" class="button ae-7 margin-left-1" style="background: #32373B; color: #E0E2DB; padding: 12px 25px; border-radius: 5px; font-size: 16px;" onmouseover="this.style.background='#FFB900'; this.style.color='#32373B'" onmouseout="this.style.background='#32373B'; this.style.color='#E0E2DB'">訂閱獲限量圖樣</a>
+              </div>
+            </li>
+            <li class="col-5-12 ae-3">
+              <div class="fix-4-12 center">
+                <img src="assets/img/gallery-60-2.jpg" alt="Personalized Design" style="width: 100%; border-radius: 5px;" class="ae-2 fromCenter">
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 募資進度 -->
+        <div class="fix-6-12 ae-4 margin-top-4 center">
+          <div class="progress" style="background: #32373B; padding: 15px; border-radius: 5px; color: #E0E2DB; text-align: left;">
+            <p style="margin-bottom: 10px;">募資進度：45% | 支持者：128人 | 剩餘時間：15天</p>
+            <div style="background: #FFB900; width: 45%; height: 10px; border-radius: 5px;"></div>
+          </div>
+        </div>
+
+        <!-- 電子報訂閱 -->
+        <div class="fix-6-12 ae-5 margin-top-4 center">
+          <form action="#" autocomplete="off" class="slides-form">
+            <input type="email" name="email" placeholder="輸入 E-mail 訂閱最新進度" style="padding: 12px; width: 70%; border: none; background: #E0E2DB; color: #32373B; border-radius: 5px; font-size: 16px;">
+            <button type="submit" name="submit" style="background: #6E2585; color: #E0E2DB; padding: 12px 20px; border: none; border-radius: 5px; margin-left: 10px; font-size: 16px;" onmouseover="this.style.background='#FFB900'; this.style.color='#32373B'" onmouseout="this.style.background='#6E2585'; this.style.color='#E0E2DB'">訂閱</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-  <div class="background" style="background-image:url(assets/img/background/img-95.jpg)"></div>
+  <div class="background" style="background-image: url('assets/img/background/img-steering.jpg'); opacity: 0.7;"></div>
+
+  <!-- 內嵌 CSS -->
+  <style>
+      
+    /* 手機端適配 */
+    @media (max-width: 767px) {
+      .flex {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .col-5-12, .col-7-12 {
+        width: 100%;
+      }
+      .fix-4-12 {
+        margin: 0 auto;
+      }
+      .fix-6-12 {
+        width: 90%;
+      }
+      .slides-form input {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      .slides-form button {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+  </style>
 </section>
 
 <!-- Panel Bottom #01 -->
 <nav class="panel bottom forceMobileView">
   <div class="sections desktop">
-    <div class="left"><a href="#" class="opacity-8">聯絡<a href="https://freehtml5.co" target="_blank">我們</a></div>
+    <div class="left"><a href="#" class="opacity-8">聯絡<a href="#" target="_blank">我們</a></div>
     <div class="center"><span class="nextSlide"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-down"></use></svg></span></div>
     <div class="right"><span data-dropdown-id="2" class="button actionButton dropdownTrigger"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share"></use></svg></span></div>
   </div>
