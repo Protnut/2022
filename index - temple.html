@@ -17,28 +17,12 @@
 
 	<!-- Compressed Scripts -->
 	<script src="js/slides.min.js" type="text/javascript"></script>
-    
-    <!-- 添加 favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <!-- Apple Touch Icon（iOS 主螢幕圖標） -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <!-- Microsoft Pinned Site（Windows） -->
-    <meta name="msapplication-TileImage" content="/ms-icon.png">
 
 	<!-- Fonts and Material Icons -->
 	<link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,600,700|Material+Icons"/>
     <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- lightGallery CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/css/lightgallery.min.css">
-    <!-- lightGallery 核心 JS（放在 </body> 前） -->
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/lightgallery.min.js"></script>
-    <!-- 可選：縮略圖與縮放插件（增強功能） -->
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/plugins/thumbnail/lg-thumbnail.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/plugins/zoom/lg-zoom.min.js"></script>
-    
-    <!-- Sender -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
+
             <script>
                 (function (s, e, n, d, er) {
                   s['Sender'] = er;
@@ -660,56 +644,98 @@
             <!-- 前景內容 -->
             <ul class="flex fixedSpaces verticalCenter reverse">
               <li class="col-6-12 left middle">
-                <h1 class="ae-1 fromLeft">打造你的專屬戰駒<br>無損升級航太碳纖方向盤</h1>
-                <p class="ae-2 fromLeft"><span class="opacity-8">無損改裝，保固無憂 | 航太碳纖，輕量耐用 | 全球唯一個人化圖樣</span></p>
-                <a class="button ae-3" href="#reserve">立即預約早鳥優惠</a>
-                <a class="button ae-4 cyan" href="#features">探索獨家亮點</a>
+                <h1 class="ae-1 fromLeft">改裝你的專屬戰駒<br>無損升級碳纖方向盤</h1>
+                <p class="ae-2 fromLeft"><span class="opacity-8">無損改裝，保固無憂 | 航太碳纖，抗溫耐候 | 專屬圖樣，獨一無二</span></p>
+                <a class="button ae-3" href="#reserve">搶早鳥募資預約</a>
+                <a class="button ae-4 cyan" href="#features">立即探索亮點</a>
               </li>
               <li class="col-6-12">
-                <img class="ae-4" width="605" src="assets/img/t302_steering_wheel.png" alt="碳纖維方向盤改裝" />
+                <img class="ae-4" width="605" src="assets/img/t302_steering_wheel.png" alt="Modified Steering Wheel" />
               </li>
             </ul>
           </div>
 
+          <!-- 抽獎公告區 -->
+          <div class="fix-12-12 toCenter margin-top-2 ae-6">
+            <a href="#event" class="lottery-banner">
+              <h2>限時抽獎：贏取方向盤縫皮</h2>
+              <p>4/23 前參加，還有 <span id="banner-countdown"></span></p>
+            </a>
+          </div>
+
+          <!-- 募資狀態區 -->
+          <div class="fix-12-12 toCenter margin-top-4">
+            <form action="test.aspx" method="get" class="funding-status ae-2">
+              <h2 class="cool-text">募資狀態</h2>
+              <progress id="funding-progress" value="0" max="100"></progress>
+              <p class="cool-text">目標 20 萬，已達 <span class="counter" id="progress-counter">0%</span></p>
+            </form>
+          </div>
+
           <!-- 抽獎活動區 -->
-          <div class="fix-12-12 toCenter margin-top-10 ae-7">
+          <div class="fix-12-12 toCenter margin-top-4 ae-7">
             <div class="fix-7-12 lottery-event">
-              <h2 class="ae-8">限時抽獎！搶先體驗改裝未來</h2>
-              <p class="ae-9">填表領 NT300 折扣碼＋抽碳纖維杯墊，立即加入募資行列！</p>
-              <a href="#event" class="button ae-10 pulse">馬上參加抽獎</a>
+              <h2 class="ae-8">抽獎活動進行中！</h2>
+              <p class="ae-9">填表參加，贏取免費碳纖維方向盤杯墊，4/23 前截止！</p>
+              <a href="#event" class="button ae-10 pulse">立即參加抽獎</a>
+            </div>
+          </div>
+
+          <!-- 統計區 -->
+          <ul class="stats-grid margin-top-2" id="stats-section">
+            <li class="ae-4">
+              <h3>支持人數</h3>
+              <p class="tiny"><span class="counter" id="supporters-counter">0</span> 位車主</p>
+            </li>
+            <li class="ae-5">
+              <h3>剩餘時間</h3>
+              <p class="tiny">只剩 <span class="counter" id="days-counter">00天00時00分00秒</span></p>
+            </li>
+            <li class="ae-6">
+              <h3>募資金額</h3>
+              <p class="tiny">已達 <span class="counter" id="funds-counter">0</span> 萬</p>
+            </li>
+          </ul>
+
+          <!-- 早鳥優惠區 -->
+          <div class="fix-12-12 toCenter margin-top-5 early-bird" id="early-bird">
+            <div class="fix-7-12">
+              <h2 class="ae-2">限時早鳥：僅剩 50 組</h2>
+              <h2 class="ae-2 var(--secondary-dark)">原價 NT$4,999 現僅 NT$2,999 <br><span class="counter" style="font-size: 54px;">( 省 40% )</span></h2>
+              <a href="#" class="button ae-3">立即搶早鳥優惠</a>
             </div>
           </div>
 
           <!-- 產品核心賣點簡述區 -->
             <div class="fix-8-12 toCenter margin-top-4 feature-overview ae-7">
               <div class="feature-container">
-                <h2 class="feature-title">三大獨家亮點，定義你的駕馭風格</h2>
-                <p class="feature-description">握緊全球唯一的個人化碳纖方向盤，無損改裝讓你兼顧保值與熱血！</p>
+                <h2 class="feature-title">三大升級，駕馭你的專屬風格</h2>
+                <p class="feature-description">週末開著你的愛車，握著專屬塗鴉的碳纖方向盤，無損改裝讓你兼顧保固與個性！</p>
                 <ul class="feature-list">
                   <li>
                     <svg width="54" height="54" fill="#FFB900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
                     </svg>
                     <h3>無損改裝</h3>
-                    <p>20分鐘DIY，100%保留原廠保固與安全</p>
+                    <p>20分鐘裝配，100%保留原廠保固</p>
                   </li>
                   <li>
                     <svg width="54" height="54" fill="#FFB900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path d="M12 2L9 8H5l3 4-3 8h6l3-6 3 6h6l-3-8 3-4h-4l-3-6z"/>
                     </svg>
                     <h3>航太碳纖</h3>
-                    <p>超跑級乾式碳纖，輕40%、耐溫140℃</p>
+                    <p>比傳統材料輕40%，耐溫140℃</p>
                   </li>
                   <li>
                     <svg width="54" height="54" fill="#FFB900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path d="M13 2L3 14h7v8l10-12h-7z"/>
                     </svg>
                     <h3>專屬圖樣</h3>
-                    <p>全球首創，客製你的Logo與塗鴉</p>
+                    <p>任何你要的圖樣，獨一無二</p>
                   </li>
                 </ul>
                 <div class="feature-cta">
-                  <a href="#features" class="cta-button">發現更多專屬特色</a>
+                  <a href="#features" class="cta-button">了解更多亮點</a>
                 </div>
               </div>
             </div>
@@ -717,10 +743,10 @@
           <!-- 車型適用性簡述區 -->
           <div class="fix-12-12 toCenter margin-top-4">
             <div class="fix-7-12 car-compatibility">
-              <h2 class="ae-2">完美適配你的愛車</h2>
-              <p>支援BMW、Mercedes-Benz等多款車型，20分鐘輕鬆速裝</p>
+              <h2 class="ae-2">適配你的愛車</h2>
+              <p>兼容 BMW、Mercedes-Benz 等多款車型，20分鐘 DIY 改裝</p>
               <div>
-                <a href="#suitable" class="cta-button">確認我的車型</a>
+                <a href="#suitable" class="cta-button">檢查我的車型</a>
               </div>
             </div>
           </div>
@@ -728,10 +754,10 @@
           <!-- 訂閱區 -->
           <div class="fix-12-12 toCenter margin-top-2">
             <div class="fix-7-12 subscribe-section" id="subscribe">
-              <h2 class="ae-2">搶先鎖定早鳥名額</h2>
-              <p>訂閱即享募資最新資訊與獨家優惠</p>
+              <h2 class="ae-2">搶先解鎖早鳥特權</h2>
+              <p>訂閱享最新優惠通知</p>
               <div class="sender-form-field" data-sender-form-id="m8sert9wez6z1e0zsk0"></div>
-              <p class="privacy-text">你的資料絕對安全，專屬優惠直送！</p>
+              <p class="privacy-text">你的資料100%安全，只送你專屬優惠！</p>
             </div>
           </div>
 
@@ -740,7 +766,7 @@
             <div class="fix-12-12 toCenter" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; gap: 20px;">
               <div style="flex: 1; min-width: 250px; text-align: left;">
                 <img src="assets/img/logo_pc.png" alt="Beurst Logo" style="width: 100px; max-width: 100%; height: auto;" />
-                <p style="color: var(--primary-yellow); text-shadow: 0 0 5px var(--primary-purple); font-size: 14px;">台灣精製，改裝你的專屬駕馭體驗</p>
+                <p style="color: var(--primary-yellow); text-shadow: 0 0 5px var(--primary-purple); font-size: 14px;">改裝新世代，從方向盤開始</p>
               </div>
               <div class="social-icons" style="flex: 1; min-width: 200px; text-align: center;">
                 <a href="https://www.facebook.com/BeurstTaiwan/" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -840,9 +866,9 @@
       <div class="wrap">
         <!-- 頁面標題 -->
         <div class="features-title-section ae-1">
-          <h1 class="ae-3">點燃改車魂，打造你的專屬傳奇</h1>
-          <p class="ae-2 margin-bottom-1">無損改裝｜超跑碳纖｜全球唯一</p>
-          <p class="ae-3">加入募資，定義你的駕駛風格</p>
+          <h1 class="ae-3">極致改裝，你的專屬亮點</h1>
+          <p class="ae-2 margin-bottom-1">無損升級｜超跑材質｜獨一無二</p>
+          <p class="ae-3">支持創新，打造你的超跑體驗</p>
           <img class="title-bg" src="assets/img/background/features_back.jpg" alt="方向盤動畫" />
         </div>
 
@@ -854,37 +880,37 @@
                 <svg width="54" height="54" fill="#FFB900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
                 </svg>
-                <h3>無損改裝，省心保值</h3>
+                <h3>無損改裝，零風險升級</h3>
               </div>
               <img class="ae-4" width="100%" src="assets/img/features-1.jpg" alt="BMW 前後對比" data-action="zoom"/>
-              <p>免拆原廠盤，20分鐘速裝，保固不失效，安全氣囊無憂。改裝從此輕鬆，愛車價值加倍！</p>
+              <p>不拆原廠方向盤，無需專業工具，20分鐘內升級，保留原廠保固與安全無憂。改裝不再是賭注，而是你的安心選擇。</p>
             </li>
             <li class="col-4-12 ae-3 highlight-card" data-label="航太科技">
               <div class="highlight-content">
                 <svg width="54" height="54" fill="#FFB900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2L9 8H5l3 4-3 8h6l3-6 3 6h6l-3-8 3-4h-4l-3-6z"/>
                 </svg>
-                <h3>超跑碳纖，性能爆棚</h3>
+                <h3>超跑碳纖，極致輕盈</h3>
               </div>
               <img class="ae-4" width="100%" src="assets/img/features-2.jpg" alt="乾式碳纖維" data-action="zoom"/>
-              <p>航太級乾式碳纖維，超輕超耐用，抗高溫不黃化，格紋整齊無氣泡。如超跑般硬派，握感直接進化！</p>
+              <p>航太級乾式碳纖維，150°C高溫鋼模壓製，耐溫超過140°C，強度提升50%。頂級超跑專屬材質，現在屬於你。</p>
             </li>
             <li class="col-4-12 ae-3 highlight-card" data-label="全球首創">
               <div class="highlight-content">
                 <svg width="54" height="54" fill="#FFB900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M13 2L3 14h7v8l10-12h-7z"/>
                 </svg>
-                <h3>你的專屬，全球獨家</h3>
+                <h3>專屬風格，全球唯一</h3>
               </div>
               <img class="ae-4" width="100%" src="assets/img/features-3.jpg" alt="個性化方向盤" data-action="zoom"/>
-              <p>Logo、塗鴉隨心印，獨家金油轉印技術，讓方向盤成為你的改裝名片，車友圈C位出道！</p>
+              <p>從專業 Logo 到隨手塗鴉，工業金油轉印技術讓每款方向盤全球獨一無二。你的設計，改變改裝界的未來。</p>
             </li>
           </ul>
         </div>
 
         <!-- 額外優勢區 -->
         <div class="fix-10-12 features-benefits">
-          <h2 class="benefits-title">改裝進階，你的專屬加分</h2>
+          <h2 class="benefits-title">你擁有的專屬優勢</h2>
           <ul class="benefit-list">
             <li class="benefit-card" data-animate>
               <div class="benefit-icon-wrapper">
@@ -893,8 +919,8 @@
                 </svg>
               </div>
               <div class="benefit-content">
-                <h4>頂級皮革，質感滿分</h4>
-                <p><span>無限搭配</span>，義大利頭層皮與Alcantara，讓你的方向盤化身藝術品。</p>
+                <h4>頂級義大利進口皮革</h4>
+                <p><span>數百萬種搭配</span>，義大利頭層皮革與Alcantara，打造你的改裝傑作。</p>
               </div>
             </li>
             <li class="benefit-card" data-animate>
@@ -904,8 +930,8 @@
                 </svg>
               </div>
               <div class="benefit-content">
-                <h4>20分鐘輕鬆DIY</h4>
-                <p><span>4步搞定</span>，20分鐘速裝，改裝零壓力！</p>
+                <h4>20分鐘DIY安裝</h4>
+                <p><span>4步完成</span>，募資期間免費安裝，輕鬆上手。</p>
               </div>
             </li>
             <li class="benefit-card" data-animate>
@@ -915,8 +941,8 @@
                 </svg>
               </div>
               <div class="benefit-content">
-                <h4>全罩半罩，隨心選</h4>
-                <p>完美適配你的風格，改裝需求更自由。</p>
+                <h4>全罩與半罩選擇</h4>
+                <p>靈活適配，滿足你的改裝風格。</p>
               </div>
             </li>
             <li class="benefit-card" data-animate>
@@ -926,8 +952,8 @@
                 </svg>
               </div>
               <div class="benefit-content">
-                <h4>黑科技碳纖，超耐用</h4>
-                <p>獨家 "Flexible-Fibre™ 技術"，360°緊密包覆，<span>強度飆升</span>，歷久彌新。</p>
+                <h4>Flexible-Fibre™黑科技</h4>
+                <p>360°碳纖包覆，<span>強度提升30%</span>，耐久如新。</p>
               </div>
             </li>
             <li class="benefit-card" data-animate>
@@ -937,8 +963,8 @@
                 </svg>
               </div>
               <div class="benefit-content">
-                <h4>保值又環保</h4>
-                <p>保護原廠盤，台澳聯手打造，愛車更永續。</p>
+                <h4>保值與永續</h4>
+                <p>保護原廠盤，澳洲設計台灣製造，減少環境負擔。</p>
               </div>
             </li>
           </ul>
@@ -946,8 +972,8 @@
 
         <!-- 影片展示區 -->
         <div class="fix-12-12 features-videos">
-          <h1 class="ae-1">親眼見證，改裝新革命</h1>
-          <p>真實體驗，點燃你的改車熱情</p>
+          <h1 class="ae-1">看看它的魅力</h1>
+          <p>真實體驗，見證改裝革命</p>
           <ul class="video-list">
             <li>
               <div class="popupTrigger videoThumbnail shadow rounded" data-popup-id="60-1">
@@ -955,7 +981,7 @@
                 <div class="play-icon">
                   <svg width="24" height="24" fill="#fff" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <p>20分鐘快速上手（1:30）</p>
+                <p>快速安裝（1:30）</p>
               </div>
             </li>
             <li>
@@ -964,7 +990,7 @@
                 <div class="play-icon">
                   <svg width="24" height="24" fill="#fff" viewBox=" 0 24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <p>硬核耐用實測（2:00）</p>
+                <p>耐用實測（2:00）</p>
               </div>
             </li>
             <li>
@@ -973,7 +999,7 @@
                 <div class="play-icon">
                   <svg width="24" height="24" fill="#fff" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <p>專屬客製全流程（1:45）</p>
+                <p>客製之旅（1:45）</p>
               </div>
             </li>
           </ul>
@@ -1025,12 +1051,15 @@
 
         <!-- 行動召喚區 -->
         <div class="fix-6-12 features-cta">
-          <h1 class="ae-2 huge fromAbove margin-bottom-2">改裝傳奇，從你開始！</h1>
+          <h1 class="ae-2 huge fromAbove margin-bottom-2">打造傳奇，立即行動！</h1>
           <div class="cta-buttons">
-            <a href="#reserve" class="button ae-3 primary">立即預約，搶早鳥優惠</a>
-            <a href="#install" class="button ae-3 secondary">探索更多細節</a>
+            <a href="#" class="button ae-3 primary">搶限量 50 組早鳥</a>
+            <a href="#install" class="button ae-3 secondary">了解更多</a>
           </div>
-          <p class="ae-2">填表享NT300折扣＋抽碳纖維杯墊，搶先加入募資！</p>
+          <div class="countdown-box">
+            <p>募資倒數：<span id="countdown"></span></p>
+          </div>
+          <p class="ae-2">前 50 名享 NT$500 折扣 + 免運費，僅限50組，錯過不再！</p>
         </div>
       </div>
     </div>
@@ -1500,71 +1529,103 @@
 </script>
 
 <!-- Slide 3 (#91) -->
-<section class="slide fade-6 kenBurns" data-name="update">
+        <section class="slide fade-6 kenBurns" data-name="update">
   <div class="content">
     <div class="container">
       <div class="wrap">
         <!-- 標題區 -->
         <div class="fix-6-12">
-          <h1 class="ae-2 huge fromAbove margin-bottom-2">你的改車傳奇，熱血啟動！</h1>
-          <p class="hero ae-2 margin-bottom-3"><span class="opacity-8">加入募資，點燃超跑夢</span></p>
+          <h1 class="ae-2 huge fromAbove margin-bottom-2">你的專屬改裝進行中！</h1>
+          <p class="hero ae-2 margin-bottom-3"><span class="opacity-8">528位車主已加入航太級夢想</span></p>
           <div class="button-group">
-            <a href="#reserve" class="button ae-3 primary-button">搶早鳥，立即參戰</a>
-            <a href="#" class="button ae-3 secondary-button">追蹤最新動態</a>
+            <a href="#" class="button ae-3 primary-button">立即支持募資</a>
+            <a href="#" class="button ae-3 secondary-button">訂閱更新</a>
           </div>
         </div>
 
         <!-- 進度展示區 -->
         <div class="fix-12-12 toCenter margin-top-8">
+          <div class="fix-7-12">
+            <h1 class="margin-bottom-2 ae-1 progress-title"><span class="opacity-6">募資進度一覽</span></h1>
+            <div class="ae-4 progress-circle">
+              <svg viewBox="0 0 36 36">
+                <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#E0E2DB" stroke-width="2"/>
+                <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 9.54 3.06" fill="none" stroke="#FFB900" stroke-width="2" stroke-dasharray="30, 100"/>
+                <text x="18" y="18" text-anchor="middle" font-size="8">30%</text>
+                <text x="18" y="24" text-anchor="middle" font-size="3">NT$150萬 / 500萬</text>
+              </svg>
+            </div>
+            <p class="cool-text ae-2">目標500萬，已達 <span class="highlight-number">150萬</span></p>
+          </div>
 
           <!-- 抽獎活動區 -->
           <div class="fix-12-12 ae-7 margin-top-4">
             <div class="fix-7-12 toCenter event-card">
-              <h2 class="ae-8">限時抽獎，改裝大禮來襲！</h2>
-              <p class="ae-9">填表支持募資，抽碳纖維套件！</p>
-              <a href="#reserve" class="button ae-10 event-button">立即搶抽</a>
+              <h2 class="ae-8">抽獎活動開跑！</h2>
+              <p class="ae-9">支持募資再抽大獎，限時至 4/23！</p>
+              <a href="#event" class="button ae-10 event-button">立即參加</a>
             </div>
           </div>
+
+          <!-- 數據卡片區 -->
+          <ul class="grid margin-top-4">
+            <li class="ae-4 data-card">
+              <h3>支持人數</h3>
+              <p class="tiny"><span class="highlight-number">528</span> 位車主</p>
+            </li>
+            <li class="ae-5 data-card">
+              <h3>剩餘時間</h3>
+              <p class="tiny">只剩 <span class="highlight-number">7</span> 天</p>
+            </li>
+            <li class="ae-6 data-card">
+              <h3>募資金額</h3>
+              <p class="tiny">已達 <span class="highlight-number">150</span> 萬</p>
+            </li>
+          </ul>
         </div>
 
         <!-- 里程碑區 -->
         <div class="milestone-section">
-          <h2 class="milestone-title">改裝進程，熱血加速！</h2>
+          <h2 class="milestone-title">最新里程碑</h2>
           <div class="milestone-container">
             <ul class="milestone-list">
               <li class="milestone-item">
-                <span class="milestone-date">4/23</span> 解鎖碳纖維改裝新世代，搶先預約！
-                <a href="#reserve" class="learn-more">了解更多</a>
+                <span class="milestone-date">3/15</span> 首批客製化圖樣開放投票，支持者參與中！
+                <a href="/vote-details" class="learn-more">了解更多</a>
               </li>
               <li class="milestone-item">
-                <span class="milestone-date">4/22</span> Beurst Taiwan 官方網站正式上線！
-                <a href="#" class="learn-more">了解更多</a>
+                <span class="milestone-date">3/18</span> 航太級碳纖維鋼模壓製完成，耐溫達200°C，重量減輕15%！
+                <a href="/carbon-fiber-details" class="learn-more">了解更多</a>
+              </li>
+              <li class="milestone-item">
+                <span class="milestone-date">3/20</span> 義大利皮革新色選項公開，質感再升級！
+                <a href="/leather-options" class="learn-more">了解更多</a>
               </li>
             </ul>
             <details class="milestone-details">
-              <summary>更多熱血進度</summary>
+              <summary>查看更多</summary>
               <ul class="milestone-list">
                 <li class="milestone-item">
-                  <span class="milestone-date">3/8</span> 開始計畫募資活動，感謝支持者！
-                  <a href="#update" class="learn-more">了解更多</a>
+                  <span class="milestone-date">3/5</span> 首批樣品完成，質感超乎預期！
+                  <a href="/sample-details" class="learn-more">了解更多</a>
                 </li>
                 <li class="milestone-item">
-                  <span class="milestone-date">1/5</span> Line官方群組成立，感謝大家支持！
-                  <a href="https://lin.ee/GmiO256" target="_blank" class="learn-more">了解更多</a>
+                  <span class="milestone-date">3/8</span> 募資突破100萬，感謝支持者！
+                  <a href="/funding-update" class="learn-more">了解更多</a>
                 </li>
               </ul>
             </details>
-            <a href="#customize"><button class="cta-button">立即打造你的專屬方向盤</button></a>
+            <a href="/customize"><button class="cta-button">立即客製你的改裝套件</button></a>
           </div>
         </div>
 
         <!-- 底部CTA區 -->
         <div class="fix-12-12 toCenter margin-top-8">
           <div class="fix-7-12">
-            <h1 class="ae-2 huge fromAbove margin-bottom-3">早鳥限時，C位是你！</h1>
+            <h1 class="ae-2 huge fromAbove margin-bottom-3">別錯過早鳥，立即加入！</h1>
             <div class="button-group">
-              <a href="#customize" class="button ae-3 primary-button">立即客製，搶NT300折扣</a>
-              <a href="#" class="button ae-3 secondary-button">追蹤改裝進度</a>
+              <a href="#" class="button ae-3 primary-button">搶先體驗客製化設計</a>
+              <a href="#" class="button ae-3 secondary-button">訂閱最新消息</a>
             </div>
           </div>
         </div>
@@ -1900,86 +1961,77 @@
 }
 </style>    
 
-<!-- Slide 4 (#27) -->    
-<section class="slide fade-6 kenBurns" data-name="install">
+<!-- Slide 4 (#27) -->
+ <section class="slide fade-6 kenBurns" data-name="install">
   <div class="content">
     <div class="container">
       <div class="wrap">
         <!-- 材質展示區 -->
         <div class="material-section fix-10-12 margin-bottom-5">
-          <h1 class="ae-1">超跑材質，點燃你的改車魂</h1>
-          <p class="intro-text ae-2">航太碳纖維、義大利頂級皮革、超強尼龍縫線，輕盈硬派又耐用，握出你的專屬態度！</p>
+          <h1 class="ae-1">頂級航太科技，打造你的專屬方向盤</h1>
+          <p class="intro-text ae-2">採用超跑等級的乾式碳纖維與義大利皮革，結合軍規縫線，輕量、耐用、永不褪色，完美詮釋你的改裝品味。</p>
           <ul class="flex verticalCenter grid material-list">
             <li class="col-5-12 ae-3 fromCenter material-item">
               <img src="assets/img/toray-carbon-fiber.jpg" alt="航太級乾式碳纖維方向盤材料" loading="lazy" />
-              <h3>航太碳纖維，輕盈硬派</h3>
-              <p>超跑專用乾式碳纖維，超輕超耐用，抗高溫不黃化，握感如賽道般精準。</p>
+              <h3>航太級乾式碳纖維</h3>
+              <p>150°C 高溫、110 kgf/cm² 鋼模壓製，輕 20%、耐溫 200°C，超跑專用，永不黃變。</p>
             </li>
             <li class="col-5-12 ae-4 fromCenter material-item">
-              <img src="assets/img/leather-teating-specifications.jpg" alt="義大利頭層皮革改裝材料" loading="lazy" />
-              <h3>義大利皮革，奢華握感</h3>
-              <p>頭層皮革與Alcantara，國際ISO品質認證耐磨耐用，無限搭配，質感直逼超跑內裝。</p>
+              <img src="assets/img/leather.jpg" alt="義大利頭層皮革改裝材料" loading="lazy" />
+              <h3>義大利頭層皮革</h3>
+              <p>ISO 認證奢華觸感，耐磨壽命提升 50%，無限搭配可能，展現獨特質感。</p>
             </li>
             <li class="col-5-12 ae-5 fromCenter material-item">
               <img src="assets/img/bonded-thread.jpg" alt="尼龍 PA66 邦迪線縫合" loading="lazy" />
-              <h3>超強尼龍縫線，堅若磐石</h3>
-              <p>杜邦尼龍PA66，耐熱耐磨，20kg拉力不變形，完美固定你的改裝夢想。</p>
+              <h3>軍規 PA66 邦迪線</h3>
+              <p>20kg 拉力，耐熱超越 PA6，軍規級縫合，堅固耐用。</p>
             </li>
           </ul>
-          <a href="#reserve" class="cta-button ae-6" aria-label="立即支持募資">立即搶早鳥，享NT300折扣</a>
+          <a href="/support" class="cta-button ae-6" aria-label="立即支持募資">立即支持，早鳥優惠倒數 7 天</a>
         </div>
 
         <!-- 個人化圖樣區 -->
         <div class="pattern-section fix-10-12 margin-bottom-5">
-          <h1 class="ae-1">全球獨家，打造你的改裝名片</h1>
-          <p class="intro-text ae-2">獨創金油轉印技術，把你的Logo、圖標變成方向盤焦點，車友圈C位出道！</p>
+          <h1 class="ae-1">你的專屬風格，全球獨一無二</h1>
+          <p class="intro-text ae-2">全球首創金油油墨轉印技術，將你的 Logo、塗鴉或設計永久融入方向盤，展現改裝車迷的自我態度。</p>
           <ul class="flex verticalCenter grid pattern-list">
             <li class="col-4-12 ae-3 fromCenter">
-              <img src="assets/img/m-benz_w210_dot.jpg" alt="Hyundai Elantra 個人化碳纖維方向盤" loading="lazy" />
-            </li>
-            <li class="col-4-12 ae-3 fromCenter">
-              <img src="assets/img/hyundai_elantra_usa.jpg" alt="Hyundai Elantra 個人化碳纖維方向盤" loading="lazy" />
-            </li>
-            <li class="col-4-12 ae-3 fromCenter">
-              <img src="assets/img/bmw_318i_pet.jpg" alt="Hyundai Elantra 個人化碳纖維方向盤" loading="lazy" />
-            </li>
-            <li class="col-4-12 ae-3 fromCenter">
-              <img src="assets/img/bme_520i_starrynight.jpg" alt="Hyundai Elantra 個人化碳纖維方向盤" loading="lazy" />
+              <img src="assets/img/hyundai_elantra.jpg" alt="Hyundai Elantra 個人化碳纖維方向盤" loading="lazy" />
             </li>
             <li class="col-4-12 ae-4 fromCenter">
-              <img src="assets/img/m-benz_c300_kid.jpg" alt="Mercedes-Benz C300 客製化方向盤" loading="lazy" />
+              <img src="assets/img/Mercedes-Benz_C300.jpg" alt="Mercedes-Benz C300 客製化方向盤" loading="lazy" />
             </li>
             <li class="col-4-12 ae-5 fromCenter">
-              <img src="assets/img/bmw_316i_family.jpg" alt="BMW 520i 獨特方向盤設計" loading="lazy" />
+              <img src="assets/img/bmw_520i.jpg" alt="BMW 520i 獨特方向盤設計" loading="lazy" />
             </li>
           </ul>
-          <a href="#customize" class="cta-button ae-6" aria-label="上傳個人化設計">立即設計，秀出你的態度</a>
+          <a href="/customize" class="cta-button ae-6" aria-label="上傳個人化設計">立即上傳你的專屬設計</a>
         </div>
 
         <!-- 安裝步驟區 -->
         <div class="install-section fix-8-12 margin-bottom-5">
-          <h1 class="ae-1">20分鐘DIY，改裝超簡單</h1>
-          <p class="intro-text ae-2">免拆方向盤，保固氣囊全無憂，隨附工具包，輕鬆打造超跑級握感！</p>
+          <h1 class="ae-1">20分鐘無損改裝，簡單上手</h1>
+          <p class="intro-text ae-2">無需拆卸原廠方向盤，100% 不影響保固與氣囊安全，隨附工具包，讓你輕鬆打造超跑級駕駛體驗。</p>
           <ul class="timeline">
             <li class="ae-3 timeline-item">
               <span class="step-number">1</span>
-              <img src="assets/img/step1.jpg" alt="套入碳纖維外殼" loading="lazy" />
-              <p>套上碳纖維外盔與真皮，完美貼合保固不失效</p>
+              <img src="assets/img/step1.jpg" alt="剝離方向盤舊皮" loading="lazy" />
+              <p>剝離舊皮，準備工具包 <span>無損原廠保固</span></p>
             </li>
             <li class="ae-4 timeline-item">
               <span class="step-number">2</span>
-              <img src="assets/img/step2.jpg" alt="引線縫合預留線孔" loading="lazy" />
-              <p>對齊預留線孔，輕鬆穿線，穩穩固定</p>
+              <img src="assets/img/step2.jpg" alt="套入碳纖維外殼" loading="lazy" />
+              <p>套入碳纖維外殼，精準貼合</p>
             </li>
             <li class="ae-5 timeline-item">
               <span class="step-number">3</span>
-              <img src="assets/img/step3.jpg" alt="拉緊縫線打結固定" loading="lazy" />
-              <p>拉緊縫線，背面打三平結，超牢靠</p>
+              <img src="assets/img/step3.jpg" alt="縫合預留孔" loading="lazy" />
+              <p>縫合預留孔，20分鐘上手</p>
             </li>
             <li class="ae-6 timeline-item">
               <span class="step-number">4</span>
-              <img src="assets/img/step4.jpg" alt="完美塞皮收尾" loading="lazy" />
-              <p>正面塞入多餘皮革，完美收尾，氣囊電控都安全</p>
+              <img src="assets/img/step4.jpg" alt="拉緊方向盤縫線" loading="lazy" />
+              <p>拉緊收尾，展現專屬風格 <span>不觸碰氣囊</span></p>
             </li>
           </ul>
           <div class="video-container ae-7 fromCenter">
@@ -1988,32 +2040,32 @@
               <span class="play-button"><svg><use xlink:href="#play"></use></svg></span>
             </div>
           </div>
-          <a href="#" class="cta-button ae-8" aria-label="立即支持募資">立即支持，解鎖專屬改裝</a>
+          <a href="/support" class="cta-button ae-8" aria-label="立即支持募資">立即支持，解鎖專屬改裝</a>
         </div>
 
         <!-- FAQ 區 -->
         <div class="faq-section fix-8-12 margin-bottom-5" id="FAQ">
-          <h2 class="ae-1">常改裝疑惑，一秒解惑</h2>
-          <p class="intro-text ae-2">關於材質與安裝的疑問？這裡讓你秒懂，放心改裝！</p>
+          <h2 class="ae-1">常見問題，快速解答</h2>
+          <p class="intro-text ae-2">想知道更多安裝與產品細節？這裡有你需要的所有答案！</p>
           <div class="faq-container">
             <details class="faq-item ae-3">
-              <summary>需要專業技術或工具嗎？</summary>
-              <p>完全不用！附贈工具包，20分鐘搞定，新手也能輕鬆上手。</p>
+              <summary>需要專業工具或經驗嗎？</summary>
+              <p>完全不需要！我們提供專用工具包，20分鐘即可完成，適合新手車迷。</p>
             </details>
             <details class="faq-item ae-4">
-              <summary>會不會影響保固或氣囊？</summary>
-              <p>絕對安全！無損設計，保固不失效，氣囊功能100%無憂。<a href="/safety-details" class="learn-more">了解更多</a></p>
+              <summary>會影響原廠保固或氣囊安全嗎？</summary>
+              <p>絕對安全！無損安裝技術，100% 不影響保固與氣囊功能。<a href="/safety-details" class="learn-more">了解更多</a></p>
             </details>
             <details class="faq-item ae-5">
-              <summary>客製圖樣會不會掉色？</summary>
-              <p>超耐用！獨家金油轉印，耐磨防刮，色彩永不褪。<a href="/pattern-details" class="learn-more">了解更多</a></p>
+              <summary>個人化圖樣耐用嗎？</summary>
+              <p>金油油墨轉印技術，耐磨、防刮，永久保持鮮明色彩。<a href="/pattern-details" class="learn-more">了解更多</a></p>
             </details>
             <details class="faq-item ae-6">
-              <summary>全罩式和半罩式差在哪？</summary>
-              <p>全罩式包覆全幅部，豪華感十足；半罩式包覆握把，輕盈靈活，隨你風格挑選！<a href="/style-details" class="learn-more">了解更多</a></p>
+              <summary>全罩式與半罩式有什麼不同？</summary>
+              <p>全罩式包覆方向盤全幅，豪華感十足；半罩式僅包覆握把，輕盈靈活，依你喜好選擇。<a href="/style-details" class="learn-more">了解更多</a></p>
             </details>
           </div>
-          <a href="#reserve" class="cta-button ae-7" aria-label="立即支持募資">立即支持，搶NT300折扣</a>
+          <a href="/support" class="cta-button ae-7" aria-label="立即支持募資">立即支持，搶早鳥優惠</a>
         </div>
       </div>
     </div>
@@ -2365,26 +2417,9 @@
           <select id="yearSelect" aria-label="選擇汽車年份">
             <option value="">選擇汽車年份</option>
             <option value="2007">2007</option>
-            <option value="2007">2008</option>
-            <option value="2007">2009</option>
-            <option value="2007">2010</option>
-            <option value="2007">2011</option>
-            <option value="2007">2012</option>
-            <option value="2007">2013</option>
-            <option value="2007">2014</option>
-            <option value="2007">2015</option>
-            <option value="2007">2016</option>
-            <option value="2007">2017</option>
-            <option value="2007">2018</option>
-            <option value="2007">2019</option>
-            <option value="2007">2020</option>
-            <option value="2007">2021</option>
-            <option value="2007">2022</option>
-            <option value="2007">2023</option>
-            <option value="2007">2024</option>
             <option value="2025">2025</option>
           </select>
-          <input type="text" id="modelInput" placeholder="輸入車型（如 316i）">
+          <input type="text" id="modelInput" placeholder="輸入車型（如 3 Series）">
           <button id="searchButton" aria-label="查詢車型適配性">立即查詢</button>
         </div>
         <div id="searchResult" class="search-result">
@@ -2394,340 +2429,63 @@
         </div>
 
         <!-- 車型展示 -->
-            <div class="fix-10-12 ae-4">
+        <div class="fix-10-12 ae-4">
           <h2 class="ae-1 margin-bottom-2" style="color: #008EAA;">熱門車型一覽</h2>
-          <p class="intro-text ae-2">已適配 BMW、Ford、Hyundai、Mercedes-Benz 等主流品牌，更多車型持續更新！</p>
-          
-          <!-- BMW -->
+            <p class="intro-text ae-2">已適配 BMW、Ford、Hyundai、Mercedes-Benz 等主流品牌，更多車型持續更新！</p>
           <div class="brand-section ae-3 margin-bottom-4">
             <h3 class="ae-4 brand-toggle">BMW <span class="toggle-icon">+</span></h3>
             <ul class="grid grid-83 noSpaces equal ae-5 fadeIn brand-content">
-            <li class="col-4-12 ae-6" style="background: #32373B; color: #E0E2DB; padding: 20px; border-radius: 5px;">
-                <h4 class="ae-7">BMW 3 Series 316i 2013</h4>
-                <div class="image-container">
-                  <a href="assets/img/suitable/bmw_316i_no_a.jpg" class="gallery-item" data-sub-html="BMW 3 Series 318i 2010 碳纖維方向盤，募資優惠搶先預約！">
-                    <img class="ae-8" src="assets/img/suitable/bmw_316i_no.jpg" alt="BMW 3 Series 318i 2010 碳纖維方向盤" loading="lazy">
-                  </a>
-                  <a href="assets/img/suitable/bmw_316i_no_b.jpg" class="gallery-item hidden" data-sub-html="BMW 3 Series 318i 2010 義大利頭層皮革縫線特寫"></a>
-                  <a href="assets/img/suitable/bmw_316i_no_c.jpg" class="gallery-item hidden" data-sub-html="BMW 3 Series 318i 2010 航太級乾式碳纖維紋理"></a>
-                </div>
-                <div class="ae-9 margin-top-1">
-                  <p class="tiny detail-note">點擊瀏覽更多圖片細節</p>
-                  <h6 class="uppercase bold small opacity-4">FULL SPOKE 全罩式</h6>
-                  <p class="tiny highlight">航太碳纖｜無損安裝｜超跑真皮</p>
-                </div>
-                <div class="margin-top-2 margin-bottom-2 equalElement ae-10">
-                  <ul class="p tiny">
-                    <li><strong>亮光｜平織｜乾式碳纖維</strong></li>
-                    <li><strong>義大利頭層牛皮｜紅</strong></li>
-                    <li><strong>義大利頭層牛皮｜黑</strong></li>
-                    <li><strong>台製邦迪線｜鐵灰</strong></li>
-                    <li class="opacity-7">Flexible-Fibre™ 技術</li>
-                  </ul>
-                  <span class="tag">航太級材質</span>
-                  <span class="tag personalization">免拆原盤</span>
-                </div>
-                <a href="#customize" class="cta-button ae-11" aria-label="設計你的專屬碳纖維方向盤">立即設計你的方向盤 <span class="countdown">募資優惠搶先預約</span></a>
-              </li>
               <li class="col-4-12 ae-6" style="background: #32373B; color: #E0E2DB; padding: 20px; border-radius: 5px;">
-                <h4 class="ae-7">BMW 3 Series 318i 2010</h4>
-                <div class="image-container">
-                  <a href="assets/img/suitable/bmw_318i_a.jpg" class="gallery-item" data-sub-html="BMW 3 Series 318i 2010 碳纖維方向盤，募資優惠搶先預約！">
-                    <img class="ae-8" src="assets/img/suitable/bmw_318i.jpg" alt="BMW 3 Series 318i 2010 碳纖維方向盤" loading="lazy">
-                  </a>
-                  <a href="assets/img/suitable/bmw_318i_b.jpg" class="gallery-item hidden" data-sub-html="BMW 3 Series 318i 2010 義大利頭層皮革縫線特寫"></a>
-                  <a href="assets/img/suitable/bmw_318i_c.jpg" class="gallery-item hidden" data-sub-html="BMW 3 Series 318i 2010 航太級乾式碳纖維紋理"></a>
-                  <a href="assets/img/suitable/bmw_318i_d.jpg" class="gallery-item hidden" data-sub-html="BMW 3 Series 318i 2010 毛小孩客製化圖樣"></a>
-                </div>
+                <h4 class="ae-7">3 Series 320i 2015</h4>
+                <img class="ae-8" width="100%" src="assets/img/bmw_320i.jpg" alt="BMW 3 Series">
                 <div class="ae-9 margin-top-1">
-                  <p class="tiny detail-note">點擊瀏覽更多圖片細節</p>
                   <h6 class="uppercase bold small opacity-4">FULL SPOKE 全罩式</h6>
-                  <p class="tiny highlight">航太碳纖｜無損安裝｜客製圖樣</p>
                 </div>
                 <div class="margin-top-2 margin-bottom-2 equalElement ae-10">
                   <ul class="p tiny">
-                    <li><strong>毛小孩</strong> - 客製化毛家人圖樣</li>
-                    <li><strong>消光｜斜紋｜乾式碳纖維</strong></li>
-                    <li><strong>義大利頭層牛皮｜白</strong></li>
-                    <li><strong>義大利頭層牛皮｜鐵灰</strong></li>
-                    <li><strong>台製邦迪線｜黑</strong></li>
-                    <li class="opacity-7">Flexible-Fibre™ 技術</li>
-                  </ul>
-                  <span class="tag">航太級材質</span>
-                  <span class="tag personalization">客製Logo</span>
-                </div>
-                <a href="#customize" class="cta-button ae-11" aria-label="設計你的專屬碳纖維方向盤">立即設計你的方向盤 <span class="countdown">募資優惠搶先預約</span></a>
-              </li>
-                <li class="col-4-12 ae-6" style="background: #32373B; color: #E0E2DB; padding: 20px; border-radius: 5px;">
-                <h4 class="ae-7">BMW 3 Series 520i 1998</h4>
-                <div class="image-container">
-                  <a href="assets/img/suitable/bmw_520i_a.jpg" class="gallery-item" data-sub-html="BMW 3 Series 316i 2013 碳纖維方向盤，募資優惠搶先預約！">
-                    <img class="ae-8" src="assets/img/suitable/bmw_520i.jpg" alt="BMW 3 Series 520i 1998 碳纖維方向盤" loading="lazy">
-                  </a>
-                  <a href="assets/img/suitable/bmw_520i_b.jpg" class="gallery-item hidden" data-sub-html="BMW 3 Series 520i 1998 義大利頭層皮革縫線特寫"></a>
-                  <a href="assets/img/suitable/bmw_520i_c.jpg" class="gallery-item hidden" data-sub-html="BMW 3 Series 520i 1998 航太級乾式碳纖維紋理"></a>
-                  <a href="assets/img/suitable/bmw_520i_d.jpg" class="gallery-item hidden" data-sub-html="BMW 3 Series 520i 1998 星夜·梵谷客製化圖樣"></a>
-                </div>
-                <div class="ae-9 margin-top-1">
-                  <p class="tiny detail-note">點擊瀏覽更多圖片細節</p>
-                  <h6 class="uppercase bold small opacity-4">FULL SPOKE 全罩式</h6>
-                  <p class="tiny highlight">航太碳纖｜無損安裝｜客製圖樣</p>
-                </div>
-                <div class="margin-top-2 margin-bottom-2 equalElement ae-10">
-                  <ul class="p tiny">
-                    <li><strong>星夜</strong> - 客製化梵谷名畫</li>
-                    <li><strong>消光｜平織｜乾式碳纖維</strong></li>
-                    <li><strong>義大利頭層牛皮｜寶藍 (壓孔)</strong></li>
-                    <li><strong>義大利Alcantara｜黑</strong></li>
-                    <li><strong>台製邦迪線｜黃</strong></li>
-                    <li class="opacity-7">Flexible-Fibre™ 技術</li>
-                  </ul>
-                  <span class="tag">航太級材質</span>
-                  <span class="tag personalization">客製Logo</span>
-                </div>
-                <a href="#customize" class="cta-button ae-11" aria-label="設計你的專屬碳纖維方向盤">立即設計你的方向盤 <span class="countdown">募資優惠搶先預約</span></a>
-              </li>
-                <li class="col-4-12 ae-6" style="background: #32373B; color: #E0E2DB; padding: 20px; border-radius: 5px;">
-                <h4 class="ae-7">BMW 3 Series 316i 2013</h4>
-                <div class="image-container">
-                  <a href="assets/img/suitable/bmw_316i_a.jpg" class="gallery-item" data-sub-html="BMW 3 Series 316i 2013 碳纖維方向盤，募資優惠搶先預約！">
-                    <img class="ae-8" src="assets/img/suitable/bmw_316i.jpg" alt="BMW 3 Series 316i 2013 碳纖維方向盤" loading="lazy">
-                  </a>
-                  <a href="assets/img/suitable/bmw_316i_b.jpg" class="gallery-item hidden" data-sub-html="BMW 3 Series 316i 2013 義大利頭層皮革縫線特寫"></a>
-                  <a href="assets/img/suitable/bmw_316i_c.jpg" class="gallery-item hidden" data-sub-html="BMW 3 Series 316i 2013 航太級乾式碳纖維紋理"></a>
-                  <a href="assets/img/suitable/bmw_316i_d.jpg" class="gallery-item hidden" data-sub-html="BMW 3 Series 316i 2013 達斯·維達客製化圖樣"></a>
-                </div>
-                <div class="ae-9 margin-top-1">
-                  <p class="tiny detail-note">點擊瀏覽更多圖片細節</p>
-                  <h6 class="uppercase bold small opacity-4">FULL SPOKE 全罩式</h6>
-                  <p class="tiny highlight">航太碳纖｜無損安裝｜客製圖樣</p>
-                </div>
-                <div class="margin-top-2 margin-bottom-2 equalElement ae-10">
-                  <ul class="p tiny">
-                    <li><strong>家人</strong> - 客製化家人圖樣</li>
-                    <li><strong>消光｜平織｜乾式碳纖維</strong></li>
-                    <li><strong>義大利頭層牛皮｜黑 (壓孔)</strong></li>
-                    <li><strong>義大利頭層牛皮｜鐵灰</strong></li>
-                    <li><strong>台製邦迪線｜黃</strong></li>
-                    <li class="opacity-7">Flexible-Fibre™ 技術</li>
-                  </ul>
-                  <span class="tag">航太級材質</span>
-                  <span class="tag personalization">客製Logo</span>
-                </div>
-                <a href="#customize" class="cta-button ae-11" aria-label="設計你的專屬碳纖維方向盤">立即設計你的方向盤 <span class="countdown">募資優惠搶先預約</span></a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Ford -->
-          <div class="brand-section ae-4 margin-bottom-4">
-            <h3 class="ae-5 brand-toggle">Ford <span class="toggle-icon">+</span></h3>
-            <ul class="grid grid-83 noSpaces equal ae-6 fadeIn brand-content">
-                <li class="col-4-12 ae-6" style="background: #32373B; color: #E0E2DB; padding: 20px; border-radius: 5px;">
-                <h4 class="ae-7">Ford Kuga 2015</h4>
-                <div class="image-container">
-                  <a href="assets/img/suitable/ford_kuga_a.jpg" class="gallery-item" data-sub-html="Hyundai Elantra 2014 碳纖維方向盤，募資優惠搶先預約！">
-                    <img class="ae-8" src="assets/img/suitable/ford_kuga.jpg" alt="Ford Kuga 2015 碳纖維方向盤" loading="lazy">
-                  </a>
-                  <a href="assets/img/suitable/ford_kuga_b.jpg" class="gallery-item hidden" data-sub-html="Ford Kuga 2015 義大利頭層皮革縫線特寫"></a>
-                  <a href="assets/img/suitable/ford_kuga_c.jpg" class="gallery-item hidden" data-sub-html="Ford Kuga 2015 航太級乾式碳纖維紋理"></a>
-                </div>
-                <div class="ae-9 margin-top-1">
-                  <p class="tiny detail-note">點擊瀏覽更多圖片細節</p>
-                  <h6 class="uppercase bold small opacity-4">FULL SPOKE 全罩式</h6>
-                  <p class="tiny highlight">航太碳纖｜無損安裝｜超跑皮革</p>
-                </div>
-                <div class="margin-top-2 margin-bottom-2 equalElement ae-10">
-                  <ul class="p tiny">
-                    <li><strong>亮光｜斜紋｜乾式碳纖維</strong></li>
-                    <li><strong>義大利頭層皮革｜紅</strong></li>
-                    <li><strong>台製邦迪線｜黃</strong></li>
-                    <li class="opacity-7">Flexible-Fibre™ 技術</li>
-                  </ul>
-                  <span class="tag">航太級材質</span>
-                  <span class="tag personalization">免拆原盤</span>
-                </div>
-                <a href="#customize" class="cta-button ae-11" aria-label="設計你的專屬碳纖維方向盤">立即設計你的方向盤 <span class="countdown">募資優惠搶先預約</span></a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Hyundai -->
-          <div class="brand-section ae-4 margin-bottom-4">
-            <h3 class="ae-5 brand-toggle">Hyundai <span class="toggle-icon">+</span></h3>
-            <ul class="grid grid-83 noSpaces equal ae-6 fadeIn brand-content">
-                <li class="col-4-12 ae-6" style="background: #32373B; color: #E0E2DB; padding: 20px; border-radius: 5px;">
-                <h4 class="ae-7">Hyundai Elantra 2014</h4>
-                <div class="image-container">
-                  <a href="assets/img/suitable/hyundai_elantra_a.jpg" class="gallery-item" data-sub-html="Hyundai Elantra 2014 碳纖維方向盤，募資優惠搶先預約！">
-                    <img class="ae-8" src="assets/img/suitable/hyundai_elantra.jpg" alt="Hyundai Elantra 2014 碳纖維方向盤" loading="lazy">
-                  </a>
-                  <a href="assets/img/suitable/hyundai_elantra_b.jpg" class="gallery-item hidden" data-sub-html="Hyundai Elantra 2014 義大利頭層皮革縫線特寫"></a>
-                  <a href="assets/img/suitable/hyundai_elantra_c.jpg" class="gallery-item hidden" data-sub-html="Hyundai Elantra 2014 航太級乾式碳纖維紋理"></a>
-                  <a href="assets/img/suitable/hyundai_elantra_d.jpg" class="gallery-item hidden" data-sub-html="Hyundai Elantra 2014 美國隊長客製化圖樣"></a>
-                </div>
-                <div class="ae-9 margin-top-1">
-                  <p class="tiny detail-note">點擊瀏覽更多圖片細節</p>
-                  <h6 class="uppercase bold small opacity-4">FULL SPOKE 全罩式</h6>
-                  <p class="tiny highlight">航太碳纖｜無損安裝｜客製圖樣</p>
-                </div>
-                <div class="margin-top-2 margin-bottom-2 equalElement ae-10">
-                  <ul class="p tiny">
-                    <li><strong>U.S.A</strong> - 客製化圖標</li>
-                    <li><strong>消光｜平織｜乾式碳纖維</strong></li>
-                    <li><strong>義大利頭層皮革｜寶藍</strong></li>
-                    <li><strong>義大利頭層皮革｜紅</strong></li>
+                    <li><strong>達斯·維達</strong></li>
+                    <li><strong>亮光｜平織碳纖維</strong></li>
+                    <li><strong>義大利頭層皮革｜黑/白</strong></li>
                     <li><strong>台製邦迪線｜白</strong></li>
                     <li class="opacity-7">Flexible-Fibre™ 技術</li>
                   </ul>
                   <span class="tag">航太級材質</span>
-                  <span class="tag personalization">客製Logo</span>
                 </div>
-                <a href="#customize" class="cta-button ae-11" aria-label="設計你的專屬碳纖維方向盤">立即設計你的方向盤 <span class="countdown">募資優惠搶先預約</span></a>
-              </li>
-              <li class="col-4-12 ae-6" style="background: #32373B; color: #E0E2DB; padding: 20px; border-radius: 5px;">
-                <h4 class="ae-7">Hyundai Elantra 2014</h4>
-                <div class="image-container">
-                  <a href="assets/img/suitable/hyundai_elantra_o_a.jpg" class="gallery-item" data-sub-html="Hyundai Elantra 2014 碳纖維方向盤，募資優惠搶先預約！">
-                    <img class="ae-8" src="assets/img/suitable/hyundai_elantra_o.jpg" alt="Hyundai Elantra 2014 碳纖維方向盤" loading="lazy">
-                  </a>
-                  <a href="assets/img/suitable/hyundai_elantra_o_b.jpg" class="gallery-item hidden" data-sub-html="Hyundai Elantra 2014 義大利頭層皮革縫線特寫"></a>
-                  <a href="assets/img/suitable/hyundai_elantra_o_c.jpg" class="gallery-item hidden" data-sub-html="Hyundai Elantra 2014 航太級乾式碳纖維紋理"></a>
-                  <a href="assets/img/suitable/hyundai_elantra_o_d.jpg" class="gallery-item hidden" data-sub-html="Hyundai Elantra 2014 美國隊長客製化圖樣"></a>
-                </div>
-                <div class="ae-9 margin-top-1">
-                  <p class="tiny detail-note">點擊瀏覽更多圖片細節</p>
-                  <h6 class="uppercase bold small opacity-4">OPEN SPOKE 半罩式</h6>
-                  <p class="tiny highlight">航太碳纖｜無損安裝｜客製圖樣</p>
-                </div>
-                <div class="margin-top-2 margin-bottom-2 equalElement ae-10">
-                  <ul class="p tiny">
-                    <li><strong>U.S.A</strong> - 客製化圖標</li>
-                    <li><strong>消光｜平織｜乾式碳纖維</strong></li>
-                    <li><strong>義大利頭層皮革｜寶藍</strong></li>
-                    <li><strong>台製邦迪線｜白</strong></li>
-                    <li class="opacity-7">Flexible-Fibre™ 技術</li>
-                  </ul>
-                  <span class="tag">航太級材質</span>
-                  <span class="tag personalization">客製Logo</span>
-                </div>
-                <a href="#customize" class="cta-button ae-11" aria-label="設計你的專屬碳纖維方向盤">立即設計你的方向盤 <span class="countdown">募資優惠搶先預約</span></a>
+                <a href="#customize" class="cta-button ae-11">立即設計你的方向盤</a>
               </li>
             </ul>
           </div>
-
-          <!-- Mercedes-Benz -->
           <div class="brand-section ae-4 margin-bottom-4">
-            <h3 class="ae-5 brand-toggle">Mercedes-Benz <span class="toggle-icon">+</span></h3>
+            <h3 class="ae-5 brand-toggle">FORD <span class="toggle-icon">+</span></h3>
             <ul class="grid grid-83 noSpaces equal ae-6 fadeIn brand-content">
               <li class="col-4-12 ae-6" style="background: #32373B; color: #E0E2DB; padding: 20px; border-radius: 5px;">
-                <h4 class="ae-7">Mercedes-Benz C300 2010</h4>
-                <div class="image-container">
-                  <a href="assets/img/suitable/m-benz_c300_a.jpg" class="gallery-item" data-sub-html="Mercedes-Benz C300 2010 碳纖維方向盤，募資優惠搶先預約！">
-                    <img class="ae-8" src="assets/img/suitable/m-benz_c300.jpg" alt="Mercedes-Benz C300 2010 碳纖維方向盤" loading="lazy">
-                  </a>
-                  <a href="assets/img/suitable/m-benz_c300_b.jpg" class="gallery-item hidden" data-sub-html="Mercedes-Benz C300 2010 義大利頭層皮革縫線特寫"></a>
-                  <a href="assets/img/suitable/m-benz_c300_c.jpg" class="gallery-item hidden" data-sub-html="Mercedes-Benz C300 2010 航太級乾式碳纖維紋理"></a>
-                  <a href="assets/img/suitable/m-benz_c300_d.jpg" class="gallery-item hidden" data-sub-html="Mercedes-Benz C300 2010 小孩客製化圖樣"></a>
-                </div>
-                <div class="ae-9 margin-top-1">
-                  <p class="tiny detail-note">點擊瀏覽更多圖片細節</p>
+                <h4 class="ae-8">Kuga 1.5L 2015</h4>
+                <img class="ae-9" width="100%" src="assets/img/ford_kuga.jpg" alt="Ford Kuga Full Spoke">
+                <div class="ae-10 margin-top-1">
                   <h6 class="uppercase bold small opacity-4">FULL SPOKE 全罩式</h6>
-                  <p class="tiny highlight">航太碳纖｜無損安裝｜客製圖樣</p>
                 </div>
-                <div class="margin-top-2 margin-bottom-2 equalElement ae-10">
+                <div class="margin-top-2 margin-bottom-2 equalElement ae-11">
                   <ul class="p tiny">
-                    <li><strong>小孩</strong> - 客製化家人圖樣</li>
-                    <li><strong>亮光｜斜紋｜乾式碳纖維</strong></li>
-                    <li><strong>義大利Alcantara｜紅</strong></li>
+                    <li><strong>鋼鐵人</strong></li>
+                    <li><strong>亮光｜斜織碳纖維</strong></li>
+                    <li><strong>Alcantara｜紅</strong></li>
                     <li><strong>台製邦迪線｜白</strong></li>
-                    <li class="opacity-7">Flexible-Fibre™ 技術</li>
+                    <li class="opacity-7">WheelHelmet™</li>
                   </ul>
-                  <span class="tag">航太級材質</span>
-                  <span class="tag personalization">客製Logo</span>
+                  <span class="tag">免拆安裝</span>
                 </div>
-                <a href="#customize" class="cta-button ae-11" aria-label="設計你的專屬碳纖維方向盤">立即設計你的方向盤 <span class="countdown">募資優惠搶先預約</span></a>
-              </li>
-                <li class="col-4-12 ae-6" style="background: #32373B; color: #E0E2DB; padding: 20px; border-radius: 5px;">
-                <h4 class="ae-7">Mercedes-Benz W210 2001</h4>
-                <div class="image-container">
-                  <a href="assets/img/suitable/m-benz_w210_a.jpg" class="gallery-item" data-sub-html="Mercedes-Benz W210 2001 碳纖維方向盤，募資優惠搶先預約！">
-                    <img class="ae-8" src="assets/img/suitable/m-benz_w210.jpg" alt="Mercedes-Benz W210 2001 碳纖維方向盤" loading="lazy">
-                  </a>
-                  <a href="assets/img/suitable/m-benz_w210_b.jpg" class="gallery-item hidden" data-sub-html="Mercedes-Benz W210 2001 義大利頭層皮革縫線特寫"></a>
-                  <a href="assets/img/suitable/m-benz_w210_c.jpg" class="gallery-item hidden" data-sub-html="Mercedes-Benz W210 2001 航太級乾式碳纖維紋理"></a>
-                  <a href="assets/img/suitable/m-benz_w210_d.jpg" class="gallery-item hidden" data-sub-html="Mercedes-Benz W210 2001 標章客製化圖樣"></a>
-                </div>
-                <div class="ae-9 margin-top-1">
-                  <p class="tiny detail-note">點擊瀏覽更多圖片細節</p>
-                  <h6 class="uppercase bold small opacity-4">OPEN SPOKE 半罩式</h6>
-                  <p class="tiny highlight">航太碳纖｜無損安裝｜客製圖樣</p>
-                </div>
-                <div class="margin-top-2 margin-bottom-2 equalElement ae-10">
-                  <ul class="p tiny">
-                    <li><strong>DOT</strong> - 客製化圖標</li>
-                    <li><strong>亮光｜平織｜乾式碳纖維</strong></li>
-                    <li><strong>義大利頭層皮革｜黑</strong></li>
-                    <li><strong>台製邦迪線｜紅</strong></li>
-                    <li class="opacity-7">Flexible-Fibre™ 技術</li>
-                  </ul>
-                  <span class="tag">航太級材質</span>
-                  <span class="tag personalization">客製Logo</span>
-                </div>
-                <a href="#customize" class="cta-button ae-11" aria-label="設計你的專屬碳纖維方向盤">立即設計你的方向盤 <span class="countdown">募資優惠搶先預約</span></a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Suzuki -->
-          <div class="brand-section ae-4 margin-bottom-4">
-            <h3 class="ae-5 brand-toggle">Suzuki <span class="toggle-icon">+</span></h3>
-            <ul class="grid grid-83 noSpaces equal ae-6 fadeIn brand-content">
-              <li class="col-4-12 ae-6" style="background: #32373B; color: #E0E2DB; padding: 20px; border-radius: 5px;">
-                <h4 class="ae-7">Suzuki Vitara 2017</h4>
-                <div class="image-container">
-                  <a href="assets/img/suitable/suzuki_vitara_a.jpg" class="gallery-item" data-sub-html="Suzuki Vitara 2017 碳纖維方向盤，募資優惠搶先預約！">
-                    <img class="ae-8" src="assets/img/suitable/suzuki_vitara.jpg" alt="Suzuki Vitara 2017 碳纖維方向盤" loading="lazy">
-                  </a>
-                  <a href="assets/img/suitable/suzuki_vitara_b.jpg" class="gallery-item hidden" data-sub-html="Suzuki Vitara 2017 義大利頭層皮革縫線特寫"></a>
-                  <a href="assets/img/suitable/suzuki_vitara_c.jpg" class="gallery-item hidden" data-sub-html="Suzuki Vitara 2017 航太級乾式碳纖維紋理"></a>
-                  <a href="assets/img/suitable/suzuki_vitara_d.jpg" class="gallery-item hidden" data-sub-html="Suzuki Vitara 2017 標章客製化圖樣"></a>
-                </div>
-                <div class="ae-9 margin-top-1">
-                  <p class="tiny detail-note">點擊瀏覽更多圖片細節</p>
-                  <h6 class="uppercase bold small opacity-4">FULL SPOKE 全罩式</h6>
-                  <p class="tiny highlight">航太碳纖｜無損安裝｜客製圖樣</p>
-                </div>
-                <div class="margin-top-2 margin-bottom-2 equalElement ae-10">
-                  <ul class="p tiny">
-                    <li><strong>心愛ㄟ</strong> - 客製化心愛ㄟ圖樣</li>
-                    <li><strong>亮光｜斜紋｜乾式碳纖維</strong></li>
-                    <li><strong>義大利頭層牛皮｜鐵灰</strong></li>
-                    <li><strong>義大利Alcantara｜黑</strong></li>
-                    <li><strong>台製邦迪線｜灰</strong></li>
-                    <li class="opacity-7">Flexible-Fibre™ 技術</li>
-                  </ul>
-                  <span class="tag">航太級材質</span>
-                  <span class="tag personalization">客製Logo</span>
-                </div>
-                <a href="#customize" class="cta-button ae-11" aria-label="設計你的專屬碳纖維方向盤">立即設計你的方向盤 <span class="countdown">募資優惠搶先預約</span></a>
+                <a href="#customize" class="cta-button ae-12">立即設計你的方向盤</a>
               </li>
             </ul>
           </div>
         </div>
+
         <!-- 信任元素 -->
         <div class="ae-6 margin-top-4" style="text-align: center; color: #E0E2DB;">
-          <p class="small opacity-7">已適配主流熱門車型</p>
-          <p class="tiny">全部皮革，皆通過 <strong>UNI EN 16484</strong> 安全標準</p>
-          <img src="assets/img/UNI EN 16484.png" alt="UNI EN 16484安全認證" class="cert-badge" loading="lazy"><br>
-          <a href="#reserve" class="cta-button" aria-label="立即支持募資">立即支持，募資優惠搶先預約</a>
-        </div>
-
-        <!-- 用戶反饋區 -->
-        <div class="feedback-cta ae-7 margin-top-4">
-          <h3 style="color: #FFB900;">你的車型不在名單中？</h3>
-          <p class="small">告訴我們你的車型，我們將優先適配！</p>
-          <a href="#feedback-form" class="cta-button">提交車型需求</a>
+          <p class="small opacity-7">已適配 500+ 主流車型，未適配可全額退款</p>
+          <p class="tiny">航太級乾式碳纖維，通過 <strong>ISO 26262</strong> 汽車安全標準</p>
+          <img src="assets/img/iso-cert.png" alt="ISO 26262 汽車安全認證" class="cert-badge" loading="lazy"><br>
+          <a href="#" class="cta-button" aria-label="立即支持募資">立即支持，早鳥優惠倒數 7 天</a>
         </div>
       </div>
     </div>
@@ -2791,36 +2549,31 @@
   color: #E0E2DB;
 }
 
-/* 車型查詢與反饋CTA */
-.search-cta, .feedback-cta {
-  text-align: center;
-  margin: 20px 0;
-}
-
 /* 車型展示 */
 .brand-section {
-  background: linear-gradient(135deg, #32373B 70%, #191716);
+  background: #32373B;
   padding: 15px;
   border-radius: 5px;
-  border: 2px solid #6E2585;
-  box-shadow: 0 0 15px rgba(110, 37, 133, 0.3);
+  border: 2px solid #008EAA;
+  box-shadow: 0 0 15px rgba(0, 142, 170, 0.3);
 }
 
 .brand-toggle {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   font-family: 'Racing Sans One', sans-serif;
   font-size: 25px;
-  color: #FFB900;
-  border-bottom: 2px solid #008EAA;
+  color: #E0E2DB;
+  border-bottom: 2px solid #FFB900;
   padding-bottom: 5px;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
-.brand-toggle:hover { color: #6E2585; }
+.brand-toggle:hover { color: #FFB900; }
 
-.toggle-icon { font-size: 18px; margin-left: auto; transition: transform 0.3s ease; }
+.toggle-icon { font-size: 18px; transition: transform 0.3s ease; }
 
 .brand-content {
   overflow: hidden;
@@ -2828,130 +2581,37 @@
   max-height: 0;
 }
 
-.brand-content.active { max-height: none; height: auto; }
+.brand-content.active { max-height: 1000px; }
 
 .brand-toggle.active .toggle-icon { transform: rotate(45deg); }
 
-.image-container {
-  position: relative;
-  padding-top: 56.25%; /* 16:9 比例 */
-  overflow: hidden;
-}
-
-.image-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.brand-content img {
   border: 2px solid #008EAA;
   transition: all 0.3s ease;
 }
 
-.image-container img:hover {
+.brand-content img:hover {
   border-color: #FFB900;
   transform: scale(1.05);
 }
 
-.gallery-item.hidden { display: none; }
+.tag { color: #FFB900; font-size: 12px; }
 
-.p.tiny {
-  font-size: 14px;
-  line-height: 1.5;
-  margin: 10px 0;
-}
-
-.highlight {
-  color: #FFB900;
-  font-weight: bold;
-  margin-top: 5px;
-}
-
-.detail-note {
-  color: #E0E2DB;
-  font-style: italic;
-  margin-top: 5px;
-}
-
-.tag {
-  color: #FFB900;
-  font-size: 12px;
-  padding: 5px 10px;
-  border-radius: 3px;
-}
-
-.tag.personalization {
-  background: #6E2585;
-  color: #E0E2DB;
-  margin-left: 10px;
-}
-
-.trust-badge {
-  margin-top: 10px;
-  text-align: center;
-}
-
-.cert-badge {
-  width: 100px;
-  opacity: 0.8;
-}
-
-.cta-button {
+.button.wide {
   background: #FFB900;
   color: #191716;
-  padding: 12px 20px;
+  padding: 10px;
+  display: block;
+  text-align: center;
   border-radius: 5px;
   border: 2px solid #6E2585;
   transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
 }
 
-.cta-button:hover {
+.button.wide:hover {
   background: #6E2585;
   color: #E0E2DB;
-  box-shadow: 0 0 15px rgba(110, 37, 133, 0.5);
-}
-
-.countdown {
-  font-size: 12px;
-  color: #E0E2DB;
-  background: #6E2585;
-  padding: 2px 8px;
-  border-radius: 3px;
-  margin-left: 10px;
-}
-
-.share-buttons {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-
-.share-icon {
-  color: #FFB900;
-  font-size: 20px;
-  transition: color 0.3s ease;
-}
-
-.share-icon:hover { color: #6E2585; }
-
-@media (max-width: 767px) {
-  .grid.grid-83 .col-4-12 {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-  .image-container img {
-    max-height: 200px;
-  }
-}
-
-@media (min-width: 768px) {
-  .grid.grid-83 .col-4-12 {
-    width: 33.33%;
-  }
+  box-shadow: 0 0 10px rgba(255, 185, 0, 0.7);
 }
 </style>
 
@@ -3036,51 +2696,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // 車型展示展開收合
   const toggles = document.querySelectorAll('.brand-toggle');
-  
   toggles.forEach(toggle => {
     toggle.addEventListener('click', function() {
       const content = this.nextElementSibling;
       const icon = this.querySelector('.toggle-icon');
-      const isActive = content.classList.contains('active');
-      
-      // Toggle active state
-      content.classList.toggle('active');
-      this.classList.toggle('active');
-      icon.textContent = isActive ? '+' : '×';
-      
-      // Update ARIA attribute
-      this.setAttribute('aria-expanded', !isActive);
-    });
-    
-    // Keyboard accessibility
-    toggle.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        this.click();
+      if (content.classList.contains('active')) {
+        content.classList.remove('active');
+        this.classList.remove('active');
+        icon.textContent = '+';
+      } else {
+        content.classList.add('active');
+        this.classList.add('active');
+        icon.textContent = '×';
       }
-    });
-  });
-
-  // 初始化圖片燈箱
-  const galleries = document.querySelectorAll('.image-container');
-  galleries.forEach(gallery => {
-    lightGallery(gallery, {
-      selector: '.gallery-item',
-      thumbnail: true,
-      zoom: true,
-      download: false,
-      counter: true,
-      subHtmlSelectorRelative: true
-    });
-  });
-
-  // Google Analytics 事件追蹤（圖片放大）
-  document.querySelectorAll('.gallery-item').forEach(item => {
-    item.addEventListener('click', () => {
-      gtag('event', 'view_detail', {
-        'event_category': 'Image_Gallery',
-        'event_label': item.getAttribute('data-sub-html')
-      });
     });
   });
 });
@@ -3093,8 +2721,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="wrap">
         <!-- 標題區 -->
         <div class="fix-12-12 toCenter margin-bottom-4">
-            <h1 class="ae-1 huge fromAbove" style="font-family: 'Racing Sans One', sans-serif; text-shadow: 0 0 10px #6E2585;">建構中</h1>
-          <h3 class="ae-1 huge fromAbove" style="font-family: 'Racing Sans One', sans-serif; color: #FFB900; text-shadow: 0 0 10px #6E2585;">客製你的碳纖維方向盤</h3>
+          <h1 class="ae-1 huge fromAbove" style="font-family: 'Racing Sans One', sans-serif; color: #FFB900; text-shadow: 0 0 10px #6E2585;">客製你的碳纖維方向盤</h1>
           <p class="ae-2" style="color: #E0E2DB; font-size: 18px;">打造專屬於你的駕駛藝術品，立即設計！</p>
         </div>
 
@@ -3109,7 +2736,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <form id="customizeForm" style="display: flex; flex-direction: column; gap: 10px;">
                 <!-- 第1列: 你的選擇 -->
                 <div class="form-group ae-1" style="display: flex; align-items: center; gap: 10px;">
-                  <label style="color: #FFB900; font-weight: bold; min-width: 100px;">罩出風格 :</label>
+                  <label style="color: #FFB900; font-weight: bold; min-width: 100px;">你的選擇 :</label>
                   <div style="display: flex; align-items: center; gap: 15px;">
                     <div style="display: flex; align-items: center;">
                       <input type="radio" name="coverage" value="full" id="fullCoverage" checked style="margin-right: 5px;">
@@ -3124,7 +2751,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <!-- 第2列: 你的項目 -->
                 <div class="form-group ae-2" style="display: flex; align-items: center; gap: 10px;">
-                  <label style="color: #FFB900; font-weight: bold; min-width: 100px;">選材霸氣 :</label>
+                  <label style="color: #FFB900; font-weight: bold; min-width: 100px;">你的項目 :</label>
                   <select name="materialType" style="background: #E0E2DB; color: #32373B; padding: 5px; border: none; border-radius: 5px; width: 100%;">
                     <option value="allAlcantara">全Alcantara</option>
                     <option value="mix">Alcantara與真皮</option>
@@ -3134,7 +2761,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <!-- 第3列: 原盤幅數 -->
                 <div class="form-group ae-3" style="display: flex; align-items: center; gap: 10px;">
-                  <label style="color: #FFB900; font-weight: bold; min-width: 100px;">幅數硬派 :</label>
+                  <label style="color: #FFB900; font-weight: bold; min-width: 100px;">原盤幅數 :</label>
                   <div style="display: flex; align-items: center; gap: 15px;">
                     <div style="display: flex; align-items: center;">
                       <input type="radio" name="spokes" value="three" id="threeSpokes" checked style="margin-right: 5px;">
@@ -3149,7 +2776,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <!-- 第4列: 碳纖樣式 -->
                 <div class="form-group ae-4" style="display: flex; align-items: center; gap: 10px;">
-                  <label style="color: #FFB900; font-weight: bold; min-width: 100px;">碳纖態度 :</label>
+                  <label style="color: #FFB900; font-weight: bold; min-width: 100px;">碳纖樣式 :</label>
                   <select name="carbonStyle" style="background: #E0E2DB; color: #32373B; padding: 5px; border: none; border-radius: 5px; width: 100%;">
                     <option value="elegant">典雅</option>
                     <option value="passion">熱血</option>
@@ -3160,7 +2787,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <!-- 第5列: 碳纖外觀 -->
                 <div class="form-group ae-5" style="display: flex; align-items: center; gap: 10px;">
-                  <label style="color: #FFB900; font-weight: bold; min-width: 100px;">碳纖質感 :</label>
+                  <label style="color: #FFB900; font-weight: bold; min-width: 100px;">碳纖外觀 :</label>
                   <select name="carbonPattern" style="background: #E0E2DB; color: #32373B; padding: 5px; border: none; border-radius: 5px; width: 50%;">
                     <option value="twill">斜紋</option>
                     <option value="plain">平織</option>
@@ -3173,7 +2800,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <!-- 第6列: 皮革樣式 -->
                 <div class="form-group ae-6" style="display: flex; align-items: center; gap: 10px;">
-                  <label style="color: #FFB900; font-weight: bold; min-width: 100px;">皮革風格 :</label>
+                  <label style="color: #FFB900; font-weight: bold; min-width: 100px;">皮革樣式 :</label>
                   <select name="leatherSpokes" style="background: #E0E2DB; color: #32373B; padding: 5px; border: none; border-radius: 5px; width: 50%;">
                     <option value="three">3幅</option>
                     <option value="four">4幅</option>
@@ -3189,7 +2816,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <!-- 第7列: 側邊皮革 -->
                 <div class="form-group ae-7" style="display: flex; align-items: center; gap: 10px;">
-                  <label style="color: #FFB900; font-weight: bold; min-width: 100px;">側邊霸氣 :</label>
+                  <label style="color: #FFB900; font-weight: bold; min-width: 100px;">側邊皮革 :</label>
                   <select name="sideMaterial" style="background: #E0E2DB; color: #32373B; padding: 5px; border: none; border-radius: 5px; width: 50%;">
                     <option value="leather">真皮</option>
                     <option value="alcantara">Alcantara</option>
@@ -3206,7 +2833,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <!-- 第8列: 側邊表面 -->
                 <div class="form-group ae-8" style="display: flex; align-items: center; gap: 10px;">
-                  <label style="color: #FFB900; font-weight: bold; min-width: 100px;">側邊觸感 :</label>
+                  <label style="color: #FFB900; font-weight: bold; min-width: 100px;">側邊表面 :</label>
                   <select name="sideFinish" style="background: #E0E2DB; color: #32373B; padding: 5px; border: none; border-radius: 5px; width: 100%;">
                     <option value="raw">原皮</option>
                     <option value="perforated">壓孔</option>
@@ -3215,7 +2842,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <!-- 第9列: 底部皮革 -->
                 <div class="form-group ae-9" style="display: flex; align-items: center; gap: 10px;">
-                  <label style="color: #FFB900; font-weight: bold; min-width: 100px;">底部質感 :</label>
+                  <label style="color: #FFB900; font-weight: bold; min-width: 100px;">底部皮革 :</label>
                   <select name="bottomMaterial" style="background: #E0E2DB; color: #32373B; padding: 5px; border: none; border-radius: 5px; width: 50%;">
                     <option value="leather">真皮</option>
                     <option value="alcantara">Alcantara</option>
@@ -3233,7 +2860,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <!-- 第10列: 底部表面 -->
                 <div class="form-group ae-10" style="display: flex; align-items: center; gap: 10px;">
-                  <label style="color: #FFB900; font-weight: bold; min-width: 100px;">底部細膩 :</label>
+                  <label style="color: #FFB900; font-weight: bold; min-width: 100px;">底部表面 :</label>
                   <select name="bottomFinish" style="background: #E0E2DB; color: #32373B; padding: 5px; border: none; border-radius: 5px; width: 100%;">
                     <option value="raw">原皮</option>
                     <option value="perforated">壓孔</option>
@@ -3242,7 +2869,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <!-- 第11列: 縫線顏色 -->
                 <div class="form-group ae-11" style="display: flex; align-items: center; gap: 10px;">
-                  <label style="color: #FFB900; font-weight: bold; min-width: 100px;">縫線亮點 :</label>
+                  <label style="color: #FFB900; font-weight: bold; min-width: 100px;">縫線顏色 :</label>
                   <select name="stitchColor" class="color-select" style="background: #E0E2DB; color: #32373B; padding: 5px; border: none; border-radius: 5px; width: 85%;">
                     <option value="red">紅</option>
                     <option value="black">黑</option>
@@ -3262,7 +2889,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div style="flex: 1; text-align: center; padding: 10px; background: rgba(25, 23, 22, 0.8); border-radius: 5px;">
               <h3 style="color: #FFB900; font-family: 'Racing Sans One', sans-serif; margin-bottom: 10px;">你的專屬設計</h3>
               <canvas id="previewCanvas" width="300" height="500" style="max-width: 100%; border-radius: 5px; border: 2px solid #FFB900;"></canvas>
-              <p style="color: #E0E2DB; font-size: 12px; margin-top: 5px;">*募資支持即享折扣</p>
+              <p style="color: #E0E2DB; font-size: 12px; margin-top: 5px;">*募資支持即享 20% 折扣，限量 500 份</p>
             </div>
           </div>
 
@@ -3463,14 +3090,75 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   updateFormOptions();
 
-  // 預覽更新
-    function updatePreview() {
+  // 預覽更新（保持不變）
+  function updatePreview() {
     const formData = new FormData(customizeForm);
+    const coverage = formData.get('coverage');
+    const materialType = formData.get('materialType');
     const spokes = formData.get('spokes');
+    const carbonStyle = formData.get('carbonStyle');
+    const carbonPattern = formData.get('carbonPattern');
+    const carbonFinish = formData.get('carbonFinish');
+    const leatherSpokes = formData.get('leatherSpokes');
+    const leatherPattern = formData.get('leatherPattern');
+    const sideMaterial = formData.get('sideMaterial');
+    const sideColor = formData.get('sideColor');
+    const sideFinish = formData.get('sideFinish');
+    const bottomMaterial = formData.get('bottomMaterial');
+    const bottomColor = formData.get('bottomColor');
+    const bottomFinish = formData.get('bottomFinish');
+    const stitchColor = formData.get('stitchColor');
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     const baseImg = baseImages[spokes];
     ctx.drawImage(baseImg, 0, 0, canvas.width, canvas.height);
+
+    if (sideMaterial === 'leather' || sideMaterial === 'alcantara') {
+      ctx.fillStyle = `${colorMap[sideColor]}80`;
+      ctx.fillRect(canvas.width * 0.2, canvas.height * 0.2, canvas.width * 0.3, canvas.height * 0.2);
+    }
+
+    if (bottomMaterial === 'leather' || bottomMaterial === 'alcantara') {
+      ctx.fillStyle = `${colorMap[bottomColor]}80`;
+      ctx.fillRect(canvas.width * 0.2, canvas.height * 0.6, canvas.width * 0.3, canvas.height * 0.2);
+    }
+
+    ctx.beginPath();
+    ctx.strokeStyle = colorMap[stitchColor] || '#000';
+    ctx.lineWidth = 2;
+    ctx.moveTo(canvas.width * 0.25, canvas.height * 0.25);
+    ctx.lineTo(canvas.width * 0.45, canvas.height * 0.25);
+    ctx.moveTo(canvas.width * 0.25, canvas.height * 0.65);
+    ctx.lineTo(canvas.width * 0.45, canvas.height * 0.65);
+    ctx.stroke();
+
+    const fontSize = window.innerWidth < 768 ? 12 : 16;
+    ctx.font = `bold ${fontSize}px "Racing Sans One", sans-serif`;
+    ctx.textAlign = 'center';
+    ctx.fillStyle = '#FFB900';
+    ctx.strokeStyle = '#6E2585';
+    ctx.lineWidth = 2;
+
+    const labels = [
+      `選擇: ${coverage === 'full' ? '全罩式' : '半罩式'}`,
+      `項目: ${materialType === 'allAlcantara' ? '全Alcantara' : materialType === 'mix' ? 'Alcantara與真皮' : '全真皮'}`,
+      `幅數: ${spokes === 'three' ? '三幅' : '四幅'}`,
+      `碳纖: ${carbonStyle === 'elegant' ? '典雅' : carbonStyle === 'passion' ? '熱血' : carbonStyle === 'classic' ? '經典' : '尊貴'}`,
+      `外觀: ${carbonPattern === 'twill' ? '斜紋' : '平織'} ${carbonFinish === 'glossy' ? '亮光' : '消光'}`,
+      `皮革: ${leatherSpokes === 'three' ? '3幅' : '4幅'} ${leatherPattern === 'halfMoon' ? '半月' : leatherPattern === 'flowing' ? '流心' : leatherPattern === 'shadow' ? '影行' : leatherPattern === 'cangping' ? '蒼平' : '星痕'}`,
+      `側邊: ${sideMaterial === 'leather' ? '真皮' : 'Alcantara'} ${sideColor}`,
+      `側表: ${sideFinish === 'raw' ? '原皮' : '壓孔'}`,
+      `底部: ${bottomMaterial === 'leather' ? '真皮' : bottomMaterial === 'alcantara' ? 'Alcantara' : '無'} ${bottomMaterial !== 'none' ? bottomColor : ''}`,
+      `底表: ${bottomFinish === 'raw' ? '原皮' : '壓孔'}`,
+      `縫線: ${stitchColor}`,
+      '募資限定 - 早鳥 20% OFF'
+    ];
+
+    labels.forEach((label, index) => {
+      const y = 20 + index * 35;
+      ctx.strokeText(label, canvas.width / 2, y);
+      ctx.fillText(label, canvas.width / 2, y);
+    });
   }
 
   baseImages.three.onload = updatePreview;
@@ -3570,38 +3258,38 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="wrap">
         <!-- 標題區 -->
         <div class="fix-8-12 ae-1">
-          <h1 class="huge fromAbove margin-bottom-2" style="color: #FFB900;">點燃改車魂，握出你的傳奇</h1>
-          <p class="intro-text ae-2">每一次轉動，都是你的專屬態度</p>
-          <p class="small ae-3" style="color: #FFB900;">不只是改裝，是車友圈的熱血宣言</p>
+          <h1 class="huge fromAbove margin-bottom-2" style="color: #FFB900;">點燃你的駕馭熱情，從方向盤開始</h1>
+          <p class="intro-text ae-2">讓每一次轉動，都成為你的獨特宣言</p>
+          <p class="small ae-3" style="color: #FFB900;">不只是改裝，更是改裝車迷的態度與夢想</p>
         </div>
 
         <!-- 從哪裡來 -->
         <div class="fix-10-12 ae-2 margin-top-4">
-          <h2 class="ae-1 fromLeft margin-bottom-2" style="color: #008EAA;">從改車夢想，到全球首創</h2>
+          <h2 class="ae-1 fromLeft margin-bottom-2" style="color: #008EAA;">從車庫夢想，到航太級革新</h2>
           <ul class="flex verticalCenter">
             <li class="col-5-12 cell-27 ae-3">
               <div class="fix-4-12 center">
-                <img src="assets/img/mission-a.jpg" alt="航太級乾式碳纖維方向盤製過程" style="width: 100%; border-radius: 5px;" class="ae-2 fromCenter">
+                <img src="assets/img/gallery-60-1.jpg" alt="航太級乾式碳纖維方向盤製過程" style="width: 100%; border-radius: 5px;" class="ae-2 fromCenter">
               </div>
             </li>
             <li class="col-7-12 left ae-4">
-              <p class="opacity-8" style="font-size: 20px">十年前，我們與澳洲夥伴燃起改裝熱情，如今將航太碳纖維帶進你的愛車。台澳聯手，打造全球獨家無損改裝方向盤，超跑級握感，專屬你的風格！</p>
-                <a href="#reserve" class="cta-button ae-5" aria-label="立即支持募資">立即參戰，搶NT300折扣</a>
+              <p class="opacity-8" style="font-size: 20px">十年前，我們在澳洲一間小車庫點燃改裝夢想，今日將航太級乾式碳纖維帶入你的愛車。由澳洲設計師與台灣製造專家聯手，我們打造全球首創的碳纖維方向盤縫皮，無需拆盤即可享受超跑級操控與個人化風格。</p>
+                <a href="#" class="cta-button ae-5" aria-label="立即支持募資">立即支持，搶早鳥優惠</a>
             </li>
           </ul>
         </div>
 
         <!-- 要去哪裡 -->
         <div class="fix-10-12 ae-3 margin-top-4">
-          <h2 class="ae-1 fromLeft margin-bottom-2" style="color: #008EAA;">與車友共創，改裝新紀元</h2>
+          <h2 class="ae-1 fromLeft margin-bottom-2" style="color: #008EAA;">與你共創改裝新未來</h2>
           <ul class="flex reverse verticalCenter">
             <li class="col-7-12 left ae-4">
-              <p class="opacity-8" style="font-size: 20px">我們要讓每位車迷用親民價格，握住超跑級體驗！從義大利頂級皮革到專屬圖樣，和你一起重新定義改裝，站上車友圈C位！</p>
-              <a href="#reserve" class="cta-button ae-5" aria-label="加入改裝革命">加入革命，成為改裝先鋒</a>
+              <p class="opacity-8" style="font-size: 20px">我們的使命是讓每位車迷都能以親民價格，擁有高端改裝體驗。從義大利頭層皮革到個人化圖樣轉印，我們與全球車迷一起，重新定義駕馭的可能，成為改裝圈的先鋒。</p>
+              <a href="/support" class="cta-button ae-5" aria-label="加入改裝革命">加入改裝革命</a>
             </li>
             <li class="col-5-12 ae-3">
               <div class="fix-4-12 center">
-                <img src="assets/img/mission-b.jpg" alt="客製化碳纖維方向盤成品" style="width: 100%; border-radius: 5px;" class="ae-2 fromCenter">
+                <img src="assets/img/gallery-60-2.jpg" alt="客製化碳纖維方向盤成品" style="width: 100%; border-radius: 5px;" class="ae-2 fromCenter">
               </div>
             </li>
           </ul>
@@ -3614,22 +3302,21 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="progress-bar">
               <div class="progress-fill"></div>
             </div>
-            <p class="small margin-top-1">你的加入，點燃車友圈新革命</p>
-            <a href="#reserve" class="cta-button" aria-label="立即支持募資">立即支持，搶限時優惠</a>
+            <p class="small margin-top-1">你的支持，將點燃改裝新時代</p>
+            <a href="#" class="cta-button" aria-label="立即支持募資">立即支持，成為先鋒</a>
           </div>
         </div>
 
         <!-- 電子報訂閱 -->
         <div class="fix-8-12 ae-5 margin-top-4 center">
-          <h3 class="ae-6 margin-bottom-2" style="color: #FFB900; font-size: 24px">追蹤改裝熱訊</h3>
-          <p class="intro-text ae-7">加加入車友陣營，獨家改裝秘訣與進度搶先看！</p>
+          <h3 class="ae-6 margin-bottom-2" style="color: #FFB900; font-size: 24px">訂閱最新改裝資訊</h3>
+          <p class="intro-text ae-7">加入我們的車迷社群，搶先體驗獨家改裝秘訣與募資進度！</p>
           <div class="sender-form-field ae-8" data-sender-form-id="m8sw139cdr68z0y2vuv"></div>
         </div>
       </div>
     </div>
   </div>
-  <div class="background" style="background-image: url('assets/img/background/img-mission.jpg'); opacity: 0.4;"></div>
-  <div style="background: linear-gradient(135deg, #6E2585 20%, #008EAA 60%, #191716 100%); position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.7; z-index: -1;"></div>
+  <div class="background" style="background-image: url('assets/img/background/img-mission.jpg'); opacity: 0.3;"></div>
 
   <!-- 內嵌 CSS -->
   <style>
