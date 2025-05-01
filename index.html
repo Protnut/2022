@@ -47,6 +47,19 @@
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/plugins/thumbnail/lg-thumbnail.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/plugins/zoom/lg-zoom.min.js"></script>
     
+    <!-- Google Translate Widget -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'zh-TW', // 原始語言：繁體中文
+          includedLanguages: 'en,ja,de,es', // 支援語言：英文、日文、德文、西班牙文
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE, // 簡潔下拉選單
+          autoDisplay: false // 不自動顯示翻譯橫幅
+        }, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
     <!-- Sender -->
             <script>
                 (function (s, e, n, d, er) {
@@ -62,25 +75,6 @@
                 })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
                 sender('c97c4ab0707978')
               </script>
-    
-    <!-- Google Translate -->
-            <script type="text/javascript">
-          function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-              pageLanguage: 'zh-TW',
-              includedLanguages: 'en,ja,de,es',
-              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-              autoDisplay: false
-            }, 'google_translate_element');
-            // 為行動版Sidebar初始化相同的翻譯器
-            new google.translate.TranslateElement({
-              pageLanguage: 'zh-TW',
-              includedLanguages: 'en,ja,de,es',
-              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-              autoDisplay: false
-            }, 'google_translate_element_mobile');
-          }
-        </script>
     
 </head>
 <body class="slides horizontal simplifiedMobile animated">
