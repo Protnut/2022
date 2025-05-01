@@ -2,10 +2,19 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TCXP266');</script>
+    <!-- End Google Tag Manager -->
+    
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover">
 	<meta name="apple-mobile-web-app-capable" content="yes" />
-
-	<!-- Page Title -->
+    
+    <!-- Page Title -->
 	<title>Beurst Official Website 官方網站</title>
 
 	<!-- Compressed Styles -->
@@ -38,6 +47,19 @@
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/plugins/thumbnail/lg-thumbnail.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/plugins/zoom/lg-zoom.min.js"></script>
     
+    <!-- Google Translate Widget -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'zh-TW', // 原始語言：繁體中文
+          includedLanguages: 'en,ja,de,es', // 支援語言：英文、日文、德文、西班牙文
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE, // 簡潔下拉選單
+          autoDisplay: false // 不自動顯示翻譯橫幅
+        }, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
     <!-- Sender -->
             <script>
                 (function (s, e, n, d, er) {
@@ -56,7 +78,12 @@
     
 </head>
 <body class="slides horizontal simplifiedMobile animated">
-		
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCXP266"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    
 <!-- SVG Library -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
   
@@ -152,6 +179,10 @@
 
       <!-- 訂閱電子報按鈕 -->
       <a class="button" href="#reserve" style="display: inline-block; padding: 10px 20px; color: #fff; text-decoration: none; border-radius: 5px; background: linear-gradient(45deg, #6E2585, #FFB900); font-family: 'Racing Sans One', sans-serif; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 15px rgba(255, 185, 0, 0.7)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">搶早鳥募資預約</a>
+        
+      <!-- 語言切換器 -->
+      <div id="google_translate_element" style="display: inline-block; margin-left: 10px; vertical-align: middle;"></div>
+        </div>
     </div>
   </div>
   <div class="sections compact hidden">
@@ -178,6 +209,9 @@
       <li><a href="#reserve">解鎖碳纖維改裝，搶先預約！</a></li>
       <li><a href="mailto:contact@beurst.com">Contact Us</a></li>
     </ul>
+    <!-- 新增語言切換器 -->
+    <div id="google_translate_element_mobile" style="margin: 20px 0;"></div>
+      
     <ul class="social opacity-8">
       <li><a href="https://www.facebook.com/BeurstTaiwan"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg></a></li>
       <li><a href="https://x.com/Beurst_LLC"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></a></li>
@@ -234,6 +268,51 @@
     }
     .button.cyan { background: var(--primary-cyan); }
     .button.pulse { animation: pulse 2s infinite; }
+     
+     /* Google Translate Widget 樣式 */
+    #google_translate_element {
+      display: inline-block;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    .goog-te-combo {
+      background: var(--secondary-dark); /* 深灰背景 #32373B */
+      color: var(--secondary-light); /* 淺灰文字 #E0E2DB */
+      border: 2px solid var(--primary-yellow); /* 亮黃邊框 #FFB900 */
+      border-radius: 5px;
+      padding: 8px 12px;
+      font-family: 'Racing Sans One', sans-serif;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .goog-te-combo:hover {
+      background: var(--primary-purple); /* 深紫背景 #6E2585 */
+      border-color: var(--primary-cyan); /* 青藍邊框 #008EAA */
+      color: var(--primary-yellow); /* 亮黃文字 #FFB900 */
+      box-shadow: 0 0 10px rgba(255, 185, 0, 0.7);
+    }
+
+    .goog-te-gadget {
+      font-family: 'Racing Sans One', sans-serif !important;
+      color: var(--secondary-light) !important;
+    }
+
+    .goog-te-gadget .goog-te-combo {
+      margin: 0 !important;
+    }
+
+    /* 修復行動裝置顯示 */
+    @media (max-width: 768px) {
+      #google_translate_element {
+        margin: 10px 0;
+      }
+      .goog-te-combo {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
 
     /* 動畫效果 */
     @keyframes pulse {
@@ -758,6 +837,24 @@
       </div>
     </div>
   </section>
+
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'zh-TW',
+          includedLanguages: 'en,ja,de,es',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: false
+        }, 'google_translate_element');
+        // 為行動版Sidebar初始化相同的翻譯器
+        new google.translate.TranslateElement({
+          pageLanguage: 'zh-TW',
+          includedLanguages: 'en,ja,de,es',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: false
+        }, 'google_translate_element_mobile');
+      }
+    </script>
 
   <script>
     // 倒數計時共用函數
