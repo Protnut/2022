@@ -47,18 +47,45 @@
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/plugins/thumbnail/lg-thumbnail.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/plugins/zoom/lg-zoom.min.js"></script>
     
-    <!-- Google Translate Widget -->
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-          pageLanguage: 'zh-TW', // 原始語言：繁體中文
-          includedLanguages: 'en,ja,de,es', // 支援語言：英文、日文、德文、西班牙文
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE, // 簡潔下拉選單
-          autoDisplay: false // 不自動顯示翻譯橫幅
-        }, 'google_translate_element');
-      }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!-- Google Translate Widget -->
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'zh-TW',
+        includedLanguages: 'en,ja,de,es',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+      new google.translate.TranslateElement({
+        pageLanguage: 'zh-TW',
+        includedLanguages: 'en,ja,de,es',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element_mobile');
+      // 動態應用樣式
+      setTimeout(() => {
+        const combos = document.querySelectorAll('.goog-te-combo');
+        combos.forEach(combo => {
+          combo.style.background = 'var(--secondary-dark)';
+          combo.style.color = 'var(--secondary-light)';
+          combo.style.border = '2px solid var(--primary-yellow)';
+          combo.style.borderRadius = '5px';
+          combo.style.padding = '8px 12px';
+          combo.style.fontFamily = '"Racing Sans One", sans-serif';
+          combo.style.fontSize = '14px';
+          combo.style.width = '100%';
+          combo.style.boxSizing = 'border-box';
+        });
+      }, 500); // 延遲500ms確保元素生成
+    }
+    // 動態載入Google Translate腳本
+    const script = document.createElement('script');
+    script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    script.async = true;
+    document.body.appendChild(script);
+  });
+</script>
     
     <!-- Sender -->
             <script>
@@ -75,25 +102,6 @@
                 })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
                 sender('c97c4ab0707978')
               </script>
-    
-    <!-- Google Translate -->
-            <script type="text/javascript">
-          function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-              pageLanguage: 'zh-TW',
-              includedLanguages: 'en,ja,de,es',
-              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-              autoDisplay: false
-            }, 'google_translate_element');
-            // 為行動版Sidebar初始化相同的翻譯器
-            new google.translate.TranslateElement({
-              pageLanguage: 'zh-TW',
-              includedLanguages: 'en,ja,de,es',
-              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-              autoDisplay: false
-            }, 'google_translate_element_mobile');
-          }
-        </script>
     
 </head>
 <body class="slides horizontal simplifiedMobile animated">
@@ -193,15 +201,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul>
     </div>
     <div class="right">
-      <!-- 語言切換器 -->
-      <div id="google_translate_element" style="display: inline-block; margin-left: 10px; vertical-align: middle;"></div>
-        
       <!-- 加入會員按鈕 -->
       <a class="button" href="https://lin.ee/GmiO256" target="_blank" style="display: inline-block; padding: 8px 16px; margin-right: 10px; color: #fff; text-decoration: none; border-radius: 5px; background: #008EAA; font-family: 'Racing Sans One', sans-serif; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 10px rgba(0, 142, 170, 0.7)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">入會員享福利</a>
 
       <!-- 訂閱電子報按鈕 -->
       <a class="button" href="#reserve" style="display: inline-block; padding: 10px 20px; color: #fff; text-decoration: none; border-radius: 5px; background: linear-gradient(45deg, #6E2585, #FFB900); font-family: 'Racing Sans One', sans-serif; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 15px rgba(255, 185, 0, 0.7)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">募資預約開跑</a>
+        
+      <!-- 語言切換器 -->    
+    <div style="display: inline-block; margin-left: 10px; vertical-align: middle;">
+    <span style="color: var(--secondary-light); font-size: 14px; margin-right: 5px;">🌐 語言:</span>
+    <div id="google_translate_element"></div>
         </div>
+        
     </div>
   <div class="sections compact hidden">
     <div class="left"><a href="#" title="Beurst Taiwan"><img style="width:89px;height:28px" src="assets/img/logo_pc.png"></a></div>
@@ -228,7 +239,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li><a href="mailto:contact@beurst.com">Contact Us</a></li>
     </ul>
     <!-- 新增語言切換器 -->
-    <div id="google_translate_element_mobile" style="margin: 20px 0;"></div>
+    <div id="google_translate_element_mobile" style="margin: 20px 0;">
+  <span style="color: var(--secondary-light); font-size: 14px; margin-right: 5px; display: block;">🌐 語言選擇</span>
+</div>
       
     <ul class="social opacity-8">
       <li><a href="https://www.facebook.com/BeurstTaiwan"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg></a></li>
@@ -240,51 +253,72 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     
     <style>
-        /* Google Translate Widget 樣 Roughly translated:
-        style */
-        #google_translate_element, #google_translate_element_mobile {
-          display: inline-block;
-          margin-left: 10px;
-          vertical-align: middle;
-        }
+/* Google Translate Widget 樣式 */
+#google_translate_element, #google_translate_element_mobile {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+}
 
-        .goog-te-combo {
-          background: var(--secondary-dark); /* 深灰背景 #32373B */
-          color: var(--secondary-light); /* 淺灰文字 #E0E2DB */
-          border: 2px solid var(--primary-yellow); /* 亮黃邊框 #FFB900 */
-          border-radius: 5px;
-          padding: 8px 12px;
-          font-family: 'Racing Sans One', sans-serif;
-          font-size: 14px;
-          transition: all 0.3s ease;
-        }
+#google_translate_element .goog-te-combo,
+#google_translate_element_mobile .goog-te-combo {
+  background: var(--secondary-dark) !important; /* 深灰背景 #32373B */
+  color: var(--secondary-light) !important; /* 淺灰文字 #E0E2DB */
+  border: 2px solid var(--primary-yellow) !important; /* 亮黃邊框 #FFB900 */
+  border-radius: 5px !important;
+  padding: 8px 12px !important;
+  font-family: 'Racing Sans One', sans-serif !important;
+  font-size: 14px !important;
+  transition: all 0.3s ease !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
 
-        .goog-te-combo:hover {
-          background: var(--primary-purple); /* 深紫背景 #6E2585 */
-          border-color: var(--primary-cyan); /* 青藍邊框 #008EAA */
-          color: var(--primary-yellow); /* 亮黃文字 #FFB900 */
-          box-shadow: 0 0 10px rgba(255, 185, 0, 0.7);
-        }
+#google_translate_element .goog-te-combo:hover,
+#google_translate_element_mobile .goog-te-combo:hover {
+  background: var(--primary-purple) !important; /* 深紫背景 #6E2585 */
+  border-color: var(--primary-cyan) !important; /* 青藍邊框 #008EAA */
+  color: var(--primary-yellow) !important; /* 亮黃文字 #FFB900 */
+  box-shadow: 0 0 10px rgba(255, 185, 0, 0.7) !important;
+}
 
-        .goog-te-gadget {
-          font-family: 'Racing Sans One', sans-serif !important;
-          color: var(--secondary-light) !important;
-        }
+/* 下拉選單選項樣式 */
+#google_translate_element .goog-te-combo option,
+#google_translate_element_mobile .goog-te-combo option {
+  background: var(--secondary-dark) !important; /* 深灰背景 */
+  color: var(--secondary-light) !important; /* 淺灰文字 */
+  font-family: 'Racing Sans One', sans-serif !important;
+}
 
-        .goog-te-gadget .goog-te-combo {
-          margin: 0 !important;
-        }
+/* 移除Google Translate預設標籤文字 */
+.goog-te-gadget {
+  font-family: 'Racing Sans One', sans-serif !important;
+  color: var(--secondary-light) !important;
+  font-size: 0 !important; /* 隱藏“Select Language” */
+}
 
-        /* 修復行動裝置顯示 */
-        @media (max-width: 768px) {
-          #google_translate_element, #google_translate_element_mobile {
-            margin: 10px 0;
-          }
-          .goog-te-combo {
-            width: 100%;
-            box-sizing: border-box;
-          }
-        }
+.goog-te-gadget > div {
+  display: none !important; /* 隱藏額外的div */
+}
+
+.goog-te-gadget .goog-te-combo {
+  margin: 0 !important;
+}
+
+/* 修復行動裝置顯示 */
+@media (max-width: 768px) {
+  #google_translate_element, #google_translate_element_mobile {
+    margin: 10px 0;
+  }
+  #google_translate_element .goog-te-combo,
+  #google_translate_element_mobile .goog-te-combo {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
     </style>
     
 <!-- Slide 1 (#34) -->
