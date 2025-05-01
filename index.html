@@ -857,26 +857,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
     
   <script>
-    // 倒數計時共用函數
-    function startCountdown(endDate, elementId, format) {
-      const element = document.getElementById(elementId);
-      const updateCountdown = () => {
-        const now = new Date().getTime();
-        const distance = endDate - now;
-        if (distance < 0) {
-          element.textContent = "已結束";
-          return false;
-        }
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        element.textContent = format(days, hours, minutes, seconds);
-        return true;
-      };
-      updateCountdown();
-      return setInterval(updateCountdown, 1000);
-    }
 
     // 抽獎倒數計時
     startCountdown(new Date("2025-04-23").getTime(), "banner-countdown", (days, hours) => `${days}天 ${hours}小時`);
@@ -1569,28 +1549,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </style>
 
 <!-- 整合的 JavaScript -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // 倒數計時器
-    const endDate = new Date('2025-06-03').getTime();
-    const countdown = document.getElementById('countdown');
-    const updateCountdown = () => {
-      const now = new Date().getTime();
-      const distance = endDate - now;
-      if (distance < 0) {
-        countdown.textContent = '已結束';
-        return;
-      }
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      countdown.textContent = `${days}天 ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-    };
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-  });
-</script>
 
 <!-- Slide 3 (#91) -->
 <section class="slide fade-6 kenBurns" data-name="update">
@@ -3052,6 +3010,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   transform: scale(1.05);
 }
 
+.gallery-item.hidden { display: none; }
+
 .p.tiny {
   font-size: 14px;
   line-height: 1.5;
@@ -3889,27 +3849,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </style>
 </section>
 <!-- 在 </section> 後添加 -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const endDate = new Date("2025-06-03").getTime();
-    const countdown = document.getElementById("mission-countdown");
-    const updateCountdown = () => {
-      const now = new Date().getTime();
-      const distance = endDate - now;
-      if (distance < 0) {
-        countdown.textContent = "已結束";
-        return;
-      }
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      countdown.textContent = `${days}天 ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-    };
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-  });
-</script>
+
     
 <!-- Slide: Reserve Page -->
 <section class="slide fade-6 kenBurns" data-name="reserve">
