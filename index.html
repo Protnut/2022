@@ -240,89 +240,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     
     <style>
-/* Google Translate Widget 樣式 */
-#google_translate_element, #google_translate_element_mobile {
-  display: inline-block;
-  margin-left: 10px;
-  vertical-align: middle;
-}
+        /* Google Translate Widget 樣 Roughly translated:
+        style */
+        #google_translate_element, #google_translate_element_mobile {
+          display: inline-block;
+          margin-left: 10px;
+          vertical-align: middle;
+        }
 
-#google_translate_element .goog-te-combo,
-#google_translate_element_mobile .goog-te-combo {
-  background: var(--secondary-dark); /* 深灰背景 #32373B */
-  color: var(--secondary-light); /* 淺灰文字 #E0E2DB */
-  border: 2px solid var(--primary-yellow); /* 亮黃邊框 #FFB900 */
-  border-radius: 5px;
-  padding: 8px 12px;
-  font-family: 'Racing Sans One', sans-serif !important;
-  font-size: 14px;
-  transition: all 0.3s ease;
-  width: 100%;
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
+        .goog-te-combo {
+          background: var(--secondary-dark); /* 深灰背景 #32373B */
+          color: var(--secondary-light); /* 淺灰文字 #E0E2DB */
+          border: 2px solid var(--primary-yellow); /* 亮黃邊框 #FFB900 */
+          border-radius: 5px;
+          padding: 8px 12px;
+          font-family: 'Racing Sans One', sans-serif;
+          font-size: 14px;
+          transition: all 0.3s ease;
+        }
 
-#google_translate_element .goog-te-combo:hover,
-#google_translate_element_mobile .goog-te-combo:hover {
-  background: var(--primary-purple); /* 深紫背景 #6E2585 */
-  border-color: var(--primary-cyan); /* 青藍邊框 #008EAA */
-  color: var(--primary-yellow); /* 亮黃文字 #FFB900 */
-  box-shadow: 0 0 10px rgba(255, 185, 0, 0.7);
-}
+        .goog-te-combo:hover {
+          background: var(--primary-purple); /* 深紫背景 #6E2585 */
+          border-color: var(--primary-cyan); /* 青藍邊框 #008EAA */
+          color: var(--primary-yellow); /* 亮黃文字 #FFB900 */
+          box-shadow: 0 0 10px rgba(255, 185, 0, 0.7);
+        }
 
-#google_translate_element .goog-te-combo option,
-#google_translate_element_mobile .goog-te-combo option {
-  background: var(--secondary-dark);
-  color: var(--secondary-light);
-  font-family: 'Racing Sans One', sans-serif;
-}
+        .goog-te-gadget {
+          font-family: 'Racing Sans One', sans-serif !important;
+          color: var(--secondary-light) !important;
+        }
 
-/* 強制覆蓋Google Translate預設樣式 */
-#google_translate_element select.goog-te-combo,
-#google_translate_element_mobile select.goog-te-combo {
-  background: var(--secondary-dark) !important;
-  color: var(--secondary-light) !important;
-  border: 2px solid var(--primary-yellow) !important;
-  border-radius: 5px !important;
-  padding: 8px 12px !important;
-  font-family: 'Racing Sans One', sans-serif !important;
-  font-size: 14px !important;
-}
+        .goog-te-gadget .goog-te-combo {
+          margin: 0 !important;
+        }
 
-#google_translate_element select.goog-te-combo:hover,
-#google_translate_element_mobile select.goog-te-combo:hover {
-  background: var(--primary-purple) !important;
-  border-color: var(--primary-cyan) !important;
-  color: var(--primary-yellow) !important;
-}
-
-.goog-te-gadget {
-  font-family: 'Racing Sans One', sans-serif !important;
-  color: var(--secondary-light) !important;
-  font-size: 0 !important;
-}
-
-.goog-te-gadget > div {
-  display: none;
-}
-
-.goog-te-gadget .goog-te-combo {
-  margin: 0 !important;
-}
-
-/* 修復行動裝置顯示 */
-@media (max-width: 768px) {
-  #google_translate_element, #google_translate_element_mobile {
-    margin: 10px 0;
-  }
-  #google_translate_element .goog-te-combo,
-  #google_translate_element_mobile .goog-te-combo {
-    width: 100%;
-    box-sizing: border-box;
-  }
-}
+        /* 修復行動裝置顯示 */
+        @media (max-width: 768px) {
+          #google_translate_element, #google_translate_element_mobile {
+            margin: 10px 0;
+          }
+          .goog-te-combo {
+            width: 100%;
+            box-sizing: border-box;
+          }
+        }
     </style>
     
 <!-- Slide 1 (#34) -->
