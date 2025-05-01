@@ -76,6 +76,25 @@
                 sender('c97c4ab0707978')
               </script>
     
+    <!-- Google Translate -->
+            <script type="text/javascript">
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+              pageLanguage: 'zh-TW',
+              includedLanguages: 'en,ja,de,es',
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+              autoDisplay: false
+            }, 'google_translate_element');
+            // 為行動版Sidebar初始化相同的翻譯器
+            new google.translate.TranslateElement({
+              pageLanguage: 'zh-TW',
+              includedLanguages: 'en,ja,de,es',
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+              autoDisplay: false
+            }, 'google_translate_element_mobile');
+          }
+        </script>
+    
 </head>
 <body class="slides horizontal simplifiedMobile animated">
 
@@ -189,7 +208,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="right"><span class="button actionButton sidebarTrigger" data-sidebar-id="1"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use></svg></span></div>
   </div>
 </nav>
+    
+         <style>
+        /* Google Translate Widget 樣 Roughly translated:
+        style */
+        #google_translate_element, #google_translate_element_mobile {
+          display: inline-block;
+          margin-left: 10px;
+          vertical-align: middle;
+        }
 
+        .goog-te-combo {
+          background: var(--secondary-dark); /* 深灰背景 #32373B */
+          color: var(--secondary-light); /* 淺灰文字 #E0E2DB */
+          border: 2px solid var(--primary-yellow); /* 亮黃邊框 #FFB900 */
+          border-radius: 5px;
+          padding: 8px 12px;
+          font-family: 'Racing Sans One', sans-serif;
+          font-size: 14px;
+          transition: all 0.3s ease;
+        }
+
+        .goog-te-combo:hover {
+          background: var(--primary-purple); /* 深紫背景 #6E2585 */
+          border-color: var(--primary-cyan); /* 青藍邊框 #008EAA */
+          color: var(--primary-yellow); /* 亮黃文字 #FFB900 */
+          box-shadow: 0 0 10px rgba(255, 185, 0, 0.7);
+        }
+
+        .goog-te-gadget {
+          font-family: 'Racing Sans One', sans-serif !important;
+          color: var(--secondary-light) !important;
+        }
+
+        .goog-te-gadget .goog-te-combo {
+          margin: 0 !important;
+        }
+
+        /* 修復行動裝置顯示 */
+        @media (max-width: 768px) {
+          #google_translate_element, #google_translate_element_mobile {
+            margin: 10px 0;
+          }
+          .goog-te-combo {
+            width: 100%;
+            box-sizing: border-box;
+          }
+        }
+            </style>
+    
 <!-- Sidebar -->
 <nav class="sidebar" data-sidebar-id="1">
   <div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
@@ -267,51 +334,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
     .button.cyan { background: var(--primary-cyan); }
     .button.pulse { animation: pulse 2s infinite; }
-     
-     /* Google Translate Widget 樣式 */
-    .google_translate_element {
-      display: inline-block;
-      margin-left: 10px;
-      vertical-align: middle;
-    }
-
-    .goog-te-combo {
-      background: var(--secondary-dark); /* 深灰背景 #32373B */
-      color: var(--secondary-light); /* 淺灰文字 #E0E2DB */
-      border: 2px solid var(--primary-yellow); /* 亮黃邊框 #FFB900 */
-      border-radius: 5px;
-      padding: 8px 12px;
-      font-family: 'Racing Sans One', sans-serif;
-      font-size: 14px;
-      transition: all 0.3s ease;
-    }
-
-    .goog-te-combo:hover {
-      background: var(--primary-purple); /* 深紫背景 #6E2585 */
-      border-color: var(--primary-cyan); /* 青藍邊框 #008EAA */
-      color: var(--primary-yellow); /* 亮黃文字 #FFB900 */
-      box-shadow: 0 0 10px rgba(255, 185, 0, 0.7);
-    }
-
-    .goog-te-gadget {
-      font-family: 'Racing Sans One', sans-serif !important;
-      color: var(--secondary-light) !important;
-    }
-
-    .goog-te-gadget .goog-te-combo {
-      margin: 0 !important;
-    }
-
-    /* 修復行動裝置顯示 */
-    @media (max-width: 768px) {
-      #google_translate_element {
-        margin: 10px 0;
-      }
-      .goog-te-combo {
-        width: 100%;
-        box-sizing: border-box;
-      }
-    }
 
     /* 動畫效果 */
     @keyframes pulse {
@@ -836,25 +858,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
   </section>
-
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-          pageLanguage: 'zh-TW',
-          includedLanguages: 'en,ja,de,es',
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-          autoDisplay: false
-        }, 'google_translate_element');
-        // 為行動版Sidebar初始化相同的翻譯器
-        new google.translate.TranslateElement({
-          pageLanguage: 'zh-TW',
-          includedLanguages: 'en,ja,de,es',
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-          autoDisplay: false
-        }, 'google_translate_element_mobile');
-      }
-    </script>
-
+    
   <script>
     // 倒數計時共用函數
     function startCountdown(endDate, elementId, format) {
